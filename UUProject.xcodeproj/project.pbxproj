@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		8957F8202468E8F400132B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8957F81E2468E8F400132B13 /* Main.storyboard */; };
 		8957F8222468E8F600132B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8957F8212468E8F600132B13 /* Assets.xcassets */; };
 		8957F8252468E8F600132B13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8957F8232468E8F600132B13 /* LaunchScreen.storyboard */; };
+		896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 896CF0D82468FD9C00D02CD2 /* UIView+UU.m */; };
 		B75DC2E596D62449224C7F34 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AEC096E5D3D0E5180C470A /* Pods_SwiftProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		8957F8212468E8F600132B13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8957F8242468E8F600132B13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8957F8262468E8F600132B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		896CF0D72468FD9C00D02CD2 /* UIView+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+UU.h"; sourceTree = "<group>"; };
+		896CF0D82468FD9C00D02CD2 /* UIView+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UU.m"; sourceTree = "<group>"; };
 		C5EB5B42B9402B3FD6218983 /* Pods-OCProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProject.debug.xcconfig"; path = "Target Support Files/Pods-OCProject/Pods-OCProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D015B9223E71F81F14277C68 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD854F0C48D9A9EBEFC85C4 /* Pods_OCProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +132,6 @@
 				D015B9223E71F81F14277C68 /* Pods-SwiftProject.debug.xcconfig */,
 				62D1479CB3162430F9850F42 /* Pods-SwiftProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -166,6 +168,9 @@
 				8957F78E2468E7F200132B13 /* SceneDelegate.m */,
 				8957F7902468E7F200132B13 /* ViewController.h */,
 				8957F7912468E7F200132B13 /* ViewController.m */,
+				896CF0D12468FB5000D02CD2 /* Facade */,
+				896CF0D02468FB4900D02CD2 /* Module */,
+				896CF0CF2468FB4000D02CD2 /* Utility */,
 				8957F7932468E7F200132B13 /* Main.storyboard */,
 				8957F7962468E7F300132B13 /* Assets.xcassets */,
 				8957F7982468E7F300132B13 /* LaunchScreen.storyboard */,
@@ -205,6 +210,69 @@
 				8957F8262468E8F600132B13 /* Info.plist */,
 			);
 			path = SwiftProject;
+			sourceTree = "<group>";
+		};
+		896CF0CF2468FB4000D02CD2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				896CF0D42468FBE400D02CD2 /* Network */,
+				896CF0D62468FBFD00D02CD2 /* DataCache */,
+				896CF0D52468FBF300D02CD2 /* Security */,
+				896CF0D32468FB8B00D02CD2 /* NSCategory */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		896CF0D02468FB4900D02CD2 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		896CF0D12468FB5000D02CD2 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				896CF0D22468FB7E00D02CD2 /* UICategory */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		896CF0D22468FB7E00D02CD2 /* UICategory */ = {
+			isa = PBXGroup;
+			children = (
+				896CF0D72468FD9C00D02CD2 /* UIView+UU.h */,
+				896CF0D82468FD9C00D02CD2 /* UIView+UU.m */,
+			);
+			path = UICategory;
+			sourceTree = "<group>";
+		};
+		896CF0D32468FB8B00D02CD2 /* NSCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSCategory;
+			sourceTree = "<group>";
+		};
+		896CF0D42468FBE400D02CD2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		896CF0D52468FBF300D02CD2 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		896CF0D62468FBFD00D02CD2 /* DataCache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataCache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +524,7 @@
 			files = (
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				8957F78C2468E7F200132B13 /* AppDelegate.m in Sources */,
+				896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */,
 				8957F79D2468E7F300132B13 /* main.m in Sources */,
 				8957F78F2468E7F200132B13 /* SceneDelegate.m in Sources */,
 			);
