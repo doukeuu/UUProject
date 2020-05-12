@@ -21,6 +21,7 @@ target 'OCProject' do
   pod 'Charts'
   pod 'SAMKeychain'
   pod 'TTTAttributedLabel'
+  pod 'FLAnimatedImage'
 
 end
 

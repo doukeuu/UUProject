@@ -18,6 +18,7 @@ PODS:
   - Charts (3.5.0):
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
+  - FLAnimatedImage (1.0.12)
   - IQKeyboardManager (6.5.5)
   - IQKeyboardManagerSwift (6.5.5)
   - Kingfisher (4.10.1)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - AFNetworking
   - Alamofire
   - Charts
+  - FLAnimatedImage
   - IQKeyboardManager
   - IQKeyboardManagerSwift
   - Kingfisher
@@ -59,6 +61,7 @@ SPEC REPOS:
     - AFNetworking
     - Alamofire
     - Charts
+    - FLAnimatedImage
     - IQKeyboardManager
     - IQKeyboardManagerSwift
     - Kingfisher
@@ -77,6 +80,7 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
@@ -91,6 +95,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 1efd111516434f32621f5593df4bef7a54a970af
+PODFILE CHECKSUM: dbcdf5107be1c410d63c7e10fca57044a0e775b5
 
 COCOAPODS: 1.9.1
