@@ -16,4 +16,31 @@
 #define UULog(...)
 #endif
 
+#pragma mark - Vendor Key
+
+// 极光
+
+// 个推
+#define kGetuiAppId     @""
+#define kGetuiAppKey    @""
+#define kGetuiAppSecret @""
+
+// 百度
+
+// 友盟
+
+// 支付宝
+
+// 微信
+
+// QQ
+
+// 微博
+
+
+#pragma mark - Constant Key
+
+// 是否第一次登陆
+#define kIsFirstLaunch      @"isFirstLaunch"
+
 #endif /* UUDefineNS_h */

@@ -28,5 +28,8 @@
                                              green:((float)((value & 0xFF00) >> 8))/255.0    \
                                               blue:((float)(value & 0xFF))/255.0 alpha:1.0]
 
+//  定义通用字体大小
+#define FONT(size)         [UIFont systemFontOfSize:(size * SCREEN_RATIO)]
+#define FONT_WEIGHT(s, w)  [UIFont systemFontOfSize:(s * SCREEN_RATIO) weight:w]
 
 #endif /* UUDefineUI_h */
