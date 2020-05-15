@@ -25,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
+
+/// 获取视图控制器，可能为nil
+- (UIViewController *)viewController;
+/// 截图
+- (UIImage *)screenShot;
 @end
 
 NS_ASSUME_NONNULL_END

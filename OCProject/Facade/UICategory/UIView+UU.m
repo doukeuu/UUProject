@@ -120,4 +120,25 @@
     return self.frame.origin;
 }
 
+// 获取视图控制器，可能为nil
+- (UIViewController *)viewController {
+    for (UIView *view = self; view; view = view.superview) {
+        UIResponder *nextResponder = [view nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
+
+// 截图
+- (UIImage *)screenShot {
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, YES, [UIScreen.mainScreen scale]);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [self.layer renderInContext:ctx];
+    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 @end

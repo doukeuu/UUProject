@@ -20,6 +20,10 @@
 		890C047B246A44B000E1242F /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 890C0478246A44AF00E1242F /* area.plist */; };
 		890C047C246A44B000E1242F /* GlobalAreaCode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 890C0479246A44AF00E1242F /* GlobalAreaCode.plist */; };
 		890C047D246A44B000E1242F /* LocationCitys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 890C047A246A44B000E1242F /* LocationCitys.plist */; };
+		89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912048F246E1E7E00E76B0F /* UITextField+UU.m */; };
+		89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120492246E1E8F00E76B0F /* UITextView+UU.m */; };
+		89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120495246E307800E76B0F /* UIScrollView+Refresh.m */; };
+		89120499246E309300E76B0F /* UURefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120498246E309300E76B0F /* UURefresher.m */; };
 		8957F78C2468E7F200132B13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8957F78B2468E7F200132B13 /* AppDelegate.m */; };
 		8957F78F2468E7F200132B13 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8957F78E2468E7F200132B13 /* SceneDelegate.m */; };
 		8957F7922468E7F200132B13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8957F7912468E7F200132B13 /* ViewController.m */; };
@@ -89,6 +93,15 @@
 		890C0482246A499300E1242F /* UUDefineURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDefineURL.h; sourceTree = "<group>"; };
 		890C0484246A4A2200E1242F /* UUDefineNS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDefineNS.h; sourceTree = "<group>"; };
 		890C0485246A4A4800E1242F /* UUDefineUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDefineUI.h; sourceTree = "<group>"; };
+		8912048E246E1E7E00E76B0F /* UITextField+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+UU.h"; sourceTree = "<group>"; };
+		8912048F246E1E7E00E76B0F /* UITextField+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UU.m"; sourceTree = "<group>"; };
+		89120491246E1E8F00E76B0F /* UITextView+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+UU.h"; sourceTree = "<group>"; };
+		89120492246E1E8F00E76B0F /* UITextView+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+UU.m"; sourceTree = "<group>"; };
+		89120494246E307800E76B0F /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
+		89120495246E307800E76B0F /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
+		89120497246E309300E76B0F /* UURefresher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UURefresher.h; sourceTree = "<group>"; };
+		89120498246E309300E76B0F /* UURefresher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UURefresher.m; sourceTree = "<group>"; };
+		8912049A246E315100E76B0F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8957F7882468E7F100132B13 /* OCProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8957F78A2468E7F200132B13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8957F78B2468E7F200132B13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -253,6 +266,10 @@
 		890C0473246A420400E1242F /* Refresher */ = {
 			isa = PBXGroup;
 			children = (
+				89120497246E309300E76B0F /* UURefresher.h */,
+				89120498246E309300E76B0F /* UURefresher.m */,
+				89120494246E307800E76B0F /* UIScrollView+Refresh.h */,
+				89120495246E307800E76B0F /* UIScrollView+Refresh.m */,
 			);
 			path = Refresher;
 			sourceTree = "<group>";
@@ -325,6 +342,7 @@
 				8957F7982468E7F300132B13 /* LaunchScreen.storyboard */,
 				8957F79B2468E7F300132B13 /* Info.plist */,
 				8957F79C2468E7F300132B13 /* main.m */,
+				8912049A246E315100E76B0F /* PrefixHeader.pch */,
 			);
 			path = OCProject;
 			sourceTree = "<group>";
@@ -399,10 +417,14 @@
 				8975A696246BC444002A8D93 /* UIButton+UU.m */,
 				8975A698246BCA72002A8D93 /* UIImage+UU.h */,
 				8975A699246BCA72002A8D93 /* UIImage+UU.m */,
-				896CF0D72468FD9C00D02CD2 /* UIView+UU.h */,
-				896CF0D82468FD9C00D02CD2 /* UIView+UU.m */,
 				890C0475246A446300E1242F /* UIScrollView+UU.h */,
 				890C0476246A446300E1242F /* UIScrollView+UU.m */,
+				8912048E246E1E7E00E76B0F /* UITextField+UU.h */,
+				8912048F246E1E7E00E76B0F /* UITextField+UU.m */,
+				89120491246E1E8F00E76B0F /* UITextView+UU.h */,
+				89120492246E1E8F00E76B0F /* UITextView+UU.m */,
+				896CF0D72468FD9C00D02CD2 /* UIView+UU.h */,
+				896CF0D82468FD9C00D02CD2 /* UIView+UU.m */,
 			);
 			path = UICategory;
 			sourceTree = "<group>";
@@ -695,9 +717,13 @@
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				890C0469246A3F0D00E1242F /* UUNavigationController.m in Sources */,
 				890C045B246A3CA800E1242F /* NSString+UU.m in Sources */,
+				89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */,
 				8975A69A246BCA72002A8D93 /* UIImage+UU.m in Sources */,
+				89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */,
 				890C046F246A3F9D00E1242F /* UUBaseWebController.m in Sources */,
+				89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */,
 				890C0472246A3FD800E1242F /* UUBaseTableController.m in Sources */,
+				89120499246E309300E76B0F /* UURefresher.m in Sources */,
 				890C0462246A3E5900E1242F /* UUProgressHUD.m in Sources */,
 				8957F78C2468E7F200132B13 /* AppDelegate.m in Sources */,
 				890C0477246A446300E1242F /* UIScrollView+UU.m in Sources */,
@@ -907,7 +933,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProject/PrefixHeader.pch";
 				INFOPLIST_FILE = OCProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -924,7 +952,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProject/PrefixHeader.pch";
 				INFOPLIST_FILE = OCProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
