@@ -15,5 +15,6 @@
 #pragma mark - Define
 
 #import "UUDefineUI.h"
+#import "UUDefineURL.h"
 
 #endif /* PrefixHeader_pch */
