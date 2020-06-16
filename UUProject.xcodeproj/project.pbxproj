@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		842226C36023216A29628E68 /* Pods_OCProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD854F0C48D9A9EBEFC85C4 /* Pods_OCProject.framework */; };
+		8901D5F324984FEA000EF470 /* UUBulgeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8901D5F224984FEA000EF470 /* UUBulgeTabBar.m */; };
+		8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8901D5F6249856F0000EF470 /* UUNormalCollectionCell.m */; };
 		890C045B246A3CA800E1242F /* NSString+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C045A246A3CA800E1242F /* NSString+UU.m */; };
 		890C045E246A3D4500E1242F /* UUBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C045D246A3D4500E1242F /* UUBaseModel.m */; };
 		890C0462246A3E5900E1242F /* UUProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C0461246A3E5900E1242F /* UUProgressHUD.m */; };
@@ -95,6 +97,10 @@
 		3A23AD61129FA02CE47F8594 /* Pods-OCProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProject.release.xcconfig"; path = "Target Support Files/Pods-OCProject/Pods-OCProject.release.xcconfig"; sourceTree = "<group>"; };
 		62D1479CB3162430F9850F42 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		70AEC096E5D3D0E5180C470A /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8901D5F124984FEA000EF470 /* UUBulgeTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUBulgeTabBar.h; sourceTree = "<group>"; };
+		8901D5F224984FEA000EF470 /* UUBulgeTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUBulgeTabBar.m; sourceTree = "<group>"; };
+		8901D5F5249856F0000EF470 /* UUNormalCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNormalCollectionCell.h; sourceTree = "<group>"; };
+		8901D5F6249856F0000EF470 /* UUNormalCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNormalCollectionCell.m; sourceTree = "<group>"; };
 		890C0459246A3CA800E1242F /* NSString+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UU.h"; sourceTree = "<group>"; };
 		890C045A246A3CA800E1242F /* NSString+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UU.m"; sourceTree = "<group>"; };
 		890C045C246A3D4500E1242F /* UUBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUBaseModel.h; sourceTree = "<group>"; };
@@ -325,6 +331,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8901D5F424985610000EF470 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				8901D5F5249856F0000EF470 /* UUNormalCollectionCell.h */,
+				8901D5F6249856F0000EF470 /* UUNormalCollectionCell.m */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
 		890C0455246A2C0000E1242F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +362,7 @@
 		890C0457246A3AF500E1242F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8901D5F424985610000EF470 /* CollectionCell */,
 				890C0474246A444900E1242F /* Placeholder */,
 				890C0473246A420400E1242F /* Refresher */,
 				890C045F246A3E4600E1242F /* ProgressHUD */,
@@ -520,16 +536,18 @@
 		895A9E1424931F4C003C15D5 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
-				890C0464246A3E8000E1242F /* UUBaseController.h */,
-				890C0465246A3E8000E1242F /* UUBaseController.m */,
 				890C0470246A3FD800E1242F /* UUBaseTableController.h */,
 				890C0471246A3FD800E1242F /* UUBaseTableController.m */,
 				890C046D246A3F9D00E1242F /* UUBaseWebController.h */,
 				890C046E246A3F9D00E1242F /* UUBaseWebController.m */,
+				890C0464246A3E8000E1242F /* UUBaseController.h */,
+				890C0465246A3E8000E1242F /* UUBaseController.m */,
 				890C0467246A3F0D00E1242F /* UUNavigationController.h */,
 				890C0468246A3F0D00E1242F /* UUNavigationController.m */,
 				890C046A246A3F2500E1242F /* UUTabBarController.h */,
 				890C046B246A3F2500E1242F /* UUTabBarController.m */,
+				8901D5F124984FEA000EF470 /* UUBulgeTabBar.h */,
+				8901D5F224984FEA000EF470 /* UUBulgeTabBar.m */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -1047,6 +1065,7 @@
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				8985268A2491D74C008099FB /* UUDataStorage.m in Sources */,
 				89C40CE22490713F00AE29BC /* NSString+UI.m in Sources */,
+				8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */,
 				890C0469246A3F0D00E1242F /* UUNavigationController.m in Sources */,
 				890C045B246A3CA800E1242F /* NSString+UU.m in Sources */,
 				89C40D212490784C00AE29BC /* UUToolsNS.m in Sources */,
@@ -1077,6 +1096,7 @@
 				890C046C246A3F2500E1242F /* UUTabBarController.m in Sources */,
 				896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */,
 				8957F79D2468E7F300132B13 /* main.m in Sources */,
+				8901D5F324984FEA000EF470 /* UUBulgeTabBar.m in Sources */,
 				89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */,
 				890C045E246A3D4500E1242F /* UUBaseModel.m in Sources */,
 				8975A691246B981D002A8D93 /* NSArray+UU.m in Sources */,
