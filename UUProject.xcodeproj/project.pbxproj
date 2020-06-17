@@ -26,6 +26,10 @@
 		89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120492246E1E8F00E76B0F /* UITextView+UU.m */; };
 		89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120495246E307800E76B0F /* UIScrollView+Refresh.m */; };
 		89120499246E309300E76B0F /* UURefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120498246E309300E76B0F /* UURefresher.m */; };
+		8953B28F2499A4750034306A /* UUNormalTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B28E2499A4750034306A /* UUNormalTableCell.m */; };
+		8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B2972499AAE30034306A /* UULoginTableCell.m */; };
+		8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B29A2499B3930034306A /* UUTextFieldTableCell.m */; };
+		8953B29E2499B3A30034306A /* UUTextViewTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B29D2499B3A30034306A /* UUTextViewTableCell.m */; };
 		8957F78C2468E7F200132B13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8957F78B2468E7F200132B13 /* AppDelegate.m */; };
 		8957F7922468E7F200132B13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8957F7912468E7F200132B13 /* ViewController.m */; };
 		8957F7952468E7F200132B13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8957F7932468E7F200132B13 /* Main.storyboard */; };
@@ -134,6 +138,14 @@
 		89120497246E309300E76B0F /* UURefresher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UURefresher.h; sourceTree = "<group>"; };
 		89120498246E309300E76B0F /* UURefresher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UURefresher.m; sourceTree = "<group>"; };
 		8912049A246E315100E76B0F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8953B28D2499A4750034306A /* UUNormalTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNormalTableCell.h; sourceTree = "<group>"; };
+		8953B28E2499A4750034306A /* UUNormalTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNormalTableCell.m; sourceTree = "<group>"; };
+		8953B2962499AAE30034306A /* UULoginTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginTableCell.h; sourceTree = "<group>"; };
+		8953B2972499AAE30034306A /* UULoginTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULoginTableCell.m; sourceTree = "<group>"; };
+		8953B2992499B3930034306A /* UUTextFieldTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUTextFieldTableCell.h; sourceTree = "<group>"; };
+		8953B29A2499B3930034306A /* UUTextFieldTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUTextFieldTableCell.m; sourceTree = "<group>"; };
+		8953B29C2499B3A30034306A /* UUTextViewTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUTextViewTableCell.h; sourceTree = "<group>"; };
+		8953B29D2499B3A30034306A /* UUTextViewTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUTextViewTableCell.m; sourceTree = "<group>"; };
 		8957F7882468E7F100132B13 /* OCProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8957F78A2468E7F200132B13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8957F78B2468E7F200132B13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -362,6 +374,7 @@
 		890C0457246A3AF500E1242F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8953B28C2499A3440034306A /* TableCell */,
 				8901D5F424985610000EF470 /* CollectionCell */,
 				890C0474246A444900E1242F /* Placeholder */,
 				890C0473246A420400E1242F /* Refresher */,
@@ -421,6 +434,21 @@
 				890C0484246A4A2200E1242F /* UUDefineNS.h */,
 			);
 			path = Definition;
+			sourceTree = "<group>";
+		};
+		8953B28C2499A3440034306A /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				8953B28D2499A4750034306A /* UUNormalTableCell.h */,
+				8953B28E2499A4750034306A /* UUNormalTableCell.m */,
+				8953B2962499AAE30034306A /* UULoginTableCell.h */,
+				8953B2972499AAE30034306A /* UULoginTableCell.m */,
+				8953B2992499B3930034306A /* UUTextFieldTableCell.h */,
+				8953B29A2499B3930034306A /* UUTextFieldTableCell.m */,
+				8953B29C2499B3A30034306A /* UUTextViewTableCell.h */,
+				8953B29D2499B3A30034306A /* UUTextViewTableCell.m */,
+			);
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		8957F7432468E76B00132B13 = {
@@ -1059,12 +1087,14 @@
 				898526922491DBEB008099FB /* GTMBase64.m in Sources */,
 				89C40D292490838200AE29BC /* TFHppleElement.m in Sources */,
 				89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */,
+				8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */,
 				89C40D282490835800AE29BC /* TFHpple.m in Sources */,
 				898526872491BB6E008099FB /* UUDataCache.m in Sources */,
 				895A9E0B24930C34003C15D5 /* RemoteNotificationManager.m in Sources */,
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				8985268A2491D74C008099FB /* UUDataStorage.m in Sources */,
 				89C40CE22490713F00AE29BC /* NSString+UI.m in Sources */,
+				8953B29E2499B3A30034306A /* UUTextViewTableCell.m in Sources */,
 				8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */,
 				890C0469246A3F0D00E1242F /* UUNavigationController.m in Sources */,
 				890C045B246A3CA800E1242F /* NSString+UU.m in Sources */,
@@ -1075,6 +1105,7 @@
 				895A9E0A24930C34003C15D5 /* HandlePushMessage.m in Sources */,
 				89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */,
 				890C046F246A3F9D00E1242F /* UUBaseWebController.m in Sources */,
+				8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */,
 				89940816249702D60004364A /* UUWebProxyManager.m in Sources */,
 				899408192497031E0004364A /* UUJSExportManager.m in Sources */,
 				89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */,
@@ -1102,6 +1133,7 @@
 				8975A691246B981D002A8D93 /* NSArray+UU.m in Sources */,
 				8975A697246BC444002A8D93 /* UIButton+UU.m in Sources */,
 				890C0466246A3E8000E1242F /* UUBaseController.m in Sources */,
+				8953B28F2499A4750034306A /* UUNormalTableCell.m in Sources */,
 				89C40D34249088D300AE29BC /* UULocationGeocode.m in Sources */,
 				8975A694246B982A002A8D93 /* NSDictionary+UU.m in Sources */,
 				8975A68D246B95C5002A8D93 /* UUCostantKey.m in Sources */,

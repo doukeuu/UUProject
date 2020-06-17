@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, HTTPManagerConfig) {
     HTTPManagerConfigEndRefresh, // 停止刷新，0 不停止（默认），1 停止
 };
 
-typedef void (^CompleteBlock)(id object, NSError *error);
+typedef void (^CompleteBlock)(id _Nullable object, NSError * _Nullable error);
 
 @interface UUNetWorkManager : NSObject
 

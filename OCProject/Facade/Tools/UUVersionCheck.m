@@ -172,7 +172,7 @@
                                             handler:^(UIAlertAction * _Nonnull action) {
         NSURL *appURL = [NSURL URLWithString:self.appURLString];
         if ([[UIApplication sharedApplication] canOpenURL:appURL]) {
-            [[UIApplication sharedApplication] openURL:appURL];
+            [[UIApplication sharedApplication] openURL:appURL options:@{} completionHandler:nil];
         }
     }]];
     if (self.updateOptional) {
@@ -215,11 +215,7 @@
             [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
             [alert addAction:[UIAlertAction actionWithTitle:@"立即升级" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 NSURL *url = [NSURL URLWithString:appstoreUrl];
-                if (@available(iOS 10.0, *)) {
-                    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
-                } else {
-                    [[UIApplication sharedApplication] openURL:url];
-                }
+                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
             }]];
             [controller presentViewController:alert animated:YES completion:nil];
         });

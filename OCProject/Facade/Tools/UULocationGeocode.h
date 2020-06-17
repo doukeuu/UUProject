@@ -11,8 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^LocationBlock)(CLLocation *location, BOOL *stop, NSError *error);
-typedef void(^GeocodeBlock)(CLPlacemark *placemark, NSError *error);
+typedef void(^LocationBlock)(CLLocation * _Nullable location, BOOL *stop, NSError * _Nullable error);
+typedef void(^GeocodeBlock)(CLPlacemark * _Nullable placemark, NSError * _Nullable error);
 
 @interface UULocationGeocode : NSObject
 
