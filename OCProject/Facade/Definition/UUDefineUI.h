@@ -14,6 +14,8 @@
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_RATIO  (SCREEN_WIDTH / 375.0)
+#define FIT_WIDTH(x)  (SCREEN_WIDTH / 375.0 * x)
+#define FIT_HEIGHT(x) (SCREEN_HEIGHT / 667.0 * x)
 
 // 状态条、导航条、TabBar高度
 #define STATUS_HEIGHT    (UIApplication.sharedApplication.statusBarFrame.size.height)

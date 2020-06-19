@@ -56,6 +56,12 @@
 		8975A694246B982A002A8D93 /* NSDictionary+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975A693246B982A002A8D93 /* NSDictionary+UU.m */; };
 		8975A697246BC444002A8D93 /* UIButton+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975A696246BC444002A8D93 /* UIButton+UU.m */; };
 		8975A69A246BCA72002A8D93 /* UIImage+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975A699246BCA72002A8D93 /* UIImage+UU.m */; };
+		8983FF3E249C483400A9D20A /* UULocalAreaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF3D249C483400A9D20A /* UULocalAreaPicker.m */; };
+		8983FF41249C541700A9D20A /* UUDistalAreaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF40249C541700A9D20A /* UUDistalAreaPicker.m */; };
+		8983FF44249C56B500A9D20A /* UUNativeDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF43249C56B500A9D20A /* UUNativeDatePicker.m */; };
+		8983FF47249C56C700A9D20A /* UUCustomDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF46249C56C700A9D20A /* UUCustomDatePicker.m */; };
+		8983FF4B249C5A4100A9D20A /* UUAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF4A249C5A4100A9D20A /* UUAnimationView.m */; };
+		8983FF4E249C5E5A00A9D20A /* UUNormalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF4D249C5E5900A9D20A /* UUNormalPickerView.m */; };
 		898526872491BB6E008099FB /* UUDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 898526862491BB6E008099FB /* UUDataCache.m */; };
 		8985268A2491D74C008099FB /* UUDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 898526892491D74C008099FB /* UUDataStorage.m */; };
 		898526922491DBEB008099FB /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 898526902491DBEB008099FB /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -195,6 +201,18 @@
 		8975A696246BC444002A8D93 /* UIButton+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UU.m"; sourceTree = "<group>"; };
 		8975A698246BCA72002A8D93 /* UIImage+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+UU.h"; sourceTree = "<group>"; };
 		8975A699246BCA72002A8D93 /* UIImage+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UU.m"; sourceTree = "<group>"; };
+		8983FF3C249C483400A9D20A /* UULocalAreaPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULocalAreaPicker.h; sourceTree = "<group>"; };
+		8983FF3D249C483400A9D20A /* UULocalAreaPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULocalAreaPicker.m; sourceTree = "<group>"; };
+		8983FF3F249C541700A9D20A /* UUDistalAreaPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDistalAreaPicker.h; sourceTree = "<group>"; };
+		8983FF40249C541700A9D20A /* UUDistalAreaPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUDistalAreaPicker.m; sourceTree = "<group>"; };
+		8983FF42249C56B500A9D20A /* UUNativeDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNativeDatePicker.h; sourceTree = "<group>"; };
+		8983FF43249C56B500A9D20A /* UUNativeDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNativeDatePicker.m; sourceTree = "<group>"; };
+		8983FF45249C56C700A9D20A /* UUCustomDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUCustomDatePicker.h; sourceTree = "<group>"; };
+		8983FF46249C56C700A9D20A /* UUCustomDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUCustomDatePicker.m; sourceTree = "<group>"; };
+		8983FF49249C5A4100A9D20A /* UUAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAnimationView.h; sourceTree = "<group>"; };
+		8983FF4A249C5A4100A9D20A /* UUAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAnimationView.m; sourceTree = "<group>"; };
+		8983FF4C249C5E5900A9D20A /* UUNormalPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNormalPickerView.h; sourceTree = "<group>"; };
+		8983FF4D249C5E5900A9D20A /* UUNormalPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNormalPickerView.m; sourceTree = "<group>"; };
 		898526852491BB6E008099FB /* UUDataCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDataCache.h; sourceTree = "<group>"; };
 		898526862491BB6E008099FB /* UUDataCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUDataCache.m; sourceTree = "<group>"; };
 		898526882491D74C008099FB /* UUDataStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDataStorage.h; sourceTree = "<group>"; };
@@ -374,6 +392,8 @@
 		890C0457246A3AF500E1242F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8983FF48249C5A2A00A9D20A /* Animation */,
+				8983FF3B249C452C00A9D20A /* PickerView */,
 				8953B28C2499A3440034306A /* TableCell */,
 				8901D5F424985610000EF470 /* CollectionCell */,
 				890C0474246A444900E1242F /* Placeholder */,
@@ -706,6 +726,32 @@
 				898526892491D74C008099FB /* UUDataStorage.m */,
 			);
 			path = DataStore;
+			sourceTree = "<group>";
+		};
+		8983FF3B249C452C00A9D20A /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				8983FF3C249C483400A9D20A /* UULocalAreaPicker.h */,
+				8983FF3D249C483400A9D20A /* UULocalAreaPicker.m */,
+				8983FF3F249C541700A9D20A /* UUDistalAreaPicker.h */,
+				8983FF40249C541700A9D20A /* UUDistalAreaPicker.m */,
+				8983FF42249C56B500A9D20A /* UUNativeDatePicker.h */,
+				8983FF43249C56B500A9D20A /* UUNativeDatePicker.m */,
+				8983FF45249C56C700A9D20A /* UUCustomDatePicker.h */,
+				8983FF46249C56C700A9D20A /* UUCustomDatePicker.m */,
+				8983FF4C249C5E5900A9D20A /* UUNormalPickerView.h */,
+				8983FF4D249C5E5900A9D20A /* UUNormalPickerView.m */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		8983FF48249C5A2A00A9D20A /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				8983FF49249C5A4100A9D20A /* UUAnimationView.h */,
+				8983FF4A249C5A4100A9D20A /* UUAnimationView.m */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		89C40CE3249071AC00AE29BC /* HJVideoPlayer */ = {
@@ -1084,7 +1130,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C40D2A2490838F00AE29BC /* XPathQuery.m in Sources */,
+				8983FF41249C541700A9D20A /* UUDistalAreaPicker.m in Sources */,
 				898526922491DBEB008099FB /* GTMBase64.m in Sources */,
+				8983FF4E249C5E5A00A9D20A /* UUNormalPickerView.m in Sources */,
 				89C40D292490838200AE29BC /* TFHppleElement.m in Sources */,
 				89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */,
 				8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */,
@@ -1093,6 +1141,7 @@
 				895A9E0B24930C34003C15D5 /* RemoteNotificationManager.m in Sources */,
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				8985268A2491D74C008099FB /* UUDataStorage.m in Sources */,
+				8983FF44249C56B500A9D20A /* UUNativeDatePicker.m in Sources */,
 				89C40CE22490713F00AE29BC /* NSString+UI.m in Sources */,
 				8953B29E2499B3A30034306A /* UUTextViewTableCell.m in Sources */,
 				8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */,
@@ -1103,12 +1152,14 @@
 				89C40D24249080CC00AE29BC /* UUHTMLFilter.m in Sources */,
 				8975A69A246BCA72002A8D93 /* UIImage+UU.m in Sources */,
 				895A9E0A24930C34003C15D5 /* HandlePushMessage.m in Sources */,
+				8983FF4B249C5A4100A9D20A /* UUAnimationView.m in Sources */,
 				89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */,
 				890C046F246A3F9D00E1242F /* UUBaseWebController.m in Sources */,
 				8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */,
 				89940816249702D60004364A /* UUWebProxyManager.m in Sources */,
 				899408192497031E0004364A /* UUJSExportManager.m in Sources */,
 				89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */,
+				8983FF47249C56C700A9D20A /* UUCustomDatePicker.m in Sources */,
 				89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */,
 				890C0472246A3FD800E1242F /* UUBaseTableController.m in Sources */,
 				895A9E1C24932392003C15D5 /* UUInteractiveTransition.m in Sources */,
@@ -1120,6 +1171,7 @@
 				898526952491DCBF008099FB /* UUEncryption.m in Sources */,
 				8957F78C2468E7F200132B13 /* AppDelegate.m in Sources */,
 				89C40D37249089A100AE29BC /* UUImagePickerCheck.m in Sources */,
+				8983FF3E249C483400A9D20A /* UULocalAreaPicker.m in Sources */,
 				895A9E112493139E003C15D5 /* Reachability.m in Sources */,
 				895A9E1924932371003C15D5 /* UUAnimatedTransitioning.m in Sources */,
 				890C0477246A446300E1242F /* UIScrollView+UU.m in Sources */,
