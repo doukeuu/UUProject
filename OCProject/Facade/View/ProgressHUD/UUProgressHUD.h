@@ -31,6 +31,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// 在指定视图中显示文字提示，一段时间后隐藏
 + (void)showText:(NSString *)text inView:(UIView *)view during:(NSTimeInterval)interval;
 
+/// 圆弧形进度展示，隐藏方法用hideHUDInView
+/// @param view HUD的superView
++ (UIView *)showAnnularProgressInView:(UIView *)view;
+/// 更新圆弧形进度
+/// @param progress 进度值0～1
+/// @param view 上面方法返回的HUD视图
++ (void)updateAnnularProgress:(CGFloat)progress inView:(UIView *)view;
 @end
 
 NS_ASSUME_NONNULL_END

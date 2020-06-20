@@ -49,6 +49,27 @@
     [hud performSelector:@selector(hideAnimated:) withObject:@(YES) afterDelay:interval];
 }
 
+// 圆弧形进度展示
++ (UIView *)showAnnularProgressInView:(UIView *)view {
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.bezelView.color = [UIColor colorWithWhite:0.1 alpha:0.9];
+    hud.contentColor = [UIColor whiteColor];
+    hud.removeFromSuperViewOnHide = YES;
+    hud.graceTime = 0.5f;
+    [view addSubview:hud];
+    [hud showAnimated:YES];
+    return hud;
+}
+
+// 更新圆弧形进度
++ (void)updateAnnularProgress:(CGFloat)progress inView:(UIView *)view {
+    if (![view isKindOfClass:[MBProgressHUD class]]) return;
+    if (progress < 0 || progress > 1) return;
+    MBProgressHUD *hud = (MBProgressHUD *)view;
+    hud.progress = progress;
+}
+
 // 隐藏菊花提示视图
 + (void)hideHUD {
     [MBProgressHUD hideHUDForView:[self currentView] animated:YES];

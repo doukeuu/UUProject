@@ -69,6 +69,7 @@
 		899408102497029C0004364A /* UUWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994080F2497029C0004364A /* UUWebViewController.m */; };
 		89940816249702D60004364A /* UUWebProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89940815249702D60004364A /* UUWebProxyManager.m */; };
 		899408192497031E0004364A /* UUJSExportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 899408182497031E0004364A /* UUJSExportManager.m */; };
+		89AED721249D9C5600E2F49A /* UUSegmentButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AED720249D9C5600E2F49A /* UUSegmentButtonView.m */; };
 		89C40CE22490713F00AE29BC /* NSString+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40CE12490713F00AE29BC /* NSString+UI.m */; };
 		89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D1D2490783900AE29BC /* UUToolsUI.m */; };
 		89C40D212490784C00AE29BC /* UUToolsNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D202490784C00AE29BC /* UUToolsNS.m */; };
@@ -228,6 +229,8 @@
 		89940815249702D60004364A /* UUWebProxyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUWebProxyManager.m; sourceTree = "<group>"; };
 		899408172497031E0004364A /* UUJSExportManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUJSExportManager.h; sourceTree = "<group>"; };
 		899408182497031E0004364A /* UUJSExportManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUJSExportManager.m; sourceTree = "<group>"; };
+		89AED71F249D9C5600E2F49A /* UUSegmentButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSegmentButtonView.h; sourceTree = "<group>"; };
+		89AED720249D9C5600E2F49A /* UUSegmentButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSegmentButtonView.m; sourceTree = "<group>"; };
 		89C40CE02490713F00AE29BC /* NSString+UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UI.h"; sourceTree = "<group>"; };
 		89C40CE12490713F00AE29BC /* NSString+UI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UI.m"; sourceTree = "<group>"; };
 		89C40CE4249071AC00AE29BC /* HJVideoPlayerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJVideoPlayerHeader.h; sourceTree = "<group>"; };
@@ -392,6 +395,7 @@
 		890C0457246A3AF500E1242F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89AED71E249D9C3A00E2F49A /* SegmentView */,
 				8983FF48249C5A2A00A9D20A /* Animation */,
 				8983FF3B249C452C00A9D20A /* PickerView */,
 				8953B28C2499A3440034306A /* TableCell */,
@@ -752,6 +756,15 @@
 				8983FF4A249C5A4100A9D20A /* UUAnimationView.m */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		89AED71E249D9C3A00E2F49A /* SegmentView */ = {
+			isa = PBXGroup;
+			children = (
+				89AED71F249D9C5600E2F49A /* UUSegmentButtonView.h */,
+				89AED720249D9C5600E2F49A /* UUSegmentButtonView.m */,
+			);
+			path = SegmentView;
 			sourceTree = "<group>";
 		};
 		89C40CE3249071AC00AE29BC /* HJVideoPlayer */ = {
@@ -1189,6 +1202,7 @@
 				89C40D34249088D300AE29BC /* UULocationGeocode.m in Sources */,
 				8975A694246B982A002A8D93 /* NSDictionary+UU.m in Sources */,
 				8975A68D246B95C5002A8D93 /* UUCostantKey.m in Sources */,
+				89AED721249D9C5600E2F49A /* UUSegmentButtonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
