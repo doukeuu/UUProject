@@ -56,6 +56,10 @@
 		8975A694246B982A002A8D93 /* NSDictionary+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975A693246B982A002A8D93 /* NSDictionary+UU.m */; };
 		8975A697246BC444002A8D93 /* UIButton+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975A696246BC444002A8D93 /* UIButton+UU.m */; };
 		8975A69A246BCA72002A8D93 /* UIImage+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8975A699246BCA72002A8D93 /* UIImage+UU.m */; };
+		897AED1124A2DC70007F8D50 /* UUSearchFielddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 897AED1024A2DC70007F8D50 /* UUSearchFielddView.m */; };
+		897AED1524A2DD7C007F8D50 /* UUMultitypeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 897AED1424A2DD7C007F8D50 /* UUMultitypeLabel.m */; };
+		897AED1824A2DFEC007F8D50 /* UUDotPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 897AED1724A2DFEC007F8D50 /* UUDotPageControl.m */; };
+		897AED1C24A2E1EB007F8D50 /* UUCommentTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 897AED1B24A2E1EB007F8D50 /* UUCommentTextView.m */; };
 		8983FF3E249C483400A9D20A /* UULocalAreaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF3D249C483400A9D20A /* UULocalAreaPicker.m */; };
 		8983FF41249C541700A9D20A /* UUDistalAreaPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF40249C541700A9D20A /* UUDistalAreaPicker.m */; };
 		8983FF44249C56B500A9D20A /* UUNativeDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8983FF43249C56B500A9D20A /* UUNativeDatePicker.m */; };
@@ -69,6 +73,7 @@
 		899408102497029C0004364A /* UUWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994080F2497029C0004364A /* UUWebViewController.m */; };
 		89940816249702D60004364A /* UUWebProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89940815249702D60004364A /* UUWebProxyManager.m */; };
 		899408192497031E0004364A /* UUJSExportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 899408182497031E0004364A /* UUJSExportManager.m */; };
+		8994FD4C24A196FB007FFC07 /* UUSelectionPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994FD4B24A196FB007FFC07 /* UUSelectionPopupView.m */; };
 		8998425E24A04C8B00881A29 /* UUImageCirculatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998425D24A04C8B00881A29 /* UUImageCirculatingView.m */; };
 		8998426124A04CE200881A29 /* UUImageAutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426024A04CE200881A29 /* UUImageAutoScrollView.m */; };
 		8998426424A04D1D00881A29 /* UURippleButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426324A04D1D00881A29 /* UURippleButtonView.m */; };
@@ -208,6 +213,14 @@
 		8975A696246BC444002A8D93 /* UIButton+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+UU.m"; sourceTree = "<group>"; };
 		8975A698246BCA72002A8D93 /* UIImage+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+UU.h"; sourceTree = "<group>"; };
 		8975A699246BCA72002A8D93 /* UIImage+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UU.m"; sourceTree = "<group>"; };
+		897AED0F24A2DC70007F8D50 /* UUSearchFielddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchFielddView.h; sourceTree = "<group>"; };
+		897AED1024A2DC70007F8D50 /* UUSearchFielddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSearchFielddView.m; sourceTree = "<group>"; };
+		897AED1324A2DD7C007F8D50 /* UUMultitypeLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUMultitypeLabel.h; sourceTree = "<group>"; };
+		897AED1424A2DD7C007F8D50 /* UUMultitypeLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUMultitypeLabel.m; sourceTree = "<group>"; };
+		897AED1624A2DFEC007F8D50 /* UUDotPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDotPageControl.h; sourceTree = "<group>"; };
+		897AED1724A2DFEC007F8D50 /* UUDotPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUDotPageControl.m; sourceTree = "<group>"; };
+		897AED1A24A2E1EB007F8D50 /* UUCommentTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUCommentTextView.h; sourceTree = "<group>"; };
+		897AED1B24A2E1EB007F8D50 /* UUCommentTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUCommentTextView.m; sourceTree = "<group>"; };
 		8983FF3C249C483400A9D20A /* UULocalAreaPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULocalAreaPicker.h; sourceTree = "<group>"; };
 		8983FF3D249C483400A9D20A /* UULocalAreaPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULocalAreaPicker.m; sourceTree = "<group>"; };
 		8983FF3F249C541700A9D20A /* UUDistalAreaPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDistalAreaPicker.h; sourceTree = "<group>"; };
@@ -235,6 +248,8 @@
 		89940815249702D60004364A /* UUWebProxyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUWebProxyManager.m; sourceTree = "<group>"; };
 		899408172497031E0004364A /* UUJSExportManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUJSExportManager.h; sourceTree = "<group>"; };
 		899408182497031E0004364A /* UUJSExportManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUJSExportManager.m; sourceTree = "<group>"; };
+		8994FD4A24A196FB007FFC07 /* UUSelectionPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSelectionPopupView.h; sourceTree = "<group>"; };
+		8994FD4B24A196FB007FFC07 /* UUSelectionPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSelectionPopupView.m; sourceTree = "<group>"; };
 		8998425C24A04C8B00881A29 /* UUImageCirculatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageCirculatingView.h; sourceTree = "<group>"; };
 		8998425D24A04C8B00881A29 /* UUImageCirculatingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImageCirculatingView.m; sourceTree = "<group>"; };
 		8998425F24A04CE200881A29 /* UUImageAutoScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageAutoScrollView.h; sourceTree = "<group>"; };
@@ -413,16 +428,19 @@
 		890C0457246A3AF500E1242F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8998425524A0458000881A29 /* MultipleButton */,
+				8983FF48249C5A2A00A9D20A /* AnimationView */,
+				8998425524A0458000881A29 /* Button */,
 				8998424E24A03EEC00881A29 /* CirculateImage */,
-				89AED71E249D9C3A00E2F49A /* SegmentView */,
-				8983FF48249C5A2A00A9D20A /* Animation */,
-				8983FF3B249C452C00A9D20A /* PickerView */,
-				8953B28C2499A3440034306A /* TableCell */,
 				8901D5F424985610000EF470 /* CollectionCell */,
+				897AED1224A2DD28007F8D50 /* Label */,
+				89AED71E249D9C3A00E2F49A /* PageControl */,
+				8983FF3B249C452C00A9D20A /* PickerView */,
 				890C0474246A444900E1242F /* Placeholder */,
-				890C0473246A420400E1242F /* Refresher */,
 				890C045F246A3E4600E1242F /* ProgressHUD */,
+				890C0473246A420400E1242F /* Refresher */,
+				8953B28C2499A3440034306A /* TableCell */,
+				897AED0E24A2DC21007F8D50 /* TextField */,
+				897AED1924A2E1C8007F8D50 /* TextView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -752,6 +770,33 @@
 			path = DataStore;
 			sourceTree = "<group>";
 		};
+		897AED0E24A2DC21007F8D50 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				897AED0F24A2DC70007F8D50 /* UUSearchFielddView.h */,
+				897AED1024A2DC70007F8D50 /* UUSearchFielddView.m */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		897AED1224A2DD28007F8D50 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				897AED1324A2DD7C007F8D50 /* UUMultitypeLabel.h */,
+				897AED1424A2DD7C007F8D50 /* UUMultitypeLabel.m */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		897AED1924A2E1C8007F8D50 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				897AED1A24A2E1EB007F8D50 /* UUCommentTextView.h */,
+				897AED1B24A2E1EB007F8D50 /* UUCommentTextView.m */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
 		8983FF3B249C452C00A9D20A /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -769,13 +814,15 @@
 			path = PickerView;
 			sourceTree = "<group>";
 		};
-		8983FF48249C5A2A00A9D20A /* Animation */ = {
+		8983FF48249C5A2A00A9D20A /* AnimationView */ = {
 			isa = PBXGroup;
 			children = (
 				8983FF49249C5A4100A9D20A /* UUAnimationView.h */,
 				8983FF4A249C5A4100A9D20A /* UUAnimationView.m */,
+				8994FD4A24A196FB007FFC07 /* UUSelectionPopupView.h */,
+				8994FD4B24A196FB007FFC07 /* UUSelectionPopupView.m */,
 			);
-			path = Animation;
+			path = AnimationView;
 			sourceTree = "<group>";
 		};
 		8998424E24A03EEC00881A29 /* CirculateImage */ = {
@@ -789,7 +836,7 @@
 			path = CirculateImage;
 			sourceTree = "<group>";
 		};
-		8998425524A0458000881A29 /* MultipleButton */ = {
+		8998425524A0458000881A29 /* Button */ = {
 			isa = PBXGroup;
 			children = (
 				8998426224A04D1D00881A29 /* UURippleButtonView.h */,
@@ -801,16 +848,18 @@
 				8998426B24A0574700881A29 /* UUFloatingButton.h */,
 				8998426C24A0574700881A29 /* UUFloatingButton.m */,
 			);
-			path = MultipleButton;
+			path = Button;
 			sourceTree = "<group>";
 		};
-		89AED71E249D9C3A00E2F49A /* SegmentView */ = {
+		89AED71E249D9C3A00E2F49A /* PageControl */ = {
 			isa = PBXGroup;
 			children = (
 				89AED71F249D9C5600E2F49A /* UUSegmentButtonView.h */,
 				89AED720249D9C5600E2F49A /* UUSegmentButtonView.m */,
+				897AED1624A2DFEC007F8D50 /* UUDotPageControl.h */,
+				897AED1724A2DFEC007F8D50 /* UUDotPageControl.m */,
 			);
-			path = SegmentView;
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		89C40CE3249071AC00AE29BC /* HJVideoPlayer */ = {
@@ -1208,13 +1257,16 @@
 				8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */,
 				890C0469246A3F0D00E1242F /* UUNavigationController.m in Sources */,
 				890C045B246A3CA800E1242F /* NSString+UU.m in Sources */,
+				897AED1524A2DD7C007F8D50 /* UUMultitypeLabel.m in Sources */,
 				89C40D212490784C00AE29BC /* UUToolsNS.m in Sources */,
 				89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */,
 				8998426124A04CE200881A29 /* UUImageAutoScrollView.m in Sources */,
+				897AED1824A2DFEC007F8D50 /* UUDotPageControl.m in Sources */,
 				89C40D24249080CC00AE29BC /* UUHTMLFilter.m in Sources */,
 				8975A69A246BCA72002A8D93 /* UIImage+UU.m in Sources */,
 				895A9E0A24930C34003C15D5 /* HandlePushMessage.m in Sources */,
 				8983FF4B249C5A4100A9D20A /* UUAnimationView.m in Sources */,
+				897AED1124A2DC70007F8D50 /* UUSearchFielddView.m in Sources */,
 				89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */,
 				890C046F246A3F9D00E1242F /* UUBaseWebController.m in Sources */,
 				8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */,
@@ -1240,9 +1292,11 @@
 				890C0477246A446300E1242F /* UIScrollView+UU.m in Sources */,
 				895A9E0E249310E8003C15D5 /* UUNetWorkManager.m in Sources */,
 				890C046C246A3F2500E1242F /* UUTabBarController.m in Sources */,
+				8994FD4C24A196FB007FFC07 /* UUSelectionPopupView.m in Sources */,
 				8998426D24A0574700881A29 /* UUFloatingButton.m in Sources */,
 				896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */,
 				8998426A24A0510200881A29 /* UUSwitchButton.m in Sources */,
+				897AED1C24A2E1EB007F8D50 /* UUCommentTextView.m in Sources */,
 				8957F79D2468E7F300132B13 /* main.m in Sources */,
 				8901D5F324984FEA000EF470 /* UUBulgeTabBar.m in Sources */,
 				89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */,

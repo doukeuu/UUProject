@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface UURippleButtonView : UIView
+@interface UURippleButtonView : UIView // 波纹按钮
 
 @property (nonatomic, strong) UIButton *voiceButton; // 语音按钮
 @property (nonatomic, strong) CALayer *circleLayer;  // 动画圆圈
