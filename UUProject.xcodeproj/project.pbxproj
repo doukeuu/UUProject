@@ -95,6 +95,9 @@
 		89C40D37249089A100AE29BC /* UUImagePickerCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D36249089A100AE29BC /* UUImagePickerCheck.m */; };
 		89C40D3A24908A8700AE29BC /* UUVersionCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D3924908A8700AE29BC /* UUVersionCheck.m */; };
 		89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D3C24908DC400AE29BC /* UUCustomDefaults.m */; };
+		89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B124AACE7300612514 /* UUImageBrowseController.m */; };
+		89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B424AACF0700612514 /* UUImageClippingController.m */; };
+		89F690B824AACF9900612514 /* UULoginBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B724AACF9900612514 /* UULoginBaseController.m */; };
 		B75DC2E596D62449224C7F34 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AEC096E5D3D0E5180C470A /* Pods_SwiftProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -335,6 +338,12 @@
 		89C40D3924908A8700AE29BC /* UUVersionCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUVersionCheck.m; sourceTree = "<group>"; };
 		89C40D3B24908DC400AE29BC /* UUCustomDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUCustomDefaults.h; sourceTree = "<group>"; };
 		89C40D3C24908DC400AE29BC /* UUCustomDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUCustomDefaults.m; sourceTree = "<group>"; };
+		89F690B024AACE7300612514 /* UUImageBrowseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageBrowseController.h; sourceTree = "<group>"; };
+		89F690B124AACE7300612514 /* UUImageBrowseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImageBrowseController.m; sourceTree = "<group>"; };
+		89F690B324AACF0700612514 /* UUImageClippingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageClippingController.h; sourceTree = "<group>"; };
+		89F690B424AACF0700612514 /* UUImageClippingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImageClippingController.m; sourceTree = "<group>"; };
+		89F690B624AACF9900612514 /* UULoginBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginBaseController.h; sourceTree = "<group>"; };
+		89F690B724AACF9900612514 /* UULoginBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULoginBaseController.m; sourceTree = "<group>"; };
 		C5EB5B42B9402B3FD6218983 /* Pods-OCProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProject.debug.xcconfig"; path = "Target Support Files/Pods-OCProject/Pods-OCProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D015B9223E71F81F14277C68 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD854F0C48D9A9EBEFC85C4 /* Pods_OCProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -448,6 +457,10 @@
 		890C0458246A3AFB00E1242F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				89F690B024AACE7300612514 /* UUImageBrowseController.h */,
+				89F690B124AACE7300612514 /* UUImageBrowseController.m */,
+				89F690B324AACF0700612514 /* UUImageClippingController.h */,
+				89F690B424AACF0700612514 /* UUImageClippingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -544,6 +557,8 @@
 				8957F78B2468E7F200132B13 /* AppDelegate.m */,
 				8957F7902468E7F200132B13 /* ViewController.h */,
 				8957F7912468E7F200132B13 /* ViewController.m */,
+				89F690A824AACDF300612514 /* Launch */,
+				89F690A924AACDF900612514 /* Login */,
 				896CF0D12468FB5000D02CD2 /* Facade */,
 				896CF0CF2468FB4000D02CD2 /* Utility */,
 				895A9E1324931D7B003C15D5 /* Module */,
@@ -987,6 +1002,70 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		89F690A824AACDF300612514 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				89F690AC24AACE1200612514 /* Controller */,
+				89F690AB24AACE0F00612514 /* View */,
+				89F690AA24AACE0B00612514 /* Model */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		89F690A924AACDF900612514 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				89F690AF24AACE2100612514 /* Controller */,
+				89F690AE24AACE1E00612514 /* View */,
+				89F690AD24AACE1900612514 /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		89F690AA24AACE0B00612514 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89F690AB24AACE0F00612514 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89F690AC24AACE1200612514 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89F690AD24AACE1900612514 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89F690AE24AACE1E00612514 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89F690AF24AACE2100612514 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89F690B624AACF9900612514 /* UULoginBaseController.h */,
+				89F690B724AACF9900612514 /* UULoginBaseController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1245,6 +1324,7 @@
 				89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */,
 				8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */,
 				8998425E24A04C8B00881A29 /* UUImageCirculatingView.m in Sources */,
+				89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */,
 				89C40D282490835800AE29BC /* TFHpple.m in Sources */,
 				898526872491BB6E008099FB /* UUDataCache.m in Sources */,
 				8998426424A04D1D00881A29 /* UURippleButtonView.m in Sources */,
@@ -1291,10 +1371,12 @@
 				895A9E1924932371003C15D5 /* UUAnimatedTransitioning.m in Sources */,
 				890C0477246A446300E1242F /* UIScrollView+UU.m in Sources */,
 				895A9E0E249310E8003C15D5 /* UUNetWorkManager.m in Sources */,
+				89F690B824AACF9900612514 /* UULoginBaseController.m in Sources */,
 				890C046C246A3F2500E1242F /* UUTabBarController.m in Sources */,
 				8994FD4C24A196FB007FFC07 /* UUSelectionPopupView.m in Sources */,
 				8998426D24A0574700881A29 /* UUFloatingButton.m in Sources */,
 				896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */,
+				89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */,
 				8998426A24A0510200881A29 /* UUSwitchButton.m in Sources */,
 				897AED1C24A2E1EB007F8D50 /* UUCommentTextView.m in Sources */,
 				8957F79D2468E7F300132B13 /* main.m in Sources */,
