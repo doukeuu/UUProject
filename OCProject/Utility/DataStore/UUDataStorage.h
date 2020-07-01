@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UUDataStorage : NSObject
 
++ (NSString *)documentPath;
+
++ (BOOL)createFileDirectoryNonexistent:(NSString *)filePath;
+
++ (void)archiverObject:(id)object forKey:(NSString *)key atPath:(NSString *)filePath;
+
++ (id)unarchiverObjectForKey:(NSString *)key atPath:(NSString *)filePath;
 @end
 
 NS_ASSUME_NONNULL_END

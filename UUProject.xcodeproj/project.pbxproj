@@ -26,6 +26,12 @@
 		89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120492246E1E8F00E76B0F /* UITextView+UU.m */; };
 		89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120495246E307800E76B0F /* UIScrollView+Refresh.m */; };
 		89120499246E309300E76B0F /* UURefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120498246E309300E76B0F /* UURefresher.m */; };
+		89220B5524AC1561002B0A5E /* UULoginAreaCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B5424AC1561002B0A5E /* UULoginAreaCodeController.m */; };
+		89220B5924AC16BE002B0A5E /* UULoginPageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B5824AC16BE002B0A5E /* UULoginPageHandler.m */; };
+		89220B5C24AC2A35002B0A5E /* UUAdvertisementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B5B24AC2A35002B0A5E /* UUAdvertisementController.m */; };
+		89220B5F24AC2A44002B0A5E /* UUAdvertiseDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B5E24AC2A44002B0A5E /* UUAdvertiseDetailController.m */; };
+		89220B6224AC2B33002B0A5E /* UUAdvertisementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B6124AC2B33002B0A5E /* UUAdvertisementModel.m */; };
+		89220B6524AC2FC1002B0A5E /* UULaunchGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B6424AC2FC1002B0A5E /* UULaunchGuideController.m */; };
 		8953B28F2499A4750034306A /* UUNormalTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B28E2499A4750034306A /* UUNormalTableCell.m */; };
 		8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B2972499AAE30034306A /* UULoginTableCell.m */; };
 		8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B29A2499B3930034306A /* UUTextFieldTableCell.m */; };
@@ -159,6 +165,18 @@
 		89120497246E309300E76B0F /* UURefresher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UURefresher.h; sourceTree = "<group>"; };
 		89120498246E309300E76B0F /* UURefresher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UURefresher.m; sourceTree = "<group>"; };
 		8912049A246E315100E76B0F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		89220B5324AC1561002B0A5E /* UULoginAreaCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginAreaCodeController.h; sourceTree = "<group>"; };
+		89220B5424AC1561002B0A5E /* UULoginAreaCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULoginAreaCodeController.m; sourceTree = "<group>"; };
+		89220B5724AC16BE002B0A5E /* UULoginPageHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginPageHandler.h; sourceTree = "<group>"; };
+		89220B5824AC16BE002B0A5E /* UULoginPageHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULoginPageHandler.m; sourceTree = "<group>"; };
+		89220B5A24AC2A35002B0A5E /* UUAdvertisementController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAdvertisementController.h; sourceTree = "<group>"; };
+		89220B5B24AC2A35002B0A5E /* UUAdvertisementController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAdvertisementController.m; sourceTree = "<group>"; };
+		89220B5D24AC2A44002B0A5E /* UUAdvertiseDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAdvertiseDetailController.h; sourceTree = "<group>"; };
+		89220B5E24AC2A44002B0A5E /* UUAdvertiseDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAdvertiseDetailController.m; sourceTree = "<group>"; };
+		89220B6024AC2B33002B0A5E /* UUAdvertisementModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAdvertisementModel.h; sourceTree = "<group>"; };
+		89220B6124AC2B33002B0A5E /* UUAdvertisementModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAdvertisementModel.m; sourceTree = "<group>"; };
+		89220B6324AC2FC1002B0A5E /* UULaunchGuideController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULaunchGuideController.h; sourceTree = "<group>"; };
+		89220B6424AC2FC1002B0A5E /* UULaunchGuideController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULaunchGuideController.m; sourceTree = "<group>"; };
 		8953B28D2499A4750034306A /* UUNormalTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNormalTableCell.h; sourceTree = "<group>"; };
 		8953B28E2499A4750034306A /* UUNormalTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNormalTableCell.m; sourceTree = "<group>"; };
 		8953B2962499AAE30034306A /* UULoginTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginTableCell.h; sourceTree = "<group>"; };
@@ -511,6 +529,15 @@
 			path = Definition;
 			sourceTree = "<group>";
 		};
+		89220B5624AC16A8002B0A5E /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				89220B5724AC16BE002B0A5E /* UULoginPageHandler.h */,
+				89220B5824AC16BE002B0A5E /* UULoginPageHandler.m */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		8953B28C2499A3440034306A /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,10 +657,10 @@
 		895A9E1324931D7B003C15D5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				895A9E1624932310003C15D5 /* InteractJS */,
-				895A9E1424931F4C003C15D5 /* Structure */,
-				895A9E0524930A17003C15D5 /* Notification */,
 				89C40CE3249071AC00AE29BC /* HJVideoPlayer */,
+				895A9E1624932310003C15D5 /* InteractJS */,
+				895A9E0524930A17003C15D5 /* Notification */,
+				895A9E1424931F4C003C15D5 /* Structure */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1018,6 +1045,7 @@
 				89F690AF24AACE2100612514 /* Controller */,
 				89F690AE24AACE1E00612514 /* View */,
 				89F690AD24AACE1900612514 /* Model */,
+				89220B5624AC16A8002B0A5E /* Handler */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1025,6 +1053,8 @@
 		89F690AA24AACE0B00612514 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				89220B6024AC2B33002B0A5E /* UUAdvertisementModel.h */,
+				89220B6124AC2B33002B0A5E /* UUAdvertisementModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1039,6 +1069,12 @@
 		89F690AC24AACE1200612514 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				89220B6324AC2FC1002B0A5E /* UULaunchGuideController.h */,
+				89220B6424AC2FC1002B0A5E /* UULaunchGuideController.m */,
+				89220B5A24AC2A35002B0A5E /* UUAdvertisementController.h */,
+				89220B5B24AC2A35002B0A5E /* UUAdvertisementController.m */,
+				89220B5D24AC2A44002B0A5E /* UUAdvertiseDetailController.h */,
+				89220B5E24AC2A44002B0A5E /* UUAdvertiseDetailController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1062,6 +1098,8 @@
 			children = (
 				89F690B624AACF9900612514 /* UULoginBaseController.h */,
 				89F690B724AACF9900612514 /* UULoginBaseController.m */,
+				89220B5324AC1561002B0A5E /* UULoginAreaCodeController.h */,
+				89220B5424AC1561002B0A5E /* UULoginAreaCodeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1317,12 +1355,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C40D2A2490838F00AE29BC /* XPathQuery.m in Sources */,
+				89220B5524AC1561002B0A5E /* UULoginAreaCodeController.m in Sources */,
 				8983FF41249C541700A9D20A /* UUDistalAreaPicker.m in Sources */,
 				898526922491DBEB008099FB /* GTMBase64.m in Sources */,
 				8983FF4E249C5E5A00A9D20A /* UUNormalPickerView.m in Sources */,
 				89C40D292490838200AE29BC /* TFHppleElement.m in Sources */,
 				89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */,
 				8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */,
+				89220B5F24AC2A44002B0A5E /* UUAdvertiseDetailController.m in Sources */,
 				8998425E24A04C8B00881A29 /* UUImageCirculatingView.m in Sources */,
 				89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */,
 				89C40D282490835800AE29BC /* TFHpple.m in Sources */,
@@ -1341,6 +1381,7 @@
 				89C40D212490784C00AE29BC /* UUToolsNS.m in Sources */,
 				89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */,
 				8998426124A04CE200881A29 /* UUImageAutoScrollView.m in Sources */,
+				89220B5924AC16BE002B0A5E /* UULoginPageHandler.m in Sources */,
 				897AED1824A2DFEC007F8D50 /* UUDotPageControl.m in Sources */,
 				89C40D24249080CC00AE29BC /* UUHTMLFilter.m in Sources */,
 				8975A69A246BCA72002A8D93 /* UIImage+UU.m in Sources */,
@@ -1349,12 +1390,14 @@
 				897AED1124A2DC70007F8D50 /* UUSearchFielddView.m in Sources */,
 				89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */,
 				890C046F246A3F9D00E1242F /* UUBaseWebController.m in Sources */,
+				89220B6524AC2FC1002B0A5E /* UULaunchGuideController.m in Sources */,
 				8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */,
 				89940816249702D60004364A /* UUWebProxyManager.m in Sources */,
 				899408192497031E0004364A /* UUJSExportManager.m in Sources */,
 				89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */,
 				8983FF47249C56C700A9D20A /* UUCustomDatePicker.m in Sources */,
 				8998426724A04D7100881A29 /* UUBadgeButton.m in Sources */,
+				89220B5C24AC2A35002B0A5E /* UUAdvertisementController.m in Sources */,
 				89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */,
 				890C0472246A3FD800E1242F /* UUBaseTableController.m in Sources */,
 				895A9E1C24932392003C15D5 /* UUInteractiveTransition.m in Sources */,
@@ -1383,6 +1426,7 @@
 				8901D5F324984FEA000EF470 /* UUBulgeTabBar.m in Sources */,
 				89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */,
 				890C045E246A3D4500E1242F /* UUBaseModel.m in Sources */,
+				89220B6224AC2B33002B0A5E /* UUAdvertisementModel.m in Sources */,
 				8975A691246B981D002A8D93 /* NSArray+UU.m in Sources */,
 				8975A697246BC444002A8D93 /* UIButton+UU.m in Sources */,
 				890C0466246A3E8000E1242F /* UUBaseController.m in Sources */,
