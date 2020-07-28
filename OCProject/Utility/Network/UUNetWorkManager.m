@@ -8,106 +8,68 @@
 
 #import "UUNetWorkManager.h"
 #import "UUDeviceCheck.h"
-#import "UUToolsUI.h"
 #import <AFNetworking.h>
+#import <AFNetworkActivityIndicatorManager.h>
 
-//电池条上网络活动提示(菊花转动)
-//#import <AFNetworkActivityIndicatorManager.h>
+UUNetworkConfigKey const UUNetworkConfigSerializer = @"kNetworkConfigSerializer";
+UUNetworkConfigKey const UUNetworkConfigAccessToken = @"kNetworkConfigAccessToken";
+
+NSErrorUserInfoKey const UUNetworkErrorTips = @"kNetworkErrorTips";
+NSErrorUserInfoKey const UUNetworkErrorCode = @"kNetworkErrorCode";
+
 
 @interface UUNetWorkManager ()
 
-@property (nonatomic, assign) NSInteger showHUD;    // HUD样式
-@property (nonatomic, assign) NSInteger endRefresh; // 停止刷新
+@property (nonatomic, strong) AFHTTPSessionManager *afManager;
+@property (nonatomic, strong) NSString *userToken;
 @end
 
 @implementation UUNetWorkManager
 
 + (instancetype)shareManager {
-
-    static UUNetWorkManager *httpManager = nil;
+    static UUNetWorkManager *networkManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        httpManager = [[UUNetWorkManager alloc] init];
+        networkManager = [[UUNetWorkManager alloc] init];
     });
-    return httpManager;
-}
-
-+ (AFHTTPSessionManager *)sessionManager {
-
-    static AFHTTPSessionManager *afManager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        afManager = [AFHTTPSessionManager manager];
-        [self configureSessionManager:afManager];
-    });
-    return afManager;
+    return networkManager;
 }
 
 - (instancetype)init {
-
     if (self = [super init]) {
-        _showHUD = 1;
-        _endRefresh = 0;
+        _afManager = [AFHTTPSessionManager manager];
+        [self commonInitialize];
     }
     return self;
 }
 
-#pragma mark - Initial Configure
+#pragma mark - Initialization
 
-- (void)checkNetwork {
-    
-    /*
-    //当使用AF发送网络请求时,只要有网络操作,那么在状态栏(电池条)wifi符号旁边显示  菊花提示
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
-    //能够检测当前网络是wifi,蜂窝网络,没有网
-    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        // 网络发生变化时 会触发这里的代码
-        switch (status) {
-            case AFNetworkReachabilityStatusReachableViaWiFi:
-                DDLogVerbose(@"当前是wifi环境");
-                break;
-            case AFNetworkReachabilityStatusNotReachable:
-                DDLogVerbose(@"当前无网络");
-                break;
-            case AFNetworkReachabilityStatusUnknown:
-                DDLogVerbose(@"当前网络未知");
-                break;
-            case AFNetworkReachabilityStatusReachableViaWWAN:
-                DDLogVerbose(@"当前是蜂窝网络");
-                break;
-            default:
-                break;
-        }
-    }];
-    //开启网络检测
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
-    //网络活动发生变化时,会发送下方key 的通知,可以在通知中心中添加检测
-    //AFNetworkingReachabilityDidChangeNotification
-    
-     [[NSNotificationCenter defaultCenter] addObserver:nil selector:nil name:AFNetworkingReachabilityDidChangeNotification object:nil];
-     */
+// 初始化
+- (void)commonInitialize {
+    NSURL *url = [NSURL URLWithString:kAppBaseURL];
+    [self.afManager setValue:url forKey:@"_baseURL"];
+
+    [self configureRequestSerializer];
+
+    NSMutableSet *mutableSet = [self.afManager.responseSerializer.acceptableContentTypes mutableCopy];
+    [mutableSet addObject:@"text/html"];
+    [mutableSet addObject:@"text/xml"];
+    [mutableSet addObject:@"text/plain"];
+    self.afManager.responseSerializer.acceptableContentTypes = [mutableSet copy];
+
+    [self startNetworkReachabilityMonitoring];
 }
 
-+ (void)configureSessionManager:(AFHTTPSessionManager *)manager {
-
-    NSURL *url = [NSURL URLWithString:kAppBaseURL];
-    [manager setValue:url forKey:@"_baseURL"];
-
-    manager.requestSerializer.timeoutInterval = 15.f;
+// 配置请求序列化属性
+- (void)configureRequestSerializer {
+    self.afManager.requestSerializer.timeoutInterval = 20.f;
     NSString *userAgent = [self userAgentForRequestHeader];
-    [manager.requestSerializer setValue:userAgent forHTTPHeaderField:@"User-Agent"];
-
-    NSMutableSet *mutableSet = [manager.responseSerializer.acceptableContentTypes mutableCopy];
-    [mutableSet addObject:@"text/html"];
-    manager.responseSerializer.acceptableContentTypes = [mutableSet copy];
-
-    [self networkReachabilityForManager:manager];
+    [self.afManager.requestSerializer setValue:userAgent forHTTPHeaderField:@"User-Agent"];
 }
 
 // 拼接请求的header的User-Agent
-+ (NSString *)userAgentForRequestHeader {
-
+- (NSString *)userAgentForRequestHeader {
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     NSString *appName = info[@"CFBundleDisplayName"];
     NSString *appVersion = info[@"CFBundleShortVersionString"];
@@ -121,126 +83,184 @@
 }
 
 // 网络情况监听
-+ (void)networkReachabilityForManager:(AFHTTPSessionManager *)manager {
-
-    [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+- (void)startNetworkReachabilityMonitoring {
+    //当使用AF发送网络请求时,只要有网络操作,那么在状态栏(电池条)wifi符号旁边显示  菊花提示
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+    [self.afManager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
             case AFNetworkReachabilityStatusUnknown:
-//                [PromptHUD showTitle:@"未知网络" inView:UIApplication.sharedApplication.keyWindow];
                 NSLog(@"Network - 未知网络");
                 break;
             case AFNetworkReachabilityStatusNotReachable:
-//                [PromptHUD showTitle:@"网络未连接" inView:UIApplication.sharedApplication.keyWindow];
                 NSLog(@"Network - 网络未连接");
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
-                NSLog(@"Network - Wi-Fi");
+                NSLog(@"Network - WiFi");
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
                 NSLog(@"Network - 2G、3G、4G");
                 break;
         }
     }];
-    [manager.reachabilityManager startMonitoring];
+    [self.afManager.reachabilityManager startMonitoring];
+    
+    //网络活动发生变化时,会发送下方key 的通知,可以在通知中心中添加检测
+    //AFNetworkingReachabilityDidChangeNotification
 }
 
 #pragma mark - Setter Configure
 
-// 公用的设置方法
-+ (void)setConfig:(id)config forKey:(HTTPManagerConfig)key {
-
-    switch (key) {
-        case HTTPManagerConfigBaseURL:
-            [self configSessionManagerBaseURL:config];
-            break;
-        case HTTPManagerConfigShowHUD:
-            [self configShowProgressHUD:config];
-            break;
-        case HTTPManagerConfigEndRefresh:
-            [self configShouldEndRefresh:config];
-            break;
-    }
-}
-
 // 设置网络请求baseURL
-+ (void)configSessionManagerBaseURL:(id)config {
++ (void)resetSessionManagerBaseURL:(NSString *)baseURLString {
+    if (!baseURLString) return;
+    NSURL *url = [NSURL URLWithString:baseURLString];
+    [[UUNetWorkManager shareManager].afManager setValue:url forKey:@"_baseURL"];
+}
 
-    if (!config) return;
-    if ([config isKindOfClass:[NSString class]]) {
-        if ([config length] == 0) return;
-        NSURL *url = [NSURL URLWithString:config];
-        [[UUNetWorkManager sessionManager] setValue:url forKey:@"_baseURL"];
-    } else if ([config isKindOfClass:[NSURL class]]) {
-        if ([config absoluteString].length == 0) return;
-        [[UUNetWorkManager sessionManager] setValue:config forKey:@"_baseURL"];
+#pragma mark - Request
+
+// get请求
++ (void)GET:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure {
+    [[UUNetWorkManager shareManager] taskWithMethod:@"GET" path:path param:param config:config success:success failure:failure];
+}
+
+// post请求
++ (void)POST:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure {
+    [[UUNetWorkManager shareManager] taskWithMethod:@"POST" path:path param:param config:config success:success failure:failure];
+}
+
+// put请求
++ (void)PUT:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure {
+    [[UUNetWorkManager shareManager] taskWithMethod:@"PUT" path:path param:param config:config success:success failure:failure];
+}
+
+// patch请求
++ (void)PATCH:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure {
+    [[UUNetWorkManager shareManager] taskWithMethod:@"PATCH" path:path param:param config:config success:success failure:failure];
+}
+
+// delete请求
++ (void)DELETE:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure {
+    [[UUNetWorkManager shareManager] taskWithMethod:@"DELETE" path:path param:param config:config success:success failure:failure];
+}
+
+// 上传文件POST网络请求
++ (void)UPLOAD:(NSString *)path param:(NSDictionary *)param content:(NSDictionary *)content config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure {
+    
+    UUNetWorkManager *manager = [UUNetWorkManager shareManager];
+    [manager resetPath:&path parameters:&param];
+    
+    if (config[UUNetworkConfigSerializer]) { // 参数序列化方式
+        [manager handleSerializerConfigure:config];
+    }
+    // 添加token到请求头
+    [manager handleRequestHeaderConfigure:config];
+    
+    NSURLSessionTask *task = [manager.afManager POST:path parameters:param headers:@{} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [self handleContent:content formData:formData];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [manager handleSuccess:responseObject task:task block:success];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [manager handleFailure:error task:task block:failure];
+    }];
+    [manager querySameRequest:task cancelNew:YES];
+}
+
+// 网络请求方法
+- (NSURLSessionDataTask *)taskWithMethod:(NSString *)method path:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure {
+    
+    [self resetPath:&path parameters:&param];
+    
+    if (config[UUNetworkConfigSerializer]) { // 参数序列化方式
+        [self handleSerializerConfigure:config];
+    }
+    // 添加token到请求头
+    [self handleRequestHeaderConfigure:config];
+    
+    NSURLSessionDataTask *task;
+    task = [self.afManager dataTaskWithHTTPMethod:method URLString:path parameters:param headers:nil uploadProgress:nil downloadProgress:nil
+    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [self handleSuccess:responseObject task:task block:success];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self handleFailure:error task:task block:failure];
+    }];
+    [task resume];
+    [self querySameRequest:task cancelNew:YES];
+    return task;
+}
+
+#pragma mark - Before Request
+
+// 重置请求接口URL及参数列表
+- (void)resetPath:(NSString **)path parameters:(NSDictionary **)param {
+    NSAssert(*path, @"地址不能为空");
+
+    NSString *originPath = *path;
+    NSDictionary *originParam = *param;
+    NSString *fixedPath = @"materialMall/management_interface";
+    NSString *functionName;
+
+    NSMutableArray *originPaths = (NSMutableArray*)[originPath componentsSeparatedByString:@"/"];
+    NSMutableArray *fixedPaths = (NSMutableArray *)[fixedPath componentsSeparatedByString:@"/"];
+
+    if (originPaths.count > 1) {
+        functionName = [originPaths.lastObject copy];
+        [originPaths removeLastObject];
+        if (![originPaths containsObject:fixedPaths.lastObject]) {
+            [originPaths addObject:fixedPaths.lastObject];
+        }
+        *path = [originPaths componentsJoinedByString:@"/"];
+    }else{
+        functionName = originPath;
+        *path = fixedPath;
+    }
+
+    NSMutableDictionary *newParam = [NSMutableDictionary dictionary];
+    [newParam setValue:functionName forKey:@"function_name"];
+    [newParam setValue:originParam forKey:@"params"];
+
+    if ([NSJSONSerialization isValidJSONObject:newParam]) {
+        NSData *data = [NSJSONSerialization dataWithJSONObject:newParam
+                                                       options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *paramStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        *param = @{@"json_msg":paramStr};
     }
 }
 
-// 设置progressHUD显示样式
-+ (void)configShowProgressHUD:(id)config {
-
-    if (![config isKindOfClass:[NSNumber class]]  &&
-        ![config isKindOfClass:[NSString class]]) return;
-    [UUNetWorkManager shareManager].showHUD = [config integerValue];
+// 参数序列化方式设置
+- (void)handleSerializerConfigure:(NSDictionary<UUNetworkConfigKey,id> *)config {
+    NSString *serializer = config[UUNetworkConfigSerializer];
+    if ([serializer isEqualToString:@"json"]) {
+        self.afManager.requestSerializer = [AFJSONRequestSerializer serializer];
+    } else if ([serializer isEqualToString:@"plist"]) {
+        self.afManager.requestSerializer = [AFPropertyListRequestSerializer serializer];
+    } else {
+        if ([self.afManager.requestSerializer isMemberOfClass:[AFHTTPRequestSerializer class]]) return;
+        self.afManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    }
+    [self configureRequestSerializer];
 }
 
-// 设置MJRefresh是否停止刷新
-+ (void)configShouldEndRefresh:(id)config {
-
-    if (![config isKindOfClass:[NSNumber class]]  &&
-        ![config isKindOfClass:[NSString class]]) return;
-    [UUNetWorkManager shareManager].endRefresh = [config integerValue];
+// 请求头中添加token
+- (void)handleRequestHeaderConfigure:(NSDictionary<UUNetworkConfigKey,id> *)config {
+    if (self.userToken.length == 0) {
+        NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"USER_TOKEN"];
+        if (token.length > 0) self.userToken = token;
+    }
+    if (self.userToken.length > 0) {
+        [self.afManager.requestSerializer setValue:self.userToken forHTTPHeaderField:@"USER_TOKEN"];
+    }
+    NSString *accessToken = config[UUNetworkConfigAccessToken];
+    if (accessToken) {
+        [self.afManager.requestSerializer setValue:accessToken forHTTPHeaderField:@"ACCESS_TOKEN"];
+    }
 }
-
-#pragma mark - POST
-
-+ (void)POST:(NSString *)path params:(NSDictionary *)params completeHandler:(void (^)(id, NSError *))block {
-
-    UIView *progressHUD = [self showProgressHUD];
-    [self resetPath:&path parameters:&params];
-    
-    NSURLSessionTask *task = [[UUNetWorkManager sessionManager] POST:path parameters:params headers:@{} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [self endScrollViewRefreshing];
-        [self handleSuccess:responseObject block:block];
-        [self hideProgressHUD:progressHUD];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [self endScrollViewRefreshing];
-        [self handleFailure:error block:block];
-        [self hideProgressHUD:progressHUD];
-    }];
-    [self querySameRequest:task cancelNew:YES];
-}
-
-+ (void)UPLOAD:(NSString *)path params:(NSDictionary *)params content:(NSDictionary *)content completeHandler:(void (^)(id, NSError *))block {
-
-    [UUNetWorkManager shareManager].showHUD = 2;
-    __block UIView *progressHUD = [self showProgressHUD];
-    [self resetPath:&path parameters:&params];
-    
-    NSURLSessionTask *task = [[UUNetWorkManager sessionManager] POST:path parameters:params headers:@{}
-                                      constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-                                          [self handleContent:content formData:formData];
-                                      } progress:^(NSProgress * _Nonnull uploadProgress) {
-                                          if (progressHUD) {
-                                              double total = uploadProgress.totalUnitCount;
-                                              double done = uploadProgress.completedUnitCount;
-                                              [progressHUD setValue:@(total / done) forKey:@"progress"];
-                                          }
-                                      } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                          [self handleSuccess:responseObject block:block];
-                                          [self hideProgressHUD:progressHUD];
-                                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                          [self handleFailure:error block:block];
-                                          [self hideProgressHUD:progressHUD];
-                                      }];
-    [self querySameRequest:task cancelNew:YES];
-}
-
-#pragma mark - Handle Block
 
 // 处理上传文件的添加
 + (void)handleContent:(NSDictionary *)content formData:(id<AFMultipartFormData>)formData {
-
     if (!content || content.count == 0) return ;
 
     NSArray *array = content.allKeys;
@@ -286,23 +306,32 @@
     }
 }
 
-// 处理成功返回结果
-+ (void)handleSuccess:(id)responseObject block:(CompleteBlock)block {
+#pragma mark - After Response
 
+// 处理成功返回结果
+- (void)handleSuccess:(id)responseObject task:(NSURLSessionDataTask *)task block:(SuccessBlock)block {
+    //  返回头中有token值，则缓存
+    NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+    NSString *token = response.allHeaderFields[@"USER_TOKEN"];
+    if (token.length == 0) return;
+    self.userToken = token;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"USER_TOKEN"];
+    });
+    
+    // 返回体中的信息处理
     NSString *status = [responseObject objectForKey:@"status"];
     if (status && [status isEqualToString:@"200"]) {
         id data = [responseObject objectForKey:@"data"];
-        if (block) block(data, nil);
+        if (block) block(data);
 
     } else {
         id message = [responseObject objectForKey:@"message"];
         if ([message isKindOfClass:[NSDictionary class]]) {
             NSString *msg = [message valueForKey:@"msg"];
             NSLog(@"Error 400 = %@", msg);
-//            [PromptHUD showTitle:msg inView:UIApplication.sharedApplication.keyWindow];
         } else if ([message isKindOfClass:[NSString class]]) {
             NSLog(@"Error 400 = %@", message);
-//            [PromptHUD showTitle:message inView:UIApplication.sharedApplication.keyWindow];
         } else {
             NSLog(@"Error 400 = %@", message);
         }
@@ -310,132 +339,44 @@
         NSError *statusErr = [NSError errorWithDomain:NSURLErrorDomain
                                                  code:NSURLErrorBadServerResponse
                                              userInfo:errorInfo];
-        if (block) block(nil, statusErr);
+        if (block) block(statusErr);
     }
 }
 
-// 处理失败返回结果
-+ (void)handleFailure:(NSError *)error block:(CompleteBlock)block {
-
-    NSLog(@"%@", error);
+- (void)handleFailure:(NSError *)error task:(NSURLSessionDataTask *)task block:(FailureBlock)block {
+    NSLog(@"-- %@", error);
     if ([error.domain isEqualToString:NSURLErrorDomain] && error.code == -999) {
         return; // 网络请求被取消
     }
-    if ([UUNetWorkManager sessionManager].reachabilityManager.isReachable) {
-//        [PromptHUD showTitle:@"网络错误" inView:[UIApplication sharedApplication].keyWindow];
-    } else {
-//        [PromptHUD showTitle:@"请检查网路设置" inView:[UIApplication sharedApplication].keyWindow];
-    }
-    if (block) block(nil, error);
+    NSInteger statusCode = [(NSHTTPURLResponse *)task.response statusCode];
+        NSError *underlyingError = error;
+        if (error.userInfo[NSUnderlyingErrorKey]) {
+            underlyingError = error.userInfo[NSUnderlyingErrorKey];
+        }
+        NSString *tips;
+        if (statusCode == 401) {
+            tips = @"";
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                // 可以发送一个通知
+            });
+        } else if (statusCode == 404) {
+            tips = @"温馨提示：数据走丢了！";
+        } else {
+            NSData *errorData = underlyingError.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+            NSString *errorString = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
+            tips = errorString ?: @"未找到错误信息";
+        }
+        NSMutableDictionary *userInfo = [underlyingError.userInfo mutableCopy];
+        [userInfo setObject:tips forKey:UUNetworkErrorTips];
+        [userInfo setObject:@(statusCode) forKey:UUNetworkErrorCode];
+        if (block) block([userInfo copy]);
 }
 
 #pragma mark - Utility
 
-// 重置请求接口URL及参数列表
-+ (void)resetPath:(NSString **)path parameters:(NSDictionary **)param {
-
-    NSAssert(*path, @"地址不能为空");
-
-    NSString *originPath = *path;
-    NSDictionary *originParam = *param;
-    NSString *fixedPath = @"materialMall/management_interface";
-    NSString *functionName;
-
-    NSMutableArray *originPaths = (NSMutableArray*)[originPath componentsSeparatedByString:@"/"];
-    NSMutableArray *fixedPaths = (NSMutableArray *)[fixedPath componentsSeparatedByString:@"/"];
-
-    if (originPaths.count > 1) {
-        functionName = [originPaths.lastObject copy];
-        [originPaths removeLastObject];
-        if (![originPaths containsObject:fixedPaths.lastObject]) {
-            [originPaths addObject:fixedPaths.lastObject];
-        }
-        *path = [originPaths componentsJoinedByString:@"/"];
-    }else{
-        functionName = originPath;
-        *path = fixedPath;
-    }
-
-    NSMutableDictionary *newParam = [NSMutableDictionary dictionary];
-    [newParam setValue:functionName forKey:@"function_name"];
-    [newParam setValue:originParam forKey:@"params"];
-
-    if ([NSJSONSerialization isValidJSONObject:newParam]) {
-        NSData *data = [NSJSONSerialization dataWithJSONObject:newParam
-                                                       options:NSJSONWritingPrettyPrinted error:nil];
-        NSString *paramStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        *param = @{@"json_msg":paramStr};
-    }
-}
-
-// 显示HUD
-+ (UIView *)showProgressHUD {
-
-    __block UIView *progressHUD = nil;
-    if ([NSThread isMainThread]) {
-        if ([UUNetWorkManager shareManager].showHUD == 1) {
-//            progressHUD = [PromptHUD showIndicatorInView:UIApplication.sharedApplication.keyWindow];
-        } else if ([UUNetWorkManager shareManager].showHUD == 2) {
-//            progressHUD = [PromptHUD showAnnularForProgressInView:UIApplication.sharedApplication.keyWindow];
-        }
-    } else {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            if ([UUNetWorkManager shareManager].showHUD == 1) {
-//                progressHUD = [PromptHUD showIndicatorInView:UIApplication.sharedApplication.keyWindow];
-            } else if ([UUNetWorkManager shareManager].showHUD == 2) {
-//                progressHUD = [PromptHUD showAnnularForProgressInView:UIApplication.sharedApplication.keyWindow];
-            }
-        });
-    }
-    return progressHUD;
-}
-
-+ (UIView *)currentView {
-
-    UIViewController *controller = [UUToolsUI topViewControllerFrom:[UIApplication sharedApplication].keyWindow.rootViewController];
-    return controller.view;
-}
-
-
-// 隐藏HUD
-+ (void)hideProgressHUD:(UIView *)hud {
-
-    if ([UUNetWorkManager shareManager].showHUD != 0) {
-//        [PromptHUD hideHUD:hud];
-    }
-    [UUNetWorkManager shareManager].showHUD = 1; // 设置成默认HUD样式
-}
-
-// 停止刷新
-+ (void)endScrollViewRefreshing {
-
-    if ([UUNetWorkManager shareManager].endRefresh == 0) return;
-    UIViewController *rootController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    UIViewController *topController = [UUToolsUI topViewControllerFrom:rootController];
-    UIView *currentView = topController.view;
-    if (!currentView) return;
-
-    UIScrollView *scrollView = nil;
-    for (UIView *subview in currentView.subviews) {
-        if ([subview isKindOfClass:[UIScrollView class]]) {
-            scrollView = (UIScrollView *)subview;
-            break;
-        }
-    }
-    if (!scrollView) return;
-//    if ([scrollView.mj_header isRefreshing]) {
-//        [scrollView.mj_header endRefreshing];
-//    }
-//    if ([scrollView.mj_footer isRefreshing]) {
-//        [scrollView.mj_footer endRefreshing];
-//    }
-    [UUNetWorkManager shareManager].endRefresh = 0;
-}
-
 // 查询当前正在运行的task，停止相同的task
-+ (void)querySameRequest:(NSURLSessionTask *)newTask cancelNew:(BOOL)cancelNew {
-
-    NSMutableArray *oldTasks = [[UUNetWorkManager sessionManager].tasks mutableCopy];
+- (void)querySameRequest:(NSURLSessionTask *)newTask cancelNew:(BOOL)cancelNew {
+    NSMutableArray *oldTasks = [[UUNetWorkManager shareManager].afManager.tasks mutableCopy];
     if (oldTasks.count > 0) {
         [oldTasks removeLastObject];
     } else {
@@ -450,12 +391,13 @@
 }
 
 // 比较两个NSURLRequest是否相等
-+ (BOOL)compareEqualRequest:(NSURLRequest *)compare to:(NSURLRequest *)toValue {
-
+- (BOOL)compareEqualRequest:(NSURLRequest *)compare to:(NSURLRequest *)toValue {
     BOOL sameMethod = [compare.HTTPMethod isEqualToString:toValue.HTTPMethod];
     BOOL sameURL = [compare.URL.absoluteString isEqualToString:toValue.URL.absoluteString];
     if (sameMethod && sameURL) {
-        if ([compare.HTTPMethod isEqualToString:@"GET"]) {
+        if ([compare.HTTPMethod isEqualToString:@"GET"] ||
+            [compare.HTTPMethod isEqualToString:@"HEAD"] ||
+            [compare.HTTPMethod isEqualToString:@"DELETE"]) {
             return YES;
         } else if ([compare.HTTPBody isEqualToData:toValue.HTTPBody]) {
             return YES;

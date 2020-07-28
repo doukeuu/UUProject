@@ -10,38 +10,66 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, HTTPManagerConfig) {
-    HTTPManagerConfigBaseURL,    // 设置网络请求的baseURL
-    HTTPManagerConfigShowHUD,    // 显示HUD样式，0 不显示，1 菊花（默认），2 圆形进度
-    HTTPManagerConfigEndRefresh, // 停止刷新，0 不停止（默认），1 停止
-};
+typedef NSString * UUNetworkConfigKey NS_EXTENSIBLE_STRING_ENUM;
 
-typedef void (^CompleteBlock)(id _Nullable object, NSError * _Nullable error);
+FOUNDATION_EXPORT UUNetworkConfigKey const UUNetworkConfigSerializer;  // NSString 参数序列化类型，包含form、json、plist
+FOUNDATION_EXPORT UUNetworkConfigKey const UUNetworkConfigAccessToken; // NSString 需要添加到请求头里的token值
+
+FOUNDATION_EXPORT NSErrorUserInfoKey const UUNetworkErrorTips; // 错误的userInfo中的提示信息key
+FOUNDATION_EXPORT NSErrorUserInfoKey const UUNetworkErrorCode; // 错误的userInfo中的错误码key
+
+typedef void (^SuccessBlock)(id _Nullable result);                            // 成功回调
+typedef void (^FailureBlock)(NSDictionary<NSErrorUserInfoKey, id> *userInfo); // 失败回调
+
 
 @interface UUNetWorkManager : NSObject
 
-/// 设置属性，key是HTTPManagerConfig枚举值
-+ (void)setConfig:(id)config forKey:(HTTPManagerConfig)key;
++ (instancetype)shareManager;
++ (instancetype)new  NS_UNAVAILABLE;
+- (instancetype)init NS_UNAVAILABLE;
 
-/**
- 普通网络POST请求
- 
- @param path 请求接口
- @param params 参数字典
- @param block 请求结果回调
- */
-+ (void)POST:(NSString *)path params:(NSDictionary *)params completeHandler:(void (^)(id object, NSError *error))block;
+/// 设置网络请求baseURL
++ (void)resetSessionManagerBaseURL:(NSString *)baseURLString;
 
-/**
- 上传文件POST网络请求
- 
- @param path    请求接口
- @param params  参数字典
- @param content 上传的内容字典，key作为name时，value只能是单个的image/data/filePath；
- key不作为name时，value可以为数组，数组内容可以为image/data/filePath其中的一类
- @param block   请求结果回调
- */
-+ (void)UPLOAD:(NSString *)path params:(NSDictionary *)params content:(NSDictionary *)content completeHandler:(void (^)(id object, NSError *error))block;
+/// get请求
++ (void)GET:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+/// post请求
++ (void)POST:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+/// put请求
++ (void)PUT:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+/// patch请求
++ (void)PATCH:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+/// delete请求
++ (void)DELETE:(NSString *)path param:(NSDictionary *)param config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+/// 上传文件POST网络请求
+/// @param path 请求接口
+/// @param param 参数字典
+/// @param content 上传的内容字典，key作为name时，value只能是单个的image/data/filePath；
+/// key不作为name时，value可以为数组，数组内容可以为image/data/filePath其中的一类
+/// @param config 配置
+/// @param success 成功回调
+/// @param failure 失败回调
++ (void)UPLOAD:(NSString *)path param:(NSDictionary *)param content:(NSDictionary *)content
+        config:(NSDictionary<UUNetworkConfigKey,id> *)config success:(SuccessBlock)success failure:(FailureBlock)failure;
+
+/// 网络请求方法
+/// @param method 方法名
+/// @param path 请求接口
+/// @param param 参数字典
+/// @param config 方法配置
+/// @param success 成功回调
+/// @param failure 失败回调
+- (nullable NSURLSessionDataTask *)taskWithMethod:(NSString *)method
+                                             path:(NSString *)path
+                                            param:(nullable NSDictionary *)param
+                                           config:(nullable NSDictionary<UUNetworkConfigKey, id> *)config
+                                          success:(nullable SuccessBlock)success
+                                          failure:(nullable FailureBlock)failure;
 
 @end
 

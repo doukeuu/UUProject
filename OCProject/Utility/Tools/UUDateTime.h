@@ -10,13 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXTERN NSString *const DateHyphenTimeColonFormat;     // 日期连字符分割，时间冒号分割
-FOUNDATION_EXTERN NSString *const DateUnderScoreTimeColonFormat; // 日期下划线分割，时间冒号分割
-FOUNDATION_EXTERN NSString *const DateSlashTimeColonFormat;      // 日期斜杠分割，时间冒号分割
-FOUNDATION_EXTERN NSString *const DateHyphenFormat;              // 日期格式，连字符分割
-FOUNDATION_EXTERN NSString *const DateUnderScoreFormat;          // 日期格式，下划线分割
-FOUNDATION_EXTERN NSString *const DateSlashFormat;               // 日期格式，斜杠分割
-FOUNDATION_EXTERN NSString *const TimeColonFormat;               // 时间格式，冒号分割
+FOUNDATION_EXPORT NSString *const DateHyphenTimeColonFormat;     // 日期连字符分割，时间冒号分割
+FOUNDATION_EXPORT NSString *const DateUnderScoreTimeColonFormat; // 日期下划线分割，时间冒号分割
+FOUNDATION_EXPORT NSString *const DateSlashTimeColonFormat;      // 日期斜杠分割，时间冒号分割
+FOUNDATION_EXPORT NSString *const DateHyphenFormat;              // 日期格式，连字符分割
+FOUNDATION_EXPORT NSString *const DateUnderScoreFormat;          // 日期格式，下划线分割
+FOUNDATION_EXPORT NSString *const DateSlashFormat;               // 日期格式，斜杠分割
+FOUNDATION_EXPORT NSString *const TimeColonFormat;               // 时间格式，冒号分割
 
 /// 24小时制
 @interface UUDateTime : NSObject

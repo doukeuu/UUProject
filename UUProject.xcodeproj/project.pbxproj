@@ -86,6 +86,12 @@
 		8998426724A04D7100881A29 /* UUBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426624A04D7100881A29 /* UUBadgeButton.m */; };
 		8998426A24A0510200881A29 /* UUSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426924A0510200881A29 /* UUSwitchButton.m */; };
 		8998426D24A0574700881A29 /* UUFloatingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426C24A0574700881A29 /* UUFloatingButton.m */; };
+		89A90A1C24C9726D00D48EA1 /* UUSearchPatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A1B24C9726D00D48EA1 /* UUSearchPatternController.m */; };
+		89A90A2024C972BE00D48EA1 /* UUSearchPatternInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A1F24C972BE00D48EA1 /* UUSearchPatternInputView.m */; };
+		89A90A2324C972D700D48EA1 /* UUSearchPatternFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A2224C972D700D48EA1 /* UUSearchPatternFlowLayout.m */; };
+		89A90A2624C972F800D48EA1 /* UUSearchPatternKeyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A2524C972F800D48EA1 /* UUSearchPatternKeyCell.m */; };
+		89A90A2924C9731000D48EA1 /* UUSearchPatternHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A2824C9731000D48EA1 /* UUSearchPatternHeaderView.m */; };
+		89A90A2C24C979E300D48EA1 /* UUSearchDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A2B24C979E300D48EA1 /* UUSearchDemoController.m */; };
 		89AED721249D9C5600E2F49A /* UUSegmentButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AED720249D9C5600E2F49A /* UUSegmentButtonView.m */; };
 		89C40CE22490713F00AE29BC /* NSString+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40CE12490713F00AE29BC /* NSString+UI.m */; };
 		89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D1D2490783900AE29BC /* UUToolsUI.m */; };
@@ -283,6 +289,18 @@
 		8998426924A0510200881A29 /* UUSwitchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSwitchButton.m; sourceTree = "<group>"; };
 		8998426B24A0574700881A29 /* UUFloatingButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUFloatingButton.h; sourceTree = "<group>"; };
 		8998426C24A0574700881A29 /* UUFloatingButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUFloatingButton.m; sourceTree = "<group>"; };
+		89A90A1A24C9726D00D48EA1 /* UUSearchPatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchPatternController.h; sourceTree = "<group>"; };
+		89A90A1B24C9726D00D48EA1 /* UUSearchPatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSearchPatternController.m; sourceTree = "<group>"; };
+		89A90A1E24C972BE00D48EA1 /* UUSearchPatternInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchPatternInputView.h; sourceTree = "<group>"; };
+		89A90A1F24C972BE00D48EA1 /* UUSearchPatternInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSearchPatternInputView.m; sourceTree = "<group>"; };
+		89A90A2124C972D700D48EA1 /* UUSearchPatternFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchPatternFlowLayout.h; sourceTree = "<group>"; };
+		89A90A2224C972D700D48EA1 /* UUSearchPatternFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSearchPatternFlowLayout.m; sourceTree = "<group>"; };
+		89A90A2424C972F800D48EA1 /* UUSearchPatternKeyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchPatternKeyCell.h; sourceTree = "<group>"; };
+		89A90A2524C972F800D48EA1 /* UUSearchPatternKeyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSearchPatternKeyCell.m; sourceTree = "<group>"; };
+		89A90A2724C9731000D48EA1 /* UUSearchPatternHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchPatternHeaderView.h; sourceTree = "<group>"; };
+		89A90A2824C9731000D48EA1 /* UUSearchPatternHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSearchPatternHeaderView.m; sourceTree = "<group>"; };
+		89A90A2A24C979E300D48EA1 /* UUSearchDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchDemoController.h; sourceTree = "<group>"; };
+		89A90A2B24C979E300D48EA1 /* UUSearchDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSearchDemoController.m; sourceTree = "<group>"; };
 		89AED71F249D9C5600E2F49A /* UUSegmentButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSegmentButtonView.h; sourceTree = "<group>"; };
 		89AED720249D9C5600E2F49A /* UUSegmentButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSegmentButtonView.m; sourceTree = "<group>"; };
 		89C40CE02490713F00AE29BC /* NSString+UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UI.h"; sourceTree = "<group>"; };
@@ -475,6 +493,7 @@
 		890C0458246A3AFB00E1242F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				89A90A1924C9724100D48EA1 /* SearchPattern */,
 				89F690B024AACE7300612514 /* UUImageBrowseController.h */,
 				89F690B124AACE7300612514 /* UUImageBrowseController.m */,
 				89F690B324AACF0700612514 /* UUImageClippingController.h */,
@@ -657,7 +676,6 @@
 		895A9E1324931D7B003C15D5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				89C40CE3249071AC00AE29BC /* HJVideoPlayer */,
 				895A9E1624932310003C15D5 /* InteractJS */,
 				895A9E0524930A17003C15D5 /* Notification */,
 				895A9E1424931F4C003C15D5 /* Structure */,
@@ -725,6 +743,7 @@
 		896CF0D02468FB4900D02CD2 /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				89C40CE3249071AC00AE29BC /* HJVideoPlayer */,
 				895A9E1224931D49003C15D5 /* GTMBase64 */,
 				89C40D13249071D700AE29BC /* TFHpple */,
 			);
@@ -891,6 +910,33 @@
 				8998426C24A0574700881A29 /* UUFloatingButton.m */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		89A90A1924C9724100D48EA1 /* SearchPattern */ = {
+			isa = PBXGroup;
+			children = (
+				89A90A2A24C979E300D48EA1 /* UUSearchDemoController.h */,
+				89A90A2B24C979E300D48EA1 /* UUSearchDemoController.m */,
+				89A90A1A24C9726D00D48EA1 /* UUSearchPatternController.h */,
+				89A90A1B24C9726D00D48EA1 /* UUSearchPatternController.m */,
+				89A90A1D24C9727300D48EA1 /* View */,
+			);
+			path = SearchPattern;
+			sourceTree = "<group>";
+		};
+		89A90A1D24C9727300D48EA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89A90A1E24C972BE00D48EA1 /* UUSearchPatternInputView.h */,
+				89A90A1F24C972BE00D48EA1 /* UUSearchPatternInputView.m */,
+				89A90A2124C972D700D48EA1 /* UUSearchPatternFlowLayout.h */,
+				89A90A2224C972D700D48EA1 /* UUSearchPatternFlowLayout.m */,
+				89A90A2424C972F800D48EA1 /* UUSearchPatternKeyCell.h */,
+				89A90A2524C972F800D48EA1 /* UUSearchPatternKeyCell.m */,
+				89A90A2724C9731000D48EA1 /* UUSearchPatternHeaderView.h */,
+				89A90A2824C9731000D48EA1 /* UUSearchPatternHeaderView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		89AED71E249D9C3A00E2F49A /* PageControl */ = {
@@ -1358,6 +1404,7 @@
 				89220B5524AC1561002B0A5E /* UULoginAreaCodeController.m in Sources */,
 				8983FF41249C541700A9D20A /* UUDistalAreaPicker.m in Sources */,
 				898526922491DBEB008099FB /* GTMBase64.m in Sources */,
+				89A90A2624C972F800D48EA1 /* UUSearchPatternKeyCell.m in Sources */,
 				8983FF4E249C5E5A00A9D20A /* UUNormalPickerView.m in Sources */,
 				89C40D292490838200AE29BC /* TFHppleElement.m in Sources */,
 				89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */,
@@ -1383,6 +1430,7 @@
 				8998426124A04CE200881A29 /* UUImageAutoScrollView.m in Sources */,
 				89220B5924AC16BE002B0A5E /* UULoginPageHandler.m in Sources */,
 				897AED1824A2DFEC007F8D50 /* UUDotPageControl.m in Sources */,
+				89A90A2C24C979E300D48EA1 /* UUSearchDemoController.m in Sources */,
 				89C40D24249080CC00AE29BC /* UUHTMLFilter.m in Sources */,
 				8975A69A246BCA72002A8D93 /* UIImage+UU.m in Sources */,
 				895A9E0A24930C34003C15D5 /* HandlePushMessage.m in Sources */,
@@ -1394,6 +1442,7 @@
 				8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */,
 				89940816249702D60004364A /* UUWebProxyManager.m in Sources */,
 				899408192497031E0004364A /* UUJSExportManager.m in Sources */,
+				89A90A1C24C9726D00D48EA1 /* UUSearchPatternController.m in Sources */,
 				89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */,
 				8983FF47249C56C700A9D20A /* UUCustomDatePicker.m in Sources */,
 				8998426724A04D7100881A29 /* UUBadgeButton.m in Sources */,
@@ -1407,8 +1456,10 @@
 				890C0462246A3E5900E1242F /* UUProgressHUD.m in Sources */,
 				89C40D272490810B00AE29BC /* UUDateTime.m in Sources */,
 				898526952491DCBF008099FB /* UUEncryption.m in Sources */,
+				89A90A2324C972D700D48EA1 /* UUSearchPatternFlowLayout.m in Sources */,
 				8957F78C2468E7F200132B13 /* AppDelegate.m in Sources */,
 				89C40D37249089A100AE29BC /* UUImagePickerCheck.m in Sources */,
+				89A90A2024C972BE00D48EA1 /* UUSearchPatternInputView.m in Sources */,
 				8983FF3E249C483400A9D20A /* UULocalAreaPicker.m in Sources */,
 				895A9E112493139E003C15D5 /* Reachability.m in Sources */,
 				895A9E1924932371003C15D5 /* UUAnimatedTransitioning.m in Sources */,
@@ -1422,6 +1473,7 @@
 				89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */,
 				8998426A24A0510200881A29 /* UUSwitchButton.m in Sources */,
 				897AED1C24A2E1EB007F8D50 /* UUCommentTextView.m in Sources */,
+				89A90A2924C9731000D48EA1 /* UUSearchPatternHeaderView.m in Sources */,
 				8957F79D2468E7F300132B13 /* main.m in Sources */,
 				8901D5F324984FEA000EF470 /* UUBulgeTabBar.m in Sources */,
 				89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */,

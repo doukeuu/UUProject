@@ -21,6 +21,7 @@
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.bezelView.color = [UIColor colorWithWhite:0.4 alpha:0.8];
+    hud.bezelView.blurEffectStyle = UIBlurEffectStyleLight;
     hud.contentColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     hud.margin = 25;
@@ -39,6 +40,7 @@
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     hud.mode = MBProgressHUDModeText;
     hud.bezelView.color = [UIColor colorWithWhite:0.4 alpha:0.8];
+    hud.bezelView.blurEffectStyle = UIBlurEffectStyleLight;
     hud.contentColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     hud.userInteractionEnabled = NO;
@@ -54,6 +56,7 @@
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     hud.mode = MBProgressHUDModeAnnularDeterminate;
     hud.bezelView.color = [UIColor colorWithWhite:0.1 alpha:0.9];
+    hud.bezelView.blurEffectStyle = UIBlurEffectStyleLight;
     hud.contentColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     hud.graceTime = 0.5f;
