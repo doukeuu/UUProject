@@ -7,19 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UUNetworkDefine.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NSString * UUNetworkConfigKey NS_EXTENSIBLE_STRING_ENUM;
-
-FOUNDATION_EXPORT UUNetworkConfigKey const UUNetworkConfigSerializer;  // NSString 参数序列化类型，包含form、json、plist
-FOUNDATION_EXPORT UUNetworkConfigKey const UUNetworkConfigAccessToken; // NSString 需要添加到请求头里的token值
-
-FOUNDATION_EXPORT NSErrorUserInfoKey const UUNetworkErrorTips; // 错误的userInfo中的提示信息key
-FOUNDATION_EXPORT NSErrorUserInfoKey const UUNetworkErrorCode; // 错误的userInfo中的错误码key
-
-typedef void (^SuccessBlock)(id _Nullable result);                            // 成功回调
-typedef void (^FailureBlock)(NSDictionary<NSErrorUserInfoKey, id> *userInfo); // 失败回调
+/// 成功回调
+typedef void (^SuccessBlock)(id _Nullable result);
+/// 失败回调
+typedef void (^FailureBlock)(NSDictionary<NSErrorUserInfoKey, id> *userInfo);
 
 
 @interface UUNetWorkManager : NSObject

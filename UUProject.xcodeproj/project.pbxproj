@@ -53,7 +53,6 @@
 		895A9E0A24930C34003C15D5 /* HandlePushMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 895A9E0624930C33003C15D5 /* HandlePushMessage.m */; };
 		895A9E0B24930C34003C15D5 /* RemoteNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 895A9E0924930C34003C15D5 /* RemoteNotificationManager.m */; };
 		895A9E0E249310E8003C15D5 /* UUNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 895A9E0D249310E8003C15D5 /* UUNetWorkManager.m */; };
-		895A9E112493139E003C15D5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 895A9E0F2493139E003C15D5 /* Reachability.m */; };
 		895A9E1924932371003C15D5 /* UUAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 895A9E1824932371003C15D5 /* UUAnimatedTransitioning.m */; };
 		895A9E1C24932392003C15D5 /* UUInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 895A9E1B24932392003C15D5 /* UUInteractiveTransition.m */; };
 		896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 896CF0D82468FD9C00D02CD2 /* UIView+UU.m */; };
@@ -107,6 +106,8 @@
 		89C40D37249089A100AE29BC /* UUImagePickerCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D36249089A100AE29BC /* UUImagePickerCheck.m */; };
 		89C40D3A24908A8700AE29BC /* UUVersionCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D3924908A8700AE29BC /* UUVersionCheck.m */; };
 		89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D3C24908DC400AE29BC /* UUCustomDefaults.m */; };
+		89CF62A124D117B000E8B694 /* UUNetworkSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF62A024D117B000E8B694 /* UUNetworkSwitch.m */; };
+		89CF62A624D159FE00E8B694 /* UUNetworkDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF62A524D159FE00E8B694 /* UUNetworkDefine.m */; };
 		89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B124AACE7300612514 /* UUImageBrowseController.m */; };
 		89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B424AACF0700612514 /* UUImageClippingController.m */; };
 		89F690B824AACF9900612514 /* UULoginBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B724AACF9900612514 /* UULoginBaseController.m */; };
@@ -159,7 +160,6 @@
 		890C0478246A44AF00E1242F /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 		890C0479246A44AF00E1242F /* GlobalAreaCode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GlobalAreaCode.plist; sourceTree = "<group>"; };
 		890C047A246A44B000E1242F /* LocationCitys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocationCitys.plist; sourceTree = "<group>"; };
-		890C0482246A499300E1242F /* UUDefineURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDefineURL.h; sourceTree = "<group>"; };
 		890C0484246A4A2200E1242F /* UUDefineNS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDefineNS.h; sourceTree = "<group>"; };
 		890C0485246A4A4800E1242F /* UUDefineUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDefineUI.h; sourceTree = "<group>"; };
 		8912048E246E1E7E00E76B0F /* UITextField+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+UU.h"; sourceTree = "<group>"; };
@@ -221,8 +221,6 @@
 		895A9E0924930C34003C15D5 /* RemoteNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteNotificationManager.m; sourceTree = "<group>"; };
 		895A9E0C249310E8003C15D5 /* UUNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNetWorkManager.h; sourceTree = "<group>"; };
 		895A9E0D249310E8003C15D5 /* UUNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNetWorkManager.m; sourceTree = "<group>"; };
-		895A9E0F2493139E003C15D5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		895A9E102493139E003C15D5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		895A9E1724932371003C15D5 /* UUAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAnimatedTransitioning.h; sourceTree = "<group>"; };
 		895A9E1824932371003C15D5 /* UUAnimatedTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAnimatedTransitioning.m; sourceTree = "<group>"; };
 		895A9E1A24932392003C15D5 /* UUInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUInteractiveTransition.h; sourceTree = "<group>"; };
@@ -374,6 +372,10 @@
 		89C40D3924908A8700AE29BC /* UUVersionCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUVersionCheck.m; sourceTree = "<group>"; };
 		89C40D3B24908DC400AE29BC /* UUCustomDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUCustomDefaults.h; sourceTree = "<group>"; };
 		89C40D3C24908DC400AE29BC /* UUCustomDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUCustomDefaults.m; sourceTree = "<group>"; };
+		89CF629F24D117B000E8B694 /* UUNetworkSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNetworkSwitch.h; sourceTree = "<group>"; };
+		89CF62A024D117B000E8B694 /* UUNetworkSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNetworkSwitch.m; sourceTree = "<group>"; };
+		89CF62A424D159FE00E8B694 /* UUNetworkDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNetworkDefine.h; sourceTree = "<group>"; };
+		89CF62A524D159FE00E8B694 /* UUNetworkDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNetworkDefine.m; sourceTree = "<group>"; };
 		89F690B024AACE7300612514 /* UUImageBrowseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageBrowseController.h; sourceTree = "<group>"; };
 		89F690B124AACE7300612514 /* UUImageBrowseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImageBrowseController.m; sourceTree = "<group>"; };
 		89F690B324AACF0700612514 /* UUImageClippingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageClippingController.h; sourceTree = "<group>"; };
@@ -800,11 +802,12 @@
 		896CF0D42468FBE400D02CD2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				890C0482246A499300E1242F /* UUDefineURL.h */,
+				89CF62A424D159FE00E8B694 /* UUNetworkDefine.h */,
+				89CF62A524D159FE00E8B694 /* UUNetworkDefine.m */,
+				89CF629F24D117B000E8B694 /* UUNetworkSwitch.h */,
+				89CF62A024D117B000E8B694 /* UUNetworkSwitch.m */,
 				895A9E0C249310E8003C15D5 /* UUNetWorkManager.h */,
 				895A9E0D249310E8003C15D5 /* UUNetWorkManager.m */,
-				895A9E102493139E003C15D5 /* Reachability.h */,
-				895A9E0F2493139E003C15D5 /* Reachability.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1037,10 +1040,10 @@
 			children = (
 				89C40D17249071D700AE29BC /* TFHpple.h */,
 				89C40D15249071D700AE29BC /* TFHpple.m */,
-				89C40D14249071D700AE29BC /* TFHppleElement.h */,
-				89C40D18249071D700AE29BC /* TFHppleElement.m */,
 				89C40D16249071D700AE29BC /* XPathQuery.h */,
 				89C40D19249071D700AE29BC /* XPathQuery.m */,
+				89C40D14249071D700AE29BC /* TFHppleElement.h */,
+				89C40D18249071D700AE29BC /* TFHppleElement.m */,
 			);
 			path = TFHpple;
 			sourceTree = "<group>";
@@ -1410,6 +1413,7 @@
 				89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */,
 				8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */,
 				89220B5F24AC2A44002B0A5E /* UUAdvertiseDetailController.m in Sources */,
+				89CF62A124D117B000E8B694 /* UUNetworkSwitch.m in Sources */,
 				8998425E24A04C8B00881A29 /* UUImageCirculatingView.m in Sources */,
 				89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */,
 				89C40D282490835800AE29BC /* TFHpple.m in Sources */,
@@ -1419,6 +1423,7 @@
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				8985268A2491D74C008099FB /* UUDataStorage.m in Sources */,
 				8983FF44249C56B500A9D20A /* UUNativeDatePicker.m in Sources */,
+				89CF62A624D159FE00E8B694 /* UUNetworkDefine.m in Sources */,
 				89C40CE22490713F00AE29BC /* NSString+UI.m in Sources */,
 				8953B29E2499B3A30034306A /* UUTextViewTableCell.m in Sources */,
 				8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */,
@@ -1461,7 +1466,6 @@
 				89C40D37249089A100AE29BC /* UUImagePickerCheck.m in Sources */,
 				89A90A2024C972BE00D48EA1 /* UUSearchPatternInputView.m in Sources */,
 				8983FF3E249C483400A9D20A /* UULocalAreaPicker.m in Sources */,
-				895A9E112493139E003C15D5 /* Reachability.m in Sources */,
 				895A9E1924932371003C15D5 /* UUAnimatedTransitioning.m in Sources */,
 				890C0477246A446300E1242F /* UIScrollView+UU.m in Sources */,
 				895A9E0E249310E8003C15D5 /* UUNetWorkManager.m in Sources */,

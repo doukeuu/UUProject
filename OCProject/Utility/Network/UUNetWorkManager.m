@@ -11,13 +11,6 @@
 #import <AFNetworking.h>
 #import <AFNetworkActivityIndicatorManager.h>
 
-UUNetworkConfigKey const UUNetworkConfigSerializer = @"kNetworkConfigSerializer";
-UUNetworkConfigKey const UUNetworkConfigAccessToken = @"kNetworkConfigAccessToken";
-
-NSErrorUserInfoKey const UUNetworkErrorTips = @"kNetworkErrorTips";
-NSErrorUserInfoKey const UUNetworkErrorCode = @"kNetworkErrorCode";
-
-
 @interface UUNetWorkManager ()
 
 @property (nonatomic, strong) AFHTTPSessionManager *afManager;
@@ -47,7 +40,7 @@ NSErrorUserInfoKey const UUNetworkErrorCode = @"kNetworkErrorCode";
 
 // 初始化
 - (void)commonInitialize {
-    NSURL *url = [NSURL URLWithString:kAppBaseURL];
+    NSURL *url = [NSURL URLWithString:NET_URL_BASE];
     [self.afManager setValue:url forKey:@"_baseURL"];
 
     [self configureRequestSerializer];
@@ -357,7 +350,7 @@ NSErrorUserInfoKey const UUNetworkErrorCode = @"kNetworkErrorCode";
         if (statusCode == 401) {
             tips = @"";
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                // 可以发送一个通知
+                [[NSNotificationCenter defaultCenter] postNotificationName:UUNetworkResponseStatusCode401 object:nil];
             });
         } else if (statusCode == 404) {
             tips = @"温馨提示：数据走丢了！";
