@@ -52,4 +52,14 @@
     [self.mj_footer endRefreshing];
 }
 
+// 头部不在普通闲置状态
+- (BOOL)headerStateNotIdle {
+    return self.mj_header && self.mj_header.state != MJRefreshStateIdle;
+}
+
+// 脚部不在普通闲置状态
+- (BOOL)footerStateNotIdle {
+    return self.mj_footer && self.mj_footer.state != MJRefreshStateIdle;
+}
+
 @end

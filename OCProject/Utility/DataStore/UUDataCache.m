@@ -7,6 +7,8 @@
 //
 
 #import "UUDataCache.h"
+#import "SDImageCache.h"
+#import <WebKit/WebKit.h>
 
 static NSTimeInterval cacheTime =  (double)604800;
 
@@ -95,6 +97,100 @@ static NSTimeInterval cacheTime =  (double)604800;
 + (void)removeObjectFromFilePath:(NSString *)filePath forFileName:(NSString *)fileName {
     NSString *name = [filePath stringByAppendingPathComponent:fileName];
     [[NSFileManager defaultManager] removeItemAtPath:name error:nil];
+}
+
+
+// 计算缓存
++ (NSString *)caculateCacheSize {
+    NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+    float cacheSize = [self folderSizeAtPath:cachPath];  //计算目录大小
+    return  [NSString stringWithFormat:@"%.2f",cacheSize];
+}
+
++ (void)clearCacheBlock:(void(^)(void))block {
+    NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+    [self clearCacheWithPath:cachPath];
+    [self clearDisk];
+    [self deleteWebCache];
+    [[SDImageCache sharedImageCache] clearMemory];
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+        if (block) {
+            block();
+        }
+    }];
+}
+
+//缓存计算
++ (float)fileSizeAtPath:(NSString *)path {
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    if([fileManager fileExistsAtPath:path]){
+        long long size=[fileManager attributesOfItemAtPath:path error:nil].fileSize;
+        return size/1024.0/1024.0;
+    }
+    return 0;
+}
+
+//计算目录
++ (float)folderSizeAtPath:(NSString *)path {
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    float folderSize = 0;
+    if ([fileManager fileExistsAtPath:path]) {
+        NSArray *childerFiles=[fileManager subpathsAtPath:path];
+        for (NSString *fileName in childerFiles) {
+            NSString *absolutePath=[path stringByAppendingPathComponent:fileName];
+            folderSize += [self fileSizeAtPath:absolutePath];
+        }
+        //SDWebImage框架自身计算缓存的实现
+        folderSize += [[SDImageCache sharedImageCache] totalDiskSize]/1024.0/1024.0;
+        return folderSize;
+    }
+    return folderSize;
+}
+
+//清理缓存
++ (void)clearDisk {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString * cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    if ([fileManager fileExistsAtPath:cachePath]) {
+        
+        [fileManager removeItemAtPath:cachePath error:nil];
+        [fileManager createDirectoryAtPath:cachePath
+               withIntermediateDirectories:YES
+                                attributes:nil
+                                     error:NULL];
+        
+    }
+}
+
++(void)clearCacheWithPath:(NSString *)path {
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:path]) {
+        NSArray *childerFiles=[fileManager subpathsAtPath:path];
+        for (NSString *fileName in childerFiles) {
+            //如有需要，加入条件，过滤掉不想删除的文件
+            NSString *absolutePath=[path stringByAppendingPathComponent:fileName];
+            if ([fileManager isDeletableFileAtPath:absolutePath] && [fileManager fileExistsAtPath:absolutePath]) {
+                [fileManager removeItemAtPath:absolutePath error:nil];
+            }
+        }
+    }
+}
+
++ (void)deleteWebCache {
+    if (@available(iOS 9.0, *)) {
+        NSSet *cookieTypeSet = [WKWebsiteDataStore allWebsiteDataTypes];
+        [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:cookieTypeSet modifiedSince:[NSDate dateWithTimeIntervalSince1970:0] completionHandler:^{
+
+        }];
+    }
+    NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *cookiesFolderPath = [libraryPath stringByAppendingString:@"/Cookies"];
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+
+    if ([fileManager fileExistsAtPath:cookiesFolderPath]) {
+        NSError *errors = nil;
+        [fileManager removeItemAtPath:cookiesFolderPath error:&errors];
+    }
 }
 
 @end

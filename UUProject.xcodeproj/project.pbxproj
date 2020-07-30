@@ -85,6 +85,10 @@
 		8998426724A04D7100881A29 /* UUBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426624A04D7100881A29 /* UUBadgeButton.m */; };
 		8998426A24A0510200881A29 /* UUSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426924A0510200881A29 /* UUSwitchButton.m */; };
 		8998426D24A0574700881A29 /* UUFloatingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426C24A0574700881A29 /* UUFloatingButton.m */; };
+		899CA22624D25404002633AF /* UIColor+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 899CA22524D25404002633AF /* UIColor+UU.m */; };
+		899CA22924D298DF002633AF /* UIScrollView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 899CA22824D298DF002633AF /* UIScrollView+Placeholder.m */; };
+		899CA22C24D2994D002633AF /* UUPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 899CA22B24D2994D002633AF /* UUPlaceholderView.m */; };
+		899CA23224D2ACB0002633AF /* UUFixedTitleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 899CA23124D2ACB0002633AF /* UUFixedTitleTextView.m */; };
 		89A90A1C24C9726D00D48EA1 /* UUSearchPatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A1B24C9726D00D48EA1 /* UUSearchPatternController.m */; };
 		89A90A2024C972BE00D48EA1 /* UUSearchPatternInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A1F24C972BE00D48EA1 /* UUSearchPatternInputView.m */; };
 		89A90A2324C972D700D48EA1 /* UUSearchPatternFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 89A90A2224C972D700D48EA1 /* UUSearchPatternFlowLayout.m */; };
@@ -108,6 +112,7 @@
 		89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D3C24908DC400AE29BC /* UUCustomDefaults.m */; };
 		89CF62A124D117B000E8B694 /* UUNetworkSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF62A024D117B000E8B694 /* UUNetworkSwitch.m */; };
 		89CF62A624D159FE00E8B694 /* UUNetworkDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF62A524D159FE00E8B694 /* UUNetworkDefine.m */; };
+		89CF62A924D1784C00E8B694 /* UIBarButtonItem+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF62A824D1784C00E8B694 /* UIBarButtonItem+UU.m */; };
 		89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B124AACE7300612514 /* UUImageBrowseController.m */; };
 		89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B424AACF0700612514 /* UUImageClippingController.m */; };
 		89F690B824AACF9900612514 /* UULoginBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B724AACF9900612514 /* UULoginBaseController.m */; };
@@ -287,6 +292,14 @@
 		8998426924A0510200881A29 /* UUSwitchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSwitchButton.m; sourceTree = "<group>"; };
 		8998426B24A0574700881A29 /* UUFloatingButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUFloatingButton.h; sourceTree = "<group>"; };
 		8998426C24A0574700881A29 /* UUFloatingButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUFloatingButton.m; sourceTree = "<group>"; };
+		899CA22424D25404002633AF /* UIColor+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+UU.h"; sourceTree = "<group>"; };
+		899CA22524D25404002633AF /* UIColor+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UU.m"; sourceTree = "<group>"; };
+		899CA22724D298DF002633AF /* UIScrollView+Placeholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Placeholder.h"; sourceTree = "<group>"; };
+		899CA22824D298DF002633AF /* UIScrollView+Placeholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Placeholder.m"; sourceTree = "<group>"; };
+		899CA22A24D2994D002633AF /* UUPlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUPlaceholderView.h; sourceTree = "<group>"; };
+		899CA22B24D2994D002633AF /* UUPlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUPlaceholderView.m; sourceTree = "<group>"; };
+		899CA23024D2ACB0002633AF /* UUFixedTitleTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUFixedTitleTextView.h; sourceTree = "<group>"; };
+		899CA23124D2ACB0002633AF /* UUFixedTitleTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUFixedTitleTextView.m; sourceTree = "<group>"; };
 		89A90A1A24C9726D00D48EA1 /* UUSearchPatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchPatternController.h; sourceTree = "<group>"; };
 		89A90A1B24C9726D00D48EA1 /* UUSearchPatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSearchPatternController.m; sourceTree = "<group>"; };
 		89A90A1E24C972BE00D48EA1 /* UUSearchPatternInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSearchPatternInputView.h; sourceTree = "<group>"; };
@@ -376,6 +389,8 @@
 		89CF62A024D117B000E8B694 /* UUNetworkSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNetworkSwitch.m; sourceTree = "<group>"; };
 		89CF62A424D159FE00E8B694 /* UUNetworkDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNetworkDefine.h; sourceTree = "<group>"; };
 		89CF62A524D159FE00E8B694 /* UUNetworkDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNetworkDefine.m; sourceTree = "<group>"; };
+		89CF62A724D1784C00E8B694 /* UIBarButtonItem+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+UU.h"; sourceTree = "<group>"; };
+		89CF62A824D1784C00E8B694 /* UIBarButtonItem+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+UU.m"; sourceTree = "<group>"; };
 		89F690B024AACE7300612514 /* UUImageBrowseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageBrowseController.h; sourceTree = "<group>"; };
 		89F690B124AACE7300612514 /* UUImageBrowseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImageBrowseController.m; sourceTree = "<group>"; };
 		89F690B324AACF0700612514 /* UUImageClippingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageClippingController.h; sourceTree = "<group>"; };
@@ -516,10 +531,10 @@
 		890C0473246A420400E1242F /* Refresher */ = {
 			isa = PBXGroup;
 			children = (
-				89120497246E309300E76B0F /* UURefresher.h */,
-				89120498246E309300E76B0F /* UURefresher.m */,
 				89120494246E307800E76B0F /* UIScrollView+Refresh.h */,
 				89120495246E307800E76B0F /* UIScrollView+Refresh.m */,
+				89120497246E309300E76B0F /* UURefresher.h */,
+				89120498246E309300E76B0F /* UURefresher.m */,
 			);
 			path = Refresher;
 			sourceTree = "<group>";
@@ -527,6 +542,10 @@
 		890C0474246A444900E1242F /* Placeholder */ = {
 			isa = PBXGroup;
 			children = (
+				899CA22724D298DF002633AF /* UIScrollView+Placeholder.h */,
+				899CA22824D298DF002633AF /* UIScrollView+Placeholder.m */,
+				899CA22A24D2994D002633AF /* UUPlaceholderView.h */,
+				899CA22B24D2994D002633AF /* UUPlaceholderView.m */,
 			);
 			path = Placeholder;
 			sourceTree = "<group>";
@@ -770,8 +789,12 @@
 			children = (
 				89C40CE02490713F00AE29BC /* NSString+UI.h */,
 				89C40CE12490713F00AE29BC /* NSString+UI.m */,
+				89CF62A724D1784C00E8B694 /* UIBarButtonItem+UU.h */,
+				89CF62A824D1784C00E8B694 /* UIBarButtonItem+UU.m */,
 				8975A695246BC444002A8D93 /* UIButton+UU.h */,
 				8975A696246BC444002A8D93 /* UIButton+UU.m */,
+				899CA22424D25404002633AF /* UIColor+UU.h */,
+				899CA22524D25404002633AF /* UIColor+UU.m */,
 				8975A698246BCA72002A8D93 /* UIImage+UU.h */,
 				8975A699246BCA72002A8D93 /* UIImage+UU.m */,
 				890C0475246A446300E1242F /* UIScrollView+UU.h */,
@@ -855,6 +878,8 @@
 		897AED1924A2E1C8007F8D50 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
+				899CA23024D2ACB0002633AF /* UUFixedTitleTextView.h */,
+				899CA23124D2ACB0002633AF /* UUFixedTitleTextView.m */,
 				897AED1A24A2E1EB007F8D50 /* UUCommentTextView.h */,
 				897AED1B24A2E1EB007F8D50 /* UUCommentTextView.m */,
 			);
@@ -864,14 +889,14 @@
 		8983FF3B249C452C00A9D20A /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
-				8983FF3C249C483400A9D20A /* UULocalAreaPicker.h */,
-				8983FF3D249C483400A9D20A /* UULocalAreaPicker.m */,
-				8983FF3F249C541700A9D20A /* UUDistalAreaPicker.h */,
-				8983FF40249C541700A9D20A /* UUDistalAreaPicker.m */,
 				8983FF42249C56B500A9D20A /* UUNativeDatePicker.h */,
 				8983FF43249C56B500A9D20A /* UUNativeDatePicker.m */,
 				8983FF45249C56C700A9D20A /* UUCustomDatePicker.h */,
 				8983FF46249C56C700A9D20A /* UUCustomDatePicker.m */,
+				8983FF3C249C483400A9D20A /* UULocalAreaPicker.h */,
+				8983FF3D249C483400A9D20A /* UULocalAreaPicker.m */,
+				8983FF3F249C541700A9D20A /* UUDistalAreaPicker.h */,
+				8983FF40249C541700A9D20A /* UUDistalAreaPicker.m */,
 				8983FF4C249C5E5900A9D20A /* UUNormalPickerView.h */,
 				8983FF4D249C5E5900A9D20A /* UUNormalPickerView.m */,
 			);
@@ -1404,6 +1429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89C40D2A2490838F00AE29BC /* XPathQuery.m in Sources */,
+				899CA23224D2ACB0002633AF /* UUFixedTitleTextView.m in Sources */,
 				89220B5524AC1561002B0A5E /* UULoginAreaCodeController.m in Sources */,
 				8983FF41249C541700A9D20A /* UUDistalAreaPicker.m in Sources */,
 				898526922491DBEB008099FB /* GTMBase64.m in Sources */,
@@ -1423,15 +1449,18 @@
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				8985268A2491D74C008099FB /* UUDataStorage.m in Sources */,
 				8983FF44249C56B500A9D20A /* UUNativeDatePicker.m in Sources */,
+				89CF62A924D1784C00E8B694 /* UIBarButtonItem+UU.m in Sources */,
 				89CF62A624D159FE00E8B694 /* UUNetworkDefine.m in Sources */,
 				89C40CE22490713F00AE29BC /* NSString+UI.m in Sources */,
 				8953B29E2499B3A30034306A /* UUTextViewTableCell.m in Sources */,
 				8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */,
 				890C0469246A3F0D00E1242F /* UUNavigationController.m in Sources */,
 				890C045B246A3CA800E1242F /* NSString+UU.m in Sources */,
+				899CA22624D25404002633AF /* UIColor+UU.m in Sources */,
 				897AED1524A2DD7C007F8D50 /* UUMultitypeLabel.m in Sources */,
 				89C40D212490784C00AE29BC /* UUToolsNS.m in Sources */,
 				89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */,
+				899CA22924D298DF002633AF /* UIScrollView+Placeholder.m in Sources */,
 				8998426124A04CE200881A29 /* UUImageAutoScrollView.m in Sources */,
 				89220B5924AC16BE002B0A5E /* UULoginPageHandler.m in Sources */,
 				897AED1824A2DFEC007F8D50 /* UUDotPageControl.m in Sources */,
@@ -1474,6 +1503,7 @@
 				8994FD4C24A196FB007FFC07 /* UUSelectionPopupView.m in Sources */,
 				8998426D24A0574700881A29 /* UUFloatingButton.m in Sources */,
 				896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */,
+				899CA22C24D2994D002633AF /* UUPlaceholderView.m in Sources */,
 				89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */,
 				8998426A24A0510200881A29 /* UUSwitchButton.m in Sources */,
 				897AED1C24A2E1EB007F8D50 /* UUCommentTextView.m in Sources */,

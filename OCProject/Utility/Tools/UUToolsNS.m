@@ -34,26 +34,6 @@
     return result;
 }
 
-// 执行某个对象的方法，有返回值，可以消除原生perform方法的警告
-+ (id)performObject:(id)object withSelector:(NSString *)selString {
-    if (!object || !selString) return nil;
-    SEL sel = NSSelectorFromString(selString);
-    if (![object respondsToSelector:sel]) return nil;
-    IMP imp = [object methodForSelector:sel];
-    id (* performMethod)(id, SEL) = (void *)imp; // 函数指针
-    return performMethod(object, sel);
-}
-
-// 执行某个对象的方法，无返回值，可以消除原生perform方法的警告
-+ (void)executeObject:(id)object withSelector:(NSString *)selString {
-    if (!object || !selString) return;
-    SEL sel = NSSelectorFromString(selString);
-    if (![object respondsToSelector:sel]) return;
-    IMP imp = [object methodForSelector:sel];
-    void (* executeMethod)(id, SEL) = (void *)imp; // 函数指针
-    executeMethod(object, sel);
-}
-
 // 将手机号、身份证号中间的数字用星号代替
 + (NSString *)replacedWithAsterisk:(NSString *)number {
     NSRange range;
@@ -268,6 +248,48 @@
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:email];
+}
+
+#pragma mark - Perform & Excute
+
+// 执行某个对象的方法，有返回值，可以消除原生perform方法的警告
++ (id)performObject:(id)object withSelector:(NSString *)selString {
+    if (!object || !selString) return nil;
+    SEL sel = NSSelectorFromString(selString);
+    if (![object respondsToSelector:sel]) return nil;
+    IMP imp = [object methodForSelector:sel];
+    id (* performMethod)(id, SEL) = (void *)imp; // 函数指针
+    return performMethod(object, sel);
+}
+
+// 执行某个对象的方法，无返回值，可以消除原生perform方法的警告
++ (void)executeObject:(id)object withSelector:(NSString *)selString {
+    if (!object || !selString) return;
+    SEL sel = NSSelectorFromString(selString);
+    if (![object respondsToSelector:sel]) return;
+    IMP imp = [object methodForSelector:sel];
+    void (* executeMethod)(id, SEL) = (void *)imp; // 函数指针
+    executeMethod(object, sel);
+}
+
+// 执行某个对象的方法(第一个Object)，无返回值，可以消除原生perform方法的警告
++ (void)executeObject:(id)object selector:(NSString *)selString object:(id)first {
+    if (!object || !selString) return;
+    SEL sel = NSSelectorFromString(selString);
+    if (![object respondsToSelector:sel]) return;
+    IMP imp = [object methodForSelector:sel];
+    void (* executeMethod)(id, SEL, id) = (void *)imp; // 函数指针
+    executeMethod(object, sel, first);
+}
+
+// 执行某个对象的方法(第一个Object)，无返回值，可以消除原生perform方法的警告
++ (void)executeObject:(id)object selector:(NSString *)selString object:(id)first object:(id)second {
+    if (!object || !selString) return;
+    SEL sel = NSSelectorFromString(selString);
+    if (![object respondsToSelector:sel]) return;
+    IMP imp = [object methodForSelector:sel];
+    void (* executeMethod)(id, SEL, id, id) = (void *)imp; // 函数指针
+    executeMethod(object, sel, first, second);
 }
 
 @end

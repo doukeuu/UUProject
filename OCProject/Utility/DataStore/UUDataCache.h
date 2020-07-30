@@ -23,6 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setObject:(NSData *)data forKey:(NSString *)key;
 + (void)setObject:(id)object forFilePath:(NSString *)filePath forName:(NSString *)name;
 + (void)removeObjectFromFilePath:(NSString *)filePath forFileName:(NSString *)fileName;
+
++ (NSString *)caculateCacheSize;
++ (void)clearCacheBlock:(void(^)(void))block;
++ (void)deleteWebCache;
+
 @end
 
 NS_ASSUME_NONNULL_END

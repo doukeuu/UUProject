@@ -11,6 +11,65 @@
 
 @implementation UIImage (UU)
 
+// 生成纯色图片
++ (UIImage *)imageFromColor:(UIColor *)color {
+    if (!color) color = [UIColor whiteColor];
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+// 绘制圆角矩形图片
++ (UIImage *)roundedRect:(CGRect)rect fillColor:(UIColor *)color cornerRadius:(CGFloat)radius {
+    if (CGRectEqualToRect(rect, CGRectZero)) return nil;
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGPathRef path = CGPathCreateWithRoundedRect(rect, radius, radius, NULL);
+    CGContextAddPath(context, path);
+    [color setFill];
+    CGContextDrawPath(context, kCGPathFill);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+// 绘制渐变色图片
++ (UIImage *)gradientImageSize:(CGSize)size
+                    startPoint:(CGPoint)startP
+                      endPoint:(CGPoint)endP
+                    startColor:(UIColor *)startC
+                      endColor:(UIColor *)endC {
+    
+    if (CGSizeEqualToSize(size, CGSizeZero)) size = CGSizeMake(1, 1);
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGPathRef path = CGPathCreateWithRect(CGRectMake(0, 0, size.width, size.height), NULL);
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    NSArray *colors = @[(__bridge id)startC.CGColor, (__bridge id)endC.CGColor];
+    CGFloat locations[] = {0.0, 1.0};
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)colors, locations);
+    
+    CGPoint starPoint = CGPointMake(size.width * startP.x, size.height * startP.y);
+    CGPoint endPoint = CGPointMake(size.width * endP.x, size.height * endP.y);
+    CGContextSaveGState(context);
+    CGContextAddPath(context, path);
+    CGContextDrawLinearGradient(context, gradient, starPoint, endPoint, 0);
+    CGContextRestoreGState(context);
+    
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorSpace);
+    CGPathRelease(path);
+    UIImage *gradientImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return gradientImage;
+}
+
 // 大于固定尺寸1242时，就缩小图片
 - (UIImage *)imageWithScaleFixedSize {
     CGFloat size = 1242;

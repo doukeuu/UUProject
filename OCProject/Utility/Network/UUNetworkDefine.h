@@ -35,6 +35,14 @@ FOUNDATION_EXPORT NSString const * _Nonnull apiUrlString;   // 接口IP地址
 FOUNDATION_EXPORT NSString const * _Nonnull imgUrlString;   // 图片IP地址
 FOUNDATION_EXPORT NSString const * _Nonnull shareUrlString; // 分享IP地址
 
+/// 拼接基础URL到图片地址
+inline static NSString * splicingImgUrlForPath(NSString *string) {
+    if ([string containsString:@"http"] || [string containsString:@"HTTP"]) {
+        return string;
+    }else{
+        return [NSString stringWithFormat:@"%@%@", imgUrlString, string];
+    }
+}
 
 typedef NSString * UUNetworkConfigKey NS_EXTENSIBLE_STRING_ENUM;
 

@@ -30,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 结束头部脚部刷新
 - (void)endBothRefresh;
+
+/// 头部不在普通闲置状态
+- (BOOL)headerStateNotIdle;
+/// 脚部不在普通闲置状态
+- (BOOL)footerStateNotIdle;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -18,11 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// 生成UUID
 + (NSString *)generateUUID;
 
-/// 执行某个对象的方法，可以消除原生perform方法的警告
-+ (id)performObject:(id)object withSelector:(NSString *)selString;
-/// 执行某个对象的方法，无返回值，可以消除原生perform方法的警告
-+ (void)executeObject:(id)object withSelector:(NSString *)selString;
-
 /// 将手机号、身份证号中间的数字用星号代替
 + (NSString *)replacedWithAsterisk:(NSString *)number;
 
@@ -42,10 +37,19 @@ NS_ASSUME_NONNULL_BEGIN
 /// 验证邮箱号
 + (BOOL)validateEmail:(NSString *)email;
 
+
+/// 执行某个对象的方法，可以消除原生perform方法的警告
++ (id)performObject:(id)object withSelector:(NSString *)selString;
+/// 执行某个对象的方法，无返回值，可以消除原生perform方法的警告
++ (void)executeObject:(id)object withSelector:(NSString *)selString;
+/// 执行某个对象的方法(第一个Object)，无返回值，可以消除原生perform方法的警告
++ (void)executeObject:(id)object selector:(NSString *)selString object:(id)first;
+/// 执行某个对象的方法，无返回值，可以消除原生perform方法的警告
++ (void)executeObject:(id)object selector:(NSString *)selString object:(id)first object:(id)second;
 @end
 
 
-inline static NSString *stringValue(id obj) {
+inline static NSString *getStringValue(id obj) {
     if ([obj isKindOfClass:[NSString class]]) {
         return (NSString *)obj;
     } else if ([obj isKindOfClass:[NSNull class]]) {
