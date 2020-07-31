@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat markLineHeight;
 /// 底部分割线
 @property (nonatomic, strong) CALayer *separatorLayer;
-/// 是否可重复点击
+/// 是否可重复点击，默认否
 @property (nonatomic, assign) BOOL repeatClick;
 /// 代理
 @property (nonatomic, weak) id<UUSegmentButtonViewDelegate> delegate;

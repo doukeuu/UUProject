@@ -28,30 +28,4 @@
     return str;
 }
 
-// 取出最大值
-+ (NSString *)validateMaxNumberWithArray:(NSArray *)array {
-    if (!array || array.count == 0) return nil;
-    __block float max = [[array firstObject] floatValue];
-    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        float tempFloat = [obj floatValue];
-        if (tempFloat > max) {
-            max = tempFloat;
-        }
-    }];
-    return [NSString stringWithFormat:@"%lf", max];
-}
-
-// 取出最小值
-+ (NSString *)validateMinNumberWithArray:(NSArray *)array {
-    if (!array || array.count == 0) return nil;
-    __block float min = [[array firstObject] floatValue];
-    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        float tempFloat = [obj floatValue];
-        if (tempFloat < min) {
-            min = tempFloat;
-        }
-    }];
-    return [NSString stringWithFormat:@"%lf", min];
-}
-
 @end

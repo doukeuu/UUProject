@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UUToolsUI : NSObject
 
 /// 查找当前界面控制器
-+ (UIViewController *)topViewControllerFrom:(UIViewController *)controller;
++ (nullable UIViewController *)topViewControllerFrom:(UIViewController *)controller;
+/// 简单获取当前Controller
++ (UIViewController *)currentViewController;
 @end
 
 NS_ASSUME_NONNULL_END

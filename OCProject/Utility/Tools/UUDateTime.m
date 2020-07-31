@@ -18,6 +18,16 @@ NSString *const TimeColonFormat      = @"HH:mm:ss";
 
 @implementation UUDateTime
 
+// 设定日期格式
++ (NSDateFormatter *)dateFormatterWithFormat:(NSString *)format {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = format;
+//    formatter.locale = [NSLocale currentLocale];
+//    formatter.timeZone = [NSTimeZone systemTimeZone];
+    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC-8"]; // 东八区时间
+    return formatter;
+}
+
 // 当前年-月-日 时:分:秒
 + (NSString *)currentDateAndTime {
     return [self currentDateWithFormat:DateHyphenTimeColonFormat];
@@ -55,6 +65,15 @@ NSString *const TimeColonFormat      = @"HH:mm:ss";
     return [formatter stringFromDate:date];
 }
 
+// 根据格式将时间间隔字符串转换为时间类
++ (NSString *)stringWithTimeInterval:(NSString *)time withFormat:(NSString *)format {
+    if (!time || !format) return nil;
+    NSTimeInterval timeInterval = [time longLongValue] / 1000;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    NSDateFormatter *formatter = [self dateFormatterWithFormat:format];
+    return [formatter stringFromDate:date];
+}
+
 // 将时间与现在对比，说明时间状态
 + (NSString *)timeStateConversionFromDate:(NSDate *)date{
     if (!date) return nil;
@@ -82,13 +101,56 @@ NSString *const TimeColonFormat      = @"HH:mm:ss";
     return state;
 }
 
-// 设定日期格式
-+ (NSDateFormatter *)dateFormatterWithFormat:(NSString *)format {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = format;
-    //    formatter.locale = [NSLocale currentLocale];
-    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC-8"]; // 东八区时间
-    return formatter;
+// 将时间与现在对比，说明时间状态(年月日)
++ (NSString *)dateStateConversionFromDate:(NSDate *)date {
+    if (!date) return nil;
+    NSDateComponents *dateComponents = [self dateComponentsWithDate:date];
+    NSDateComponents *todayComponents = [self currentDateComponents];
+    
+    NSMutableString *state = [[NSMutableString alloc] init];
+    NSInteger year = dateComponents.year - todayComponents.year;
+    if (year < -2 || year > 2) {
+        [state appendFormat:@"%zd年", dateComponents.year];
+    } else if (year == -2) {
+        [state appendString:@"前年"];
+    } else if (year == -1) {
+        [state appendString:@"去年"];
+    } else if (year == 0) {
+        // nothing
+    } else if (year == 1) {
+        [state appendString:@"明年"];
+    } else if (year == 2) {
+        [state appendString:@"后年"];
+    }
+    if (state.length > 0) {
+        [state appendFormat:@"%02zd月%02zd日", dateComponents.month, dateComponents.day];
+        [state appendFormat:@"%02zd:%02zd:%02zd", dateComponents.hour, dateComponents.minute, dateComponents.second];
+        return [state copy];
+    }
+    
+    NSInteger month = dateComponents.month - todayComponents.month;
+    if (month != 0) {
+        [state appendFormat:@"%02zd月%02zd日", dateComponents.month, dateComponents.day];
+        [state appendFormat:@"%02zd:%02zd:%02zd", dateComponents.hour, dateComponents.minute, dateComponents.second];
+        return [state copy];
+    }
+    
+    NSInteger day = dateComponents.day - todayComponents.day;
+    if (day < -2 || day > 2) {
+        [state appendFormat:@"%02zd月%02zd日", dateComponents.month, dateComponents.day];
+    } else if (day == -2) {
+        [state appendString:@"前天"];
+    } else if (day == -1) {
+        [state appendString:@"昨天"];
+    } else if (day == 0) {
+        [state appendString:@"今天"];
+    } else if (day == 1) {
+        [state appendString:@"明天"];
+    } else if (day == 2) {
+        [state appendString:@"后天"];
+    }
+    [state appendFormat:@"%02zd:%02zd:%02zd", dateComponents.hour, dateComponents.minute, dateComponents.second];
+    return [state copy];
 }
 
 #pragma mark - NSDateComponents

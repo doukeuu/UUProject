@@ -49,7 +49,7 @@
 
 // 检测手机号是否符合基本格式
 - (BOOL)checkPhoneFormat {
-    if (_phone.length == 11 && [NSString validatePureDigital:_phone]) {
+    if (_phone.length == 11 && _phone.isPureDigital) {
         _tips = @"";
         return YES;
     } else {
@@ -61,7 +61,7 @@
 // 检测验证码是否符合基本格式
 - (BOOL)checkPhoneAndCodeFormat {
     if (![self checkPhoneFormat]) return NO;
-    if (_code.length != 4 || ![NSString validatePureDigital:_code]) {
+    if (_code.length != 4 || !_code.isPureDigital) {
         _tips = @"验证码格式错误，请重新输入";
         return NO;
     }

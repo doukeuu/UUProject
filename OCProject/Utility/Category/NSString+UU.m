@@ -10,41 +10,31 @@
 
 @implementation NSString (UU)
 
-// 设置格式日期
-+ (NSString *)dateFormatedStringWithTimeString:(NSString *)timeString  {
-    NSTimeInterval timeInterval = [timeString longLongValue] / 1000;
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC-8"]];
-    [formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
-    return [formatter stringFromDate:date];
-}
-
 // 删除json串中的转义符
-+ (NSString *)removeUnescapedCharacter:(NSString *)inputStr {
+- (NSString *)removeUnescapedCharacter {
     NSCharacterSet *controlChars = [NSCharacterSet controlCharacterSet];
-    NSRange range = [inputStr rangeOfCharacterFromSet:controlChars];
+    NSRange range = [self rangeOfCharacterFromSet:controlChars];
     if (range.location != NSNotFound) {
-        NSMutableString *mutable = [NSMutableString stringWithString:inputStr];
+        NSMutableString *mutable = [NSMutableString stringWithString:self];
         while (range.location != NSNotFound) {
             [mutable deleteCharactersInRange:range];
             range = [mutable rangeOfCharacterFromSet:controlChars];
         }
-        return mutable;
+        return [mutable copy];
     }
-    return inputStr;
+    return self;
 }
 
-// 正则表达式去除字符串中HTMl段落符号
-+ (NSString *)removeParagraphMarks:(NSString *)str {
+// 正则表达式去除字符串中部分HTML符号
+- (NSString *)removeParagraphMarks {
     NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"</?[p|P][^>]*>" options:NSRegularExpressionCaseInsensitive error:&error];
-    return [regex stringByReplacingMatchesInString:str options:0 range:NSMakeRange(0, [str length]) withTemplate:@""];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"</?[p|img|strong|a][^>]*>|&nbsp;" options:NSRegularExpressionCaseInsensitive error:&error];
+    return [regex stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:@""];
 }
 
-// 验证是否是纯数字
-+ (BOOL)validatePureDigital:(NSString *)value {
-    return [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"^\\d*$"] evaluateWithObject:value];
+// 是否是纯数字
+- (BOOL)isPureDigital {
+    return [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"^\\d*$"] evaluateWithObject:self];
 }
 
 @end

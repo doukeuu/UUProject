@@ -22,6 +22,16 @@
 		890C047B246A44B000E1242F /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 890C0478246A44AF00E1242F /* area.plist */; };
 		890C047C246A44B000E1242F /* GlobalAreaCode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 890C0479246A44AF00E1242F /* GlobalAreaCode.plist */; };
 		890C047D246A44B000E1242F /* LocationCitys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 890C047A246A44B000E1242F /* LocationCitys.plist */; };
+		890D9EB624D3C4E1005ED317 /* UUQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9EB524D3C4E1005ED317 /* UUQRCode.m */; };
+		890D9EB924D3E54F005ED317 /* UULocationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9EB824D3E54F005ED317 /* UULocationHandler.m */; };
+		890D9EBD24D3F960005ED317 /* SSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9EBC24D3F960005ED317 /* SSNavigationController.m */; };
+		890D9EC024D3F976005ED317 /* SSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9EBF24D3F976005ED317 /* SSBaseViewController.m */; };
+		890D9EC324D3F98C005ED317 /* SSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9EC224D3F98C005ED317 /* SSTabBarController.m */; };
+		890D9EC624D3FAF2005ED317 /* SSBaseWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9EC524D3FAF1005ED317 /* SSBaseWebController.m */; };
+		890D9EC924D3FE5C005ED317 /* UUExtensionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9EC824D3FE5C005ED317 /* UUExtensionModel.m */; };
+		890D9ECC24D40556005ED317 /* UUFoldingPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9ECB24D40556005ED317 /* UUFoldingPopupView.m */; };
+		890D9ED024D410A0005ED317 /* UUAlertTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9ECF24D410A0005ED317 /* UUAlertTipsView.m */; };
+		890D9ED324D410AE005ED317 /* UUAlertTipsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9ED224D410AE005ED317 /* UUAlertTipsController.m */; };
 		89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912048F246E1E7E00E76B0F /* UITextField+UU.m */; };
 		89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120492246E1E8F00E76B0F /* UITextView+UU.m */; };
 		89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120495246E307800E76B0F /* UIScrollView+Refresh.m */; };
@@ -106,7 +116,6 @@
 		89C40D2A2490838F00AE29BC /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D19249071D700AE29BC /* XPathQuery.m */; };
 		89C40D2C249083D800AE29BC /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C40D2B249083D800AE29BC /* libxml2.tbd */; };
 		89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D302490887F00AE29BC /* UUDeviceCheck.m */; };
-		89C40D34249088D300AE29BC /* UULocationGeocode.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D33249088D300AE29BC /* UULocationGeocode.m */; };
 		89C40D37249089A100AE29BC /* UUImagePickerCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D36249089A100AE29BC /* UUImagePickerCheck.m */; };
 		89C40D3A24908A8700AE29BC /* UUVersionCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D3924908A8700AE29BC /* UUVersionCheck.m */; };
 		89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C40D3C24908DC400AE29BC /* UUCustomDefaults.m */; };
@@ -167,6 +176,26 @@
 		890C047A246A44B000E1242F /* LocationCitys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocationCitys.plist; sourceTree = "<group>"; };
 		890C0484246A4A2200E1242F /* UUDefineNS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDefineNS.h; sourceTree = "<group>"; };
 		890C0485246A4A4800E1242F /* UUDefineUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDefineUI.h; sourceTree = "<group>"; };
+		890D9EB424D3C4E1005ED317 /* UUQRCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUQRCode.h; sourceTree = "<group>"; };
+		890D9EB524D3C4E1005ED317 /* UUQRCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUQRCode.m; sourceTree = "<group>"; };
+		890D9EB724D3E54F005ED317 /* UULocationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULocationHandler.h; sourceTree = "<group>"; };
+		890D9EB824D3E54F005ED317 /* UULocationHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULocationHandler.m; sourceTree = "<group>"; };
+		890D9EBB24D3F960005ED317 /* SSNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSNavigationController.h; sourceTree = "<group>"; };
+		890D9EBC24D3F960005ED317 /* SSNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSNavigationController.m; sourceTree = "<group>"; };
+		890D9EBE24D3F976005ED317 /* SSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSBaseViewController.h; sourceTree = "<group>"; };
+		890D9EBF24D3F976005ED317 /* SSBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSBaseViewController.m; sourceTree = "<group>"; };
+		890D9EC124D3F98C005ED317 /* SSTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTabBarController.h; sourceTree = "<group>"; };
+		890D9EC224D3F98C005ED317 /* SSTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTabBarController.m; sourceTree = "<group>"; };
+		890D9EC424D3FAF1005ED317 /* SSBaseWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSBaseWebController.h; sourceTree = "<group>"; };
+		890D9EC524D3FAF1005ED317 /* SSBaseWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSBaseWebController.m; sourceTree = "<group>"; };
+		890D9EC724D3FE5C005ED317 /* UUExtensionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUExtensionModel.h; sourceTree = "<group>"; };
+		890D9EC824D3FE5C005ED317 /* UUExtensionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUExtensionModel.m; sourceTree = "<group>"; };
+		890D9ECA24D40556005ED317 /* UUFoldingPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUFoldingPopupView.h; sourceTree = "<group>"; };
+		890D9ECB24D40556005ED317 /* UUFoldingPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUFoldingPopupView.m; sourceTree = "<group>"; };
+		890D9ECE24D410A0005ED317 /* UUAlertTipsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAlertTipsView.h; sourceTree = "<group>"; };
+		890D9ECF24D410A0005ED317 /* UUAlertTipsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAlertTipsView.m; sourceTree = "<group>"; };
+		890D9ED124D410AE005ED317 /* UUAlertTipsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAlertTipsController.h; sourceTree = "<group>"; };
+		890D9ED224D410AE005ED317 /* UUAlertTipsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAlertTipsController.m; sourceTree = "<group>"; };
 		8912048E246E1E7E00E76B0F /* UITextField+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+UU.h"; sourceTree = "<group>"; };
 		8912048F246E1E7E00E76B0F /* UITextField+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UU.m"; sourceTree = "<group>"; };
 		89120491246E1E8F00E76B0F /* UITextView+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+UU.h"; sourceTree = "<group>"; };
@@ -377,8 +406,6 @@
 		89C40D2D2490841000AE29BC /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		89C40D2F2490887F00AE29BC /* UUDeviceCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUDeviceCheck.h; sourceTree = "<group>"; };
 		89C40D302490887F00AE29BC /* UUDeviceCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUDeviceCheck.m; sourceTree = "<group>"; };
-		89C40D32249088D300AE29BC /* UULocationGeocode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULocationGeocode.h; sourceTree = "<group>"; };
-		89C40D33249088D300AE29BC /* UULocationGeocode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULocationGeocode.m; sourceTree = "<group>"; };
 		89C40D35249089A100AE29BC /* UUImagePickerCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImagePickerCheck.h; sourceTree = "<group>"; };
 		89C40D36249089A100AE29BC /* UUImagePickerCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImagePickerCheck.m; sourceTree = "<group>"; };
 		89C40D3824908A8700AE29BC /* UUVersionCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUVersionCheck.h; sourceTree = "<group>"; };
@@ -483,6 +510,8 @@
 			children = (
 				890C045C246A3D4500E1242F /* UUBaseModel.h */,
 				890C045D246A3D4500E1242F /* UUBaseModel.m */,
+				890D9EC724D3FE5C005ED317 /* UUExtensionModel.h */,
+				890D9EC824D3FE5C005ED317 /* UUExtensionModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -510,6 +539,7 @@
 		890C0458246A3AFB00E1242F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				890D9ECD24D4108A005ED317 /* AlertTips */,
 				89A90A1924C9724100D48EA1 /* SearchPattern */,
 				89F690B024AACE7300612514 /* UUImageBrowseController.h */,
 				89F690B124AACE7300612514 /* UUImageBrowseController.m */,
@@ -567,6 +597,32 @@
 				890C0484246A4A2200E1242F /* UUDefineNS.h */,
 			);
 			path = Definition;
+			sourceTree = "<group>";
+		};
+		890D9EBA24D3F906005ED317 /* SecondScheme */ = {
+			isa = PBXGroup;
+			children = (
+				890D9EBB24D3F960005ED317 /* SSNavigationController.h */,
+				890D9EBC24D3F960005ED317 /* SSNavigationController.m */,
+				890D9EBE24D3F976005ED317 /* SSBaseViewController.h */,
+				890D9EBF24D3F976005ED317 /* SSBaseViewController.m */,
+				890D9EC124D3F98C005ED317 /* SSTabBarController.h */,
+				890D9EC224D3F98C005ED317 /* SSTabBarController.m */,
+				890D9EC424D3FAF1005ED317 /* SSBaseWebController.h */,
+				890D9EC524D3FAF1005ED317 /* SSBaseWebController.m */,
+			);
+			path = SecondScheme;
+			sourceTree = "<group>";
+		};
+		890D9ECD24D4108A005ED317 /* AlertTips */ = {
+			isa = PBXGroup;
+			children = (
+				890D9ECE24D410A0005ED317 /* UUAlertTipsView.h */,
+				890D9ECF24D410A0005ED317 /* UUAlertTipsView.m */,
+				890D9ED124D410AE005ED317 /* UUAlertTipsController.h */,
+				890D9ED224D410AE005ED317 /* UUAlertTipsController.m */,
+			);
+			path = AlertTips;
 			sourceTree = "<group>";
 		};
 		89220B5624AC16A8002B0A5E /* Handler */ = {
@@ -707,6 +763,7 @@
 		895A9E1424931F4C003C15D5 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
+				890D9EBA24D3F906005ED317 /* SecondScheme */,
 				890C0470246A3FD800E1242F /* UUBaseTableController.h */,
 				890C0471246A3FD800E1242F /* UUBaseTableController.m */,
 				890C046D246A3F9D00E1242F /* UUBaseWebController.h */,
@@ -754,9 +811,9 @@
 				89C40D1A249077D000AE29BC /* Tools */,
 				896CF0D42468FBE400D02CD2 /* Network */,
 				890C0456246A3A9E00E1242F /* Model */,
+				896CF0D32468FB8B00D02CD2 /* Category */,
 				896CF0D62468FBFD00D02CD2 /* DataStore */,
 				896CF0D52468FBF300D02CD2 /* Security */,
-				896CF0D32468FB8B00D02CD2 /* Category */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -908,6 +965,8 @@
 			children = (
 				8983FF49249C5A4100A9D20A /* UUAnimationView.h */,
 				8983FF4A249C5A4100A9D20A /* UUAnimationView.m */,
+				890D9ECA24D40556005ED317 /* UUFoldingPopupView.h */,
+				890D9ECB24D40556005ED317 /* UUFoldingPopupView.m */,
 				8994FD4A24A196FB007FFC07 /* UUSelectionPopupView.h */,
 				8994FD4B24A196FB007FFC07 /* UUSelectionPopupView.m */,
 			);
@@ -1093,10 +1152,12 @@
 			children = (
 				89C40D1C2490783900AE29BC /* UUToolsUI.h */,
 				89C40D1D2490783900AE29BC /* UUToolsUI.m */,
+				890D9EB424D3C4E1005ED317 /* UUQRCode.h */,
+				890D9EB524D3C4E1005ED317 /* UUQRCode.m */,
 				89C40D3824908A8700AE29BC /* UUVersionCheck.h */,
 				89C40D3924908A8700AE29BC /* UUVersionCheck.m */,
-				89C40D32249088D300AE29BC /* UULocationGeocode.h */,
-				89C40D33249088D300AE29BC /* UULocationGeocode.m */,
+				890D9EB724D3E54F005ED317 /* UULocationHandler.h */,
+				890D9EB824D3E54F005ED317 /* UULocationHandler.m */,
 				89C40D35249089A100AE29BC /* UUImagePickerCheck.h */,
 				89C40D36249089A100AE29BC /* UUImagePickerCheck.m */,
 			);
@@ -1439,12 +1500,14 @@
 				89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */,
 				8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */,
 				89220B5F24AC2A44002B0A5E /* UUAdvertiseDetailController.m in Sources */,
+				890D9EC324D3F98C005ED317 /* SSTabBarController.m in Sources */,
 				89CF62A124D117B000E8B694 /* UUNetworkSwitch.m in Sources */,
 				8998425E24A04C8B00881A29 /* UUImageCirculatingView.m in Sources */,
 				89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */,
 				89C40D282490835800AE29BC /* TFHpple.m in Sources */,
 				898526872491BB6E008099FB /* UUDataCache.m in Sources */,
 				8998426424A04D1D00881A29 /* UURippleButtonView.m in Sources */,
+				890D9EC024D3F976005ED317 /* SSBaseViewController.m in Sources */,
 				895A9E0B24930C34003C15D5 /* RemoteNotificationManager.m in Sources */,
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				8985268A2491D74C008099FB /* UUDataStorage.m in Sources */,
@@ -1467,7 +1530,9 @@
 				89A90A2C24C979E300D48EA1 /* UUSearchDemoController.m in Sources */,
 				89C40D24249080CC00AE29BC /* UUHTMLFilter.m in Sources */,
 				8975A69A246BCA72002A8D93 /* UIImage+UU.m in Sources */,
+				890D9EC924D3FE5C005ED317 /* UUExtensionModel.m in Sources */,
 				895A9E0A24930C34003C15D5 /* HandlePushMessage.m in Sources */,
+				890D9EBD24D3F960005ED317 /* SSNavigationController.m in Sources */,
 				8983FF4B249C5A4100A9D20A /* UUAnimationView.m in Sources */,
 				897AED1124A2DC70007F8D50 /* UUSearchFielddView.m in Sources */,
 				89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */,
@@ -1480,6 +1545,7 @@
 				89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */,
 				8983FF47249C56C700A9D20A /* UUCustomDatePicker.m in Sources */,
 				8998426724A04D7100881A29 /* UUBadgeButton.m in Sources */,
+				890D9EC624D3FAF2005ED317 /* SSBaseWebController.m in Sources */,
 				89220B5C24AC2A35002B0A5E /* UUAdvertisementController.m in Sources */,
 				89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */,
 				890C0472246A3FD800E1242F /* UUBaseTableController.m in Sources */,
@@ -1487,6 +1553,7 @@
 				899408102497029C0004364A /* UUWebViewController.m in Sources */,
 				89C40D3A24908A8700AE29BC /* UUVersionCheck.m in Sources */,
 				89120499246E309300E76B0F /* UURefresher.m in Sources */,
+				890D9ED324D410AE005ED317 /* UUAlertTipsController.m in Sources */,
 				890C0462246A3E5900E1242F /* UUProgressHUD.m in Sources */,
 				89C40D272490810B00AE29BC /* UUDateTime.m in Sources */,
 				898526952491DCBF008099FB /* UUEncryption.m in Sources */,
@@ -1504,20 +1571,23 @@
 				8998426D24A0574700881A29 /* UUFloatingButton.m in Sources */,
 				896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */,
 				899CA22C24D2994D002633AF /* UUPlaceholderView.m in Sources */,
+				890D9ED024D410A0005ED317 /* UUAlertTipsView.m in Sources */,
 				89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */,
 				8998426A24A0510200881A29 /* UUSwitchButton.m in Sources */,
 				897AED1C24A2E1EB007F8D50 /* UUCommentTextView.m in Sources */,
 				89A90A2924C9731000D48EA1 /* UUSearchPatternHeaderView.m in Sources */,
 				8957F79D2468E7F300132B13 /* main.m in Sources */,
 				8901D5F324984FEA000EF470 /* UUBulgeTabBar.m in Sources */,
+				890D9ECC24D40556005ED317 /* UUFoldingPopupView.m in Sources */,
 				89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */,
 				890C045E246A3D4500E1242F /* UUBaseModel.m in Sources */,
 				89220B6224AC2B33002B0A5E /* UUAdvertisementModel.m in Sources */,
 				8975A691246B981D002A8D93 /* NSArray+UU.m in Sources */,
 				8975A697246BC444002A8D93 /* UIButton+UU.m in Sources */,
+				890D9EB624D3C4E1005ED317 /* UUQRCode.m in Sources */,
 				890C0466246A3E8000E1242F /* UUBaseController.m in Sources */,
 				8953B28F2499A4750034306A /* UUNormalTableCell.m in Sources */,
-				89C40D34249088D300AE29BC /* UULocationGeocode.m in Sources */,
+				890D9EB924D3E54F005ED317 /* UULocationHandler.m in Sources */,
 				8975A694246B982A002A8D93 /* NSDictionary+UU.m in Sources */,
 				8975A68D246B95C5002A8D93 /* UUCostantKey.m in Sources */,
 				89AED721249D9C5600E2F49A /* UUSegmentButtonView.m in Sources */,

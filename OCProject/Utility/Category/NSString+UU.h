@@ -12,17 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (UU)
 
-/// 设置格式日期
-+ (NSString *)dateFormatedStringWithTimeString:(NSString *)timeString;
-
 /// 删除json串中的转义符
-+ (NSString *)removeUnescapedCharacter:(NSString *)inputSt;
+- (NSString *)removeUnescapedCharacter;
 
-/// 正则表达式去除字符串中HTMl段落符号
-+ (NSString *)removeParagraphMarks:(NSString *)str;
+/// 正则表达式去除字符串中部分HTML符号
+- (NSString *)removeParagraphMarks;
 
-/// 验证是否是纯数字
-+ (BOOL)validatePureDigital:(NSString *)value;
+/// 是否是纯数字
+- (BOOL)isPureDigital;
 
 @end
 

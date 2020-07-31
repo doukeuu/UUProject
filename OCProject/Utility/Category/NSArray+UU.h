@@ -12,11 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSArray (UU)
 
-/// 取出最大值
-+ (NSString *)validateMaxNumberWithArray:(NSArray *)array;
-/// 取出最小值
-+ (NSString *)validateMinNumberWithArray:(NSArray *)array;
-
 @end
 
 NS_ASSUME_NONNULL_END
