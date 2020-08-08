@@ -114,9 +114,9 @@
 // 获取广告图片地址
 - (void)acquireAdvertisementImageURL {
     
-    CGFloat scale = [UIScreen mainScreen].scale;
-    NSString *resolution = [NSString stringWithFormat:@"%.fx%.f", SCREEN_WIDTH * scale, SCREEN_HEIGHT * scale];
-    NSDictionary *params = @{@"system":@"ios",@"resolution":resolution};
+//    CGFloat scale = [UIScreen mainScreen].scale;
+//    NSString *resolution = [NSString stringWithFormat:@"%.fx%.f", SCREEN_WIDTH * scale, SCREEN_HEIGHT * scale];
+//    NSDictionary *params = @{@"system":@"ios",@"resolution":resolution};
     
 //    [HTTPManager POST:kGetAdInfoURL params:params completeHandler:^(id object, NSError *error) {
 //        if (error) return ;

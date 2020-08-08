@@ -10,6 +10,12 @@
 		842226C36023216A29628E68 /* Pods_OCProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD854F0C48D9A9EBEFC85C4 /* Pods_OCProject.framework */; };
 		8901D5F324984FEA000EF470 /* UUBulgeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8901D5F224984FEA000EF470 /* UUBulgeTabBar.m */; };
 		8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8901D5F6249856F0000EF470 /* UUNormalCollectionCell.m */; };
+		89084A7624D799FD008A1A87 /* UUMapSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89084A7524D799FC008A1A87 /* UUMapSelectionController.m */; };
+		89084A7D24D7FC43008A1A87 /* UUChartListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89084A7C24D7FC43008A1A87 /* UUChartListController.m */; };
+		89084A8A24D80E7D008A1A87 /* UUPieChartOneRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89084A8924D80E7D008A1A87 /* UUPieChartOneRenderer.swift */; };
+		89084A8D24D80F68008A1A87 /* UUPieChartOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89084A8C24D80F68008A1A87 /* UUPieChartOneCell.m */; };
+		89084A9024D8103C008A1A87 /* UUBarChartOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89084A8F24D8103C008A1A87 /* UUBarChartOneCell.m */; };
+		89084A9224D810AB008A1A87 /* UUBarChartOneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89084A9124D810AB008A1A87 /* UUBarChartOneFormatter.swift */; };
 		890C045B246A3CA800E1242F /* NSString+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C045A246A3CA800E1242F /* NSString+UU.m */; };
 		890C045E246A3D4500E1242F /* UUBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C045D246A3D4500E1242F /* UUBaseModel.m */; };
 		890C0462246A3E5900E1242F /* UUProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 890C0461246A3E5900E1242F /* UUProgressHUD.m */; };
@@ -36,6 +42,10 @@
 		89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120492246E1E8F00E76B0F /* UITextView+UU.m */; };
 		89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120495246E307800E76B0F /* UIScrollView+Refresh.m */; };
 		89120499246E309300E76B0F /* UURefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120498246E309300E76B0F /* UURefresher.m */; };
+		8914291324DE2EB5009E01EF /* UUImitateWeChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8914291224DE2EB5009E01EF /* UUImitateWeChatController.m */; };
+		8914291724DE2FB2009E01EF /* UUImitateWeChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8914291624DE2FB2009E01EF /* UUImitateWeChatCell.m */; };
+		8914291A24DE3555009E01EF /* UUImitateWeChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8914291924DE3555009E01EF /* UUImitateWeChatView.m */; };
+		8914292124DE8FDA009E01EF /* UUUponBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8914292024DE8FDA009E01EF /* UUUponBubbleView.m */; };
 		89220B5524AC1561002B0A5E /* UULoginAreaCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B5424AC1561002B0A5E /* UULoginAreaCodeController.m */; };
 		89220B5924AC16BE002B0A5E /* UULoginPageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B5824AC16BE002B0A5E /* UULoginPageHandler.m */; };
 		89220B5C24AC2A35002B0A5E /* UUAdvertisementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B5B24AC2A35002B0A5E /* UUAdvertisementController.m */; };
@@ -88,6 +98,12 @@
 		899408102497029C0004364A /* UUWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994080F2497029C0004364A /* UUWebViewController.m */; };
 		89940816249702D60004364A /* UUWebProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89940815249702D60004364A /* UUWebProxyManager.m */; };
 		899408192497031E0004364A /* UUJSExportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 899408182497031E0004364A /* UUJSExportManager.m */; };
+		8994F2C924D8FB52002B3EC4 /* UUPieChartTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994F2C824D8FB52002B3EC4 /* UUPieChartTwoCell.m */; };
+		8994F2CB24D8FBEB002B3EC4 /* UUPieChartTwoMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8994F2CA24D8FBEB002B3EC4 /* UUPieChartTwoMarker.swift */; };
+		8994F2CE24D9045C002B3EC4 /* UUBarChartTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994F2CD24D9045C002B3EC4 /* UUBarChartTwoCell.m */; };
+		8994F2D024D913F4002B3EC4 /* UUBarChartTwoFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8994F2CF24D913F4002B3EC4 /* UUBarChartTwoFormatter.swift */; };
+		8994F2D224D938A0002B3EC4 /* UUBarChartTwoMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8994F2D124D938A0002B3EC4 /* UUBarChartTwoMarker.swift */; };
+		8994F2D524D9595C002B3EC4 /* UULineChartOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994F2D424D9595C002B3EC4 /* UULineChartOneCell.m */; };
 		8994FD4C24A196FB007FFC07 /* UUSelectionPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8994FD4B24A196FB007FFC07 /* UUSelectionPopupView.m */; };
 		8998425E24A04C8B00881A29 /* UUImageCirculatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998425D24A04C8B00881A29 /* UUImageCirculatingView.m */; };
 		8998426124A04CE200881A29 /* UUImageAutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8998426024A04CE200881A29 /* UUImageAutoScrollView.m */; };
@@ -153,6 +169,17 @@
 		8901D5F224984FEA000EF470 /* UUBulgeTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUBulgeTabBar.m; sourceTree = "<group>"; };
 		8901D5F5249856F0000EF470 /* UUNormalCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNormalCollectionCell.h; sourceTree = "<group>"; };
 		8901D5F6249856F0000EF470 /* UUNormalCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNormalCollectionCell.m; sourceTree = "<group>"; };
+		89084A7424D799FC008A1A87 /* UUMapSelectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUMapSelectionController.h; sourceTree = "<group>"; };
+		89084A7524D799FC008A1A87 /* UUMapSelectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUMapSelectionController.m; sourceTree = "<group>"; };
+		89084A7B24D7FC43008A1A87 /* UUChartListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUChartListController.h; sourceTree = "<group>"; };
+		89084A7C24D7FC43008A1A87 /* UUChartListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUChartListController.m; sourceTree = "<group>"; };
+		89084A8624D80DDA008A1A87 /* OCProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCProject-Bridging-Header.h"; sourceTree = "<group>"; };
+		89084A8924D80E7D008A1A87 /* UUPieChartOneRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUPieChartOneRenderer.swift; sourceTree = "<group>"; };
+		89084A8B24D80F68008A1A87 /* UUPieChartOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUPieChartOneCell.h; sourceTree = "<group>"; };
+		89084A8C24D80F68008A1A87 /* UUPieChartOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUPieChartOneCell.m; sourceTree = "<group>"; };
+		89084A8E24D8103C008A1A87 /* UUBarChartOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUBarChartOneCell.h; sourceTree = "<group>"; };
+		89084A8F24D8103C008A1A87 /* UUBarChartOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUBarChartOneCell.m; sourceTree = "<group>"; };
+		89084A9124D810AB008A1A87 /* UUBarChartOneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUBarChartOneFormatter.swift; sourceTree = "<group>"; };
 		890C0459246A3CA800E1242F /* NSString+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UU.h"; sourceTree = "<group>"; };
 		890C045A246A3CA800E1242F /* NSString+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UU.m"; sourceTree = "<group>"; };
 		890C045C246A3D4500E1242F /* UUBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUBaseModel.h; sourceTree = "<group>"; };
@@ -205,6 +232,14 @@
 		89120497246E309300E76B0F /* UURefresher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UURefresher.h; sourceTree = "<group>"; };
 		89120498246E309300E76B0F /* UURefresher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UURefresher.m; sourceTree = "<group>"; };
 		8912049A246E315100E76B0F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8914291124DE2EB5009E01EF /* UUImitateWeChatController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImitateWeChatController.h; sourceTree = "<group>"; };
+		8914291224DE2EB5009E01EF /* UUImitateWeChatController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImitateWeChatController.m; sourceTree = "<group>"; };
+		8914291524DE2FB2009E01EF /* UUImitateWeChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImitateWeChatCell.h; sourceTree = "<group>"; };
+		8914291624DE2FB2009E01EF /* UUImitateWeChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImitateWeChatCell.m; sourceTree = "<group>"; };
+		8914291824DE3555009E01EF /* UUImitateWeChatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImitateWeChatView.h; sourceTree = "<group>"; };
+		8914291924DE3555009E01EF /* UUImitateWeChatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImitateWeChatView.m; sourceTree = "<group>"; };
+		8914291F24DE8FDA009E01EF /* UUUponBubbleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUUponBubbleView.h; sourceTree = "<group>"; };
+		8914292024DE8FDA009E01EF /* UUUponBubbleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUUponBubbleView.m; sourceTree = "<group>"; };
 		89220B5324AC1561002B0A5E /* UULoginAreaCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginAreaCodeController.h; sourceTree = "<group>"; };
 		89220B5424AC1561002B0A5E /* UULoginAreaCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULoginAreaCodeController.m; sourceTree = "<group>"; };
 		89220B5724AC16BE002B0A5E /* UULoginPageHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginPageHandler.h; sourceTree = "<group>"; };
@@ -307,6 +342,15 @@
 		89940815249702D60004364A /* UUWebProxyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUWebProxyManager.m; sourceTree = "<group>"; };
 		899408172497031E0004364A /* UUJSExportManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUJSExportManager.h; sourceTree = "<group>"; };
 		899408182497031E0004364A /* UUJSExportManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUJSExportManager.m; sourceTree = "<group>"; };
+		8994F2C724D8FB52002B3EC4 /* UUPieChartTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUPieChartTwoCell.h; sourceTree = "<group>"; };
+		8994F2C824D8FB52002B3EC4 /* UUPieChartTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUPieChartTwoCell.m; sourceTree = "<group>"; };
+		8994F2CA24D8FBEB002B3EC4 /* UUPieChartTwoMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUPieChartTwoMarker.swift; sourceTree = "<group>"; };
+		8994F2CC24D9045C002B3EC4 /* UUBarChartTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUBarChartTwoCell.h; sourceTree = "<group>"; };
+		8994F2CD24D9045C002B3EC4 /* UUBarChartTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUBarChartTwoCell.m; sourceTree = "<group>"; };
+		8994F2CF24D913F4002B3EC4 /* UUBarChartTwoFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUBarChartTwoFormatter.swift; sourceTree = "<group>"; };
+		8994F2D124D938A0002B3EC4 /* UUBarChartTwoMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUBarChartTwoMarker.swift; sourceTree = "<group>"; };
+		8994F2D324D9595C002B3EC4 /* UULineChartOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULineChartOneCell.h; sourceTree = "<group>"; };
+		8994F2D424D9595C002B3EC4 /* UULineChartOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULineChartOneCell.m; sourceTree = "<group>"; };
 		8994FD4A24A196FB007FFC07 /* UUSelectionPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSelectionPopupView.h; sourceTree = "<group>"; };
 		8994FD4B24A196FB007FFC07 /* UUSelectionPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSelectionPopupView.m; sourceTree = "<group>"; };
 		8998425C24A04C8B00881A29 /* UUImageCirculatingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageCirculatingView.h; sourceTree = "<group>"; };
@@ -495,6 +539,66 @@
 			path = CollectionCell;
 			sourceTree = "<group>";
 		};
+		89084A7224D7994F008A1A87 /* ImageHandler */ = {
+			isa = PBXGroup;
+			children = (
+				89F690B024AACE7300612514 /* UUImageBrowseController.h */,
+				89F690B124AACE7300612514 /* UUImageBrowseController.m */,
+				89F690B324AACF0700612514 /* UUImageClippingController.h */,
+				89F690B424AACF0700612514 /* UUImageClippingController.m */,
+			);
+			path = ImageHandler;
+			sourceTree = "<group>";
+		};
+		89084A7324D799EC008A1A87 /* MapSelection */ = {
+			isa = PBXGroup;
+			children = (
+				89084A7424D799FC008A1A87 /* UUMapSelectionController.h */,
+				89084A7524D799FC008A1A87 /* UUMapSelectionController.m */,
+			);
+			path = MapSelection;
+			sourceTree = "<group>";
+		};
+		89084A7A24D7FAD5008A1A87 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				89084A7B24D7FC43008A1A87 /* UUChartListController.h */,
+				89084A7C24D7FC43008A1A87 /* UUChartListController.m */,
+				89084A7E24D804B9008A1A87 /* View */,
+				89084A7F24D804EB008A1A87 /* Component */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		89084A7E24D804B9008A1A87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89084A8B24D80F68008A1A87 /* UUPieChartOneCell.h */,
+				89084A8C24D80F68008A1A87 /* UUPieChartOneCell.m */,
+				8994F2C724D8FB52002B3EC4 /* UUPieChartTwoCell.h */,
+				8994F2C824D8FB52002B3EC4 /* UUPieChartTwoCell.m */,
+				89084A8E24D8103C008A1A87 /* UUBarChartOneCell.h */,
+				89084A8F24D8103C008A1A87 /* UUBarChartOneCell.m */,
+				8994F2CC24D9045C002B3EC4 /* UUBarChartTwoCell.h */,
+				8994F2CD24D9045C002B3EC4 /* UUBarChartTwoCell.m */,
+				8994F2D324D9595C002B3EC4 /* UULineChartOneCell.h */,
+				8994F2D424D9595C002B3EC4 /* UULineChartOneCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89084A7F24D804EB008A1A87 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				89084A8924D80E7D008A1A87 /* UUPieChartOneRenderer.swift */,
+				8994F2CA24D8FBEB002B3EC4 /* UUPieChartTwoMarker.swift */,
+				89084A9124D810AB008A1A87 /* UUBarChartOneFormatter.swift */,
+				8994F2CF24D913F4002B3EC4 /* UUBarChartTwoFormatter.swift */,
+				8994F2D124D938A0002B3EC4 /* UUBarChartTwoMarker.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		890C0455246A2C0000E1242F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +623,7 @@
 		890C0457246A3AF500E1242F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8914291B24DE8F97009E01EF /* BubbleView */,
 				8983FF48249C5A2A00A9D20A /* AnimationView */,
 				8998425524A0458000881A29 /* Button */,
 				8998424E24A03EEC00881A29 /* CirculateImage */,
@@ -540,11 +645,11 @@
 			isa = PBXGroup;
 			children = (
 				890D9ECD24D4108A005ED317 /* AlertTips */,
+				89084A7A24D7FAD5008A1A87 /* Charts */,
+				89084A7224D7994F008A1A87 /* ImageHandler */,
+				8914291024DE2DD9009E01EF /* ImitateWeChat */,
+				89084A7324D799EC008A1A87 /* MapSelection */,
 				89A90A1924C9724100D48EA1 /* SearchPattern */,
-				89F690B024AACE7300612514 /* UUImageBrowseController.h */,
-				89F690B124AACE7300612514 /* UUImageBrowseController.m */,
-				89F690B324AACF0700612514 /* UUImageClippingController.h */,
-				89F690B424AACF0700612514 /* UUImageClippingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -617,12 +722,42 @@
 		890D9ECD24D4108A005ED317 /* AlertTips */ = {
 			isa = PBXGroup;
 			children = (
-				890D9ECE24D410A0005ED317 /* UUAlertTipsView.h */,
-				890D9ECF24D410A0005ED317 /* UUAlertTipsView.m */,
 				890D9ED124D410AE005ED317 /* UUAlertTipsController.h */,
 				890D9ED224D410AE005ED317 /* UUAlertTipsController.m */,
+				890D9ECE24D410A0005ED317 /* UUAlertTipsView.h */,
+				890D9ECF24D410A0005ED317 /* UUAlertTipsView.m */,
 			);
 			path = AlertTips;
+			sourceTree = "<group>";
+		};
+		8914291024DE2DD9009E01EF /* ImitateWeChat */ = {
+			isa = PBXGroup;
+			children = (
+				8914291124DE2EB5009E01EF /* UUImitateWeChatController.h */,
+				8914291224DE2EB5009E01EF /* UUImitateWeChatController.m */,
+				8914291424DE2EE1009E01EF /* View */,
+			);
+			path = ImitateWeChat;
+			sourceTree = "<group>";
+		};
+		8914291424DE2EE1009E01EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8914291524DE2FB2009E01EF /* UUImitateWeChatCell.h */,
+				8914291624DE2FB2009E01EF /* UUImitateWeChatCell.m */,
+				8914291824DE3555009E01EF /* UUImitateWeChatView.h */,
+				8914291924DE3555009E01EF /* UUImitateWeChatView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8914291B24DE8F97009E01EF /* BubbleView */ = {
+			isa = PBXGroup;
+			children = (
+				8914291F24DE8FDA009E01EF /* UUUponBubbleView.h */,
+				8914292024DE8FDA009E01EF /* UUUponBubbleView.m */,
+			);
+			path = BubbleView;
 			sourceTree = "<group>";
 		};
 		89220B5624AC16A8002B0A5E /* Handler */ = {
@@ -693,6 +828,7 @@
 				8957F79B2468E7F300132B13 /* Info.plist */,
 				8957F79C2468E7F300132B13 /* main.m */,
 				8912049A246E315100E76B0F /* PrefixHeader.pch */,
+				89084A8624D80DDA008A1A87 /* OCProject-Bridging-Header.h */,
 			);
 			path = OCProject;
 			sourceTree = "<group>";
@@ -1328,6 +1464,7 @@
 				TargetAttributes = {
 					8957F7872468E7F100132B13 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					8957F7F92468E8B900132B13 = {
 						CreatedOnToolsVersion = 11.3;
@@ -1505,9 +1642,11 @@
 				8998425E24A04C8B00881A29 /* UUImageCirculatingView.m in Sources */,
 				89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */,
 				89C40D282490835800AE29BC /* TFHpple.m in Sources */,
+				8914292124DE8FDA009E01EF /* UUUponBubbleView.m in Sources */,
 				898526872491BB6E008099FB /* UUDataCache.m in Sources */,
 				8998426424A04D1D00881A29 /* UURippleButtonView.m in Sources */,
 				890D9EC024D3F976005ED317 /* SSBaseViewController.m in Sources */,
+				8914291724DE2FB2009E01EF /* UUImitateWeChatCell.m in Sources */,
 				895A9E0B24930C34003C15D5 /* RemoteNotificationManager.m in Sources */,
 				8957F7922468E7F200132B13 /* ViewController.m in Sources */,
 				8985268A2491D74C008099FB /* UUDataStorage.m in Sources */,
@@ -1517,12 +1656,16 @@
 				89C40CE22490713F00AE29BC /* NSString+UI.m in Sources */,
 				8953B29E2499B3A30034306A /* UUTextViewTableCell.m in Sources */,
 				8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */,
+				8994F2CB24D8FBEB002B3EC4 /* UUPieChartTwoMarker.swift in Sources */,
 				890C0469246A3F0D00E1242F /* UUNavigationController.m in Sources */,
+				8994F2D224D938A0002B3EC4 /* UUBarChartTwoMarker.swift in Sources */,
 				890C045B246A3CA800E1242F /* NSString+UU.m in Sources */,
+				89084A9224D810AB008A1A87 /* UUBarChartOneFormatter.swift in Sources */,
 				899CA22624D25404002633AF /* UIColor+UU.m in Sources */,
 				897AED1524A2DD7C007F8D50 /* UUMultitypeLabel.m in Sources */,
 				89C40D212490784C00AE29BC /* UUToolsNS.m in Sources */,
 				89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */,
+				89084A9024D8103C008A1A87 /* UUBarChartOneCell.m in Sources */,
 				899CA22924D298DF002633AF /* UIScrollView+Placeholder.m in Sources */,
 				8998426124A04CE200881A29 /* UUImageAutoScrollView.m in Sources */,
 				89220B5924AC16BE002B0A5E /* UULoginPageHandler.m in Sources */,
@@ -1534,21 +1677,27 @@
 				895A9E0A24930C34003C15D5 /* HandlePushMessage.m in Sources */,
 				890D9EBD24D3F960005ED317 /* SSNavigationController.m in Sources */,
 				8983FF4B249C5A4100A9D20A /* UUAnimationView.m in Sources */,
+				8994F2D524D9595C002B3EC4 /* UULineChartOneCell.m in Sources */,
 				897AED1124A2DC70007F8D50 /* UUSearchFielddView.m in Sources */,
 				89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */,
 				890C046F246A3F9D00E1242F /* UUBaseWebController.m in Sources */,
 				89220B6524AC2FC1002B0A5E /* UULaunchGuideController.m in Sources */,
 				8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */,
 				89940816249702D60004364A /* UUWebProxyManager.m in Sources */,
+				8994F2D024D913F4002B3EC4 /* UUBarChartTwoFormatter.swift in Sources */,
 				899408192497031E0004364A /* UUJSExportManager.m in Sources */,
 				89A90A1C24C9726D00D48EA1 /* UUSearchPatternController.m in Sources */,
 				89C40D3D24908DC400AE29BC /* UUCustomDefaults.m in Sources */,
+				89084A7D24D7FC43008A1A87 /* UUChartListController.m in Sources */,
+				8994F2CE24D9045C002B3EC4 /* UUBarChartTwoCell.m in Sources */,
+				8994F2C924D8FB52002B3EC4 /* UUPieChartTwoCell.m in Sources */,
 				8983FF47249C56C700A9D20A /* UUCustomDatePicker.m in Sources */,
 				8998426724A04D7100881A29 /* UUBadgeButton.m in Sources */,
 				890D9EC624D3FAF2005ED317 /* SSBaseWebController.m in Sources */,
 				89220B5C24AC2A35002B0A5E /* UUAdvertisementController.m in Sources */,
 				89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */,
 				890C0472246A3FD800E1242F /* UUBaseTableController.m in Sources */,
+				89084A8D24D80F68008A1A87 /* UUPieChartOneCell.m in Sources */,
 				895A9E1C24932392003C15D5 /* UUInteractiveTransition.m in Sources */,
 				899408102497029C0004364A /* UUWebViewController.m in Sources */,
 				89C40D3A24908A8700AE29BC /* UUVersionCheck.m in Sources */,
@@ -1566,6 +1715,7 @@
 				890C0477246A446300E1242F /* UIScrollView+UU.m in Sources */,
 				895A9E0E249310E8003C15D5 /* UUNetWorkManager.m in Sources */,
 				89F690B824AACF9900612514 /* UULoginBaseController.m in Sources */,
+				89084A8A24D80E7D008A1A87 /* UUPieChartOneRenderer.swift in Sources */,
 				890C046C246A3F2500E1242F /* UUTabBarController.m in Sources */,
 				8994FD4C24A196FB007FFC07 /* UUSelectionPopupView.m in Sources */,
 				8998426D24A0574700881A29 /* UUFloatingButton.m in Sources */,
@@ -1581,12 +1731,15 @@
 				890D9ECC24D40556005ED317 /* UUFoldingPopupView.m in Sources */,
 				89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */,
 				890C045E246A3D4500E1242F /* UUBaseModel.m in Sources */,
+				8914291324DE2EB5009E01EF /* UUImitateWeChatController.m in Sources */,
 				89220B6224AC2B33002B0A5E /* UUAdvertisementModel.m in Sources */,
+				89084A7624D799FD008A1A87 /* UUMapSelectionController.m in Sources */,
 				8975A691246B981D002A8D93 /* NSArray+UU.m in Sources */,
 				8975A697246BC444002A8D93 /* UIButton+UU.m in Sources */,
 				890D9EB624D3C4E1005ED317 /* UUQRCode.m in Sources */,
 				890C0466246A3E8000E1242F /* UUBaseController.m in Sources */,
 				8953B28F2499A4750034306A /* UUNormalTableCell.m in Sources */,
+				8914291A24DE3555009E01EF /* UUImitateWeChatView.m in Sources */,
 				890D9EB924D3E54F005ED317 /* UULocationHandler.m in Sources */,
 				8975A694246B982A002A8D93 /* NSDictionary+UU.m in Sources */,
 				8975A68D246B95C5002A8D93 /* UUCostantKey.m in Sources */,
@@ -1786,6 +1939,7 @@
 			baseConfigurationReference = C5EB5B42B9402B3FD6218983 /* Pods-OCProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProject/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1813,6 +1967,9 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xyz.OCProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OCProject/OCProject-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1822,6 +1979,7 @@
 			baseConfigurationReference = 3A23AD61129FA02CE47F8594 /* Pods-OCProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProject/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1849,6 +2007,8 @@
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xyz.OCProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OCProject/OCProject-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1856,6 +2016,7 @@
 		8957F8022468E8BA00132B13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UUOCTests/Info.plist;
@@ -1874,6 +2035,7 @@
 		8957F8032468E8BA00132B13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UUOCTests/Info.plist;
@@ -1892,6 +2054,7 @@
 		8957F8102468E8CC00132B13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UUSwiftTests/Info.plist;
@@ -1913,6 +2076,7 @@
 		8957F8112468E8CC00132B13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UUSwiftTests/Info.plist;

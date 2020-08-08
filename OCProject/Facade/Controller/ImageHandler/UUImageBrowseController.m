@@ -139,7 +139,6 @@
 @interface UUImageBrowseController () <UIScrollViewDelegate, ImageScrollViewDelegate, UIActionSheetDelegate>
 {
     NSInteger _lastIndex;
-    UIImage *_longPressImage;
 }
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) NSMutableArray *scrollArray;
@@ -227,17 +226,13 @@
 }
 
 - (void)imageScrollViewLongPressWithImage:(UIImage *)image {
-    _longPressImage = image;
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"保存图片", nil];
-    [sheet showInView:self.view];
-}
-
-#pragma mark - UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
-        UIImageWriteToSavedPhotosAlbum(_longPressImage, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
-    }
+    if (!image) return;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"保存图片" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+    }]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 -(void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
