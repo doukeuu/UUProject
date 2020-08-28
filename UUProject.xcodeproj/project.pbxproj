@@ -38,6 +38,7 @@
 		890D9ECC24D40556005ED317 /* UUFoldingPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9ECB24D40556005ED317 /* UUFoldingPopupView.m */; };
 		890D9ED024D410A0005ED317 /* UUAlertTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9ECF24D410A0005ED317 /* UUAlertTipsView.m */; };
 		890D9ED324D410AE005ED317 /* UUAlertTipsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890D9ED224D410AE005ED317 /* UUAlertTipsController.m */; };
+		89110F0324F8F80200757BED /* UIColor+UU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89110F0224F8F80200757BED /* UIColor+UU.swift */; };
 		89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912048F246E1E7E00E76B0F /* UITextField+UU.m */; };
 		89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120492246E1E8F00E76B0F /* UITextView+UU.m */; };
 		89120496246E307800E76B0F /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 89120495246E307800E76B0F /* UIScrollView+Refresh.m */; };
@@ -222,6 +223,7 @@
 		890D9ECF24D410A0005ED317 /* UUAlertTipsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAlertTipsView.m; sourceTree = "<group>"; };
 		890D9ED124D410AE005ED317 /* UUAlertTipsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAlertTipsController.h; sourceTree = "<group>"; };
 		890D9ED224D410AE005ED317 /* UUAlertTipsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAlertTipsController.m; sourceTree = "<group>"; };
+		89110F0224F8F80200757BED /* UIColor+UU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+UU.swift"; sourceTree = "<group>"; };
 		8912048E246E1E7E00E76B0F /* UITextField+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+UU.h"; sourceTree = "<group>"; };
 		8912048F246E1E7E00E76B0F /* UITextField+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+UU.m"; sourceTree = "<group>"; };
 		89120491246E1E8F00E76B0F /* UITextView+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+UU.h"; sourceTree = "<group>"; };
@@ -728,6 +730,22 @@
 			path = AlertTips;
 			sourceTree = "<group>";
 		};
+		89110EFB24F8F6B600757BED /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				89110EFF24F8F6FD00757BED /* Extension */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		89110EFF24F8F6FD00757BED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				89110F0224F8F80200757BED /* UIColor+UU.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		8914291024DE2DD9009E01EF /* ImitateWeChat */ = {
 			isa = PBXGroup;
 			children = (
@@ -854,6 +872,7 @@
 			children = (
 				8957F8182468E8F400132B13 /* AppDelegate.swift */,
 				8957F81C2468E8F400132B13 /* ViewController.swift */,
+				89110EFB24F8F6B600757BED /* Facade */,
 				8957F81E2468E8F400132B13 /* Main.storyboard */,
 				8957F8212468E8F600132B13 /* Assets.xcassets */,
 				8957F8232468E8F600132B13 /* LaunchScreen.storyboard */,
@@ -1765,6 +1784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8957F81D2468E8F400132B13 /* ViewController.swift in Sources */,
+				89110F0324F8F80200757BED /* UIColor+UU.swift in Sources */,
 				8957F8192468E8F400132B13 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
