@@ -7,17 +7,19 @@
 //
 
 #import "UUProgressHUD.h"
+#import "UUToolsUI.h"
 #import <MBProgressHUD.h>
 
 @implementation UUProgressHUD
 
 // 显示菊花提示视图
 + (void)showHUD {
-    [self showHUDInView:[self currentView]];
+    [self showHUDInView:[UUToolsUI currentViewController].view];
 }
 
 // 在指定视图中显示菊花提示视图
 + (void)showHUDInView:(UIView *)view {
+    if (!view) return;
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.bezelView.color = [UIColor colorWithWhite:0.4 alpha:0.8];
@@ -37,6 +39,7 @@
 
 // 在指定视图中显示文字提示，一段时间后隐藏
 + (void)showText:(NSString *)text inView:(UIView *)view during:(NSTimeInterval)interval {
+    if (!view) return;
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     hud.mode = MBProgressHUDModeText;
     hud.bezelView.color = [UIColor colorWithWhite:0.4 alpha:0.8];
@@ -53,6 +56,7 @@
 
 // 圆弧形进度展示
 + (UIView *)showAnnularProgressInView:(UIView *)view {
+    if (!view) return nil;
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
     hud.mode = MBProgressHUDModeAnnularDeterminate;
     hud.bezelView.color = [UIColor colorWithWhite:0.1 alpha:0.9];
@@ -75,25 +79,13 @@
 
 // 隐藏菊花提示视图
 + (void)hideHUD {
-    [MBProgressHUD hideHUDForView:[self currentView] animated:YES];
+    [MBProgressHUD hideHUDForView:[UUToolsUI currentViewController].view animated:YES];
 }
 
 // 隐藏菊花提示视图
 + (void)hideHUDInView:(UIView *)view {
     if (!view) return;
     [MBProgressHUD hideHUDForView:view animated:YES];
-}
-
-// 获取当前Controller的view
-+ (UIView *)currentView {
-    UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController; // TabBarController
-    if ([vc isKindOfClass:[UITabBarController class]]) {
-        vc = [(UITabBarController *)vc selectedViewController]; // NavigationController
-    }
-    if ([vc isKindOfClass:[UINavigationController class]]) {
-        vc = [(UINavigationController *)vc visibleViewController]; // current controller (不论是push还是present，都能找到)
-    }
-    return vc.view;
 }
 
 @end

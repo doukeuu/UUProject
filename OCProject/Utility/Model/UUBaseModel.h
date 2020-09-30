@@ -57,6 +57,19 @@ NS_ASSUME_NONNULL_BEGIN
 // */
 //+ (NSDictionary *)objectClassInArray;
 
+
+/// 获取所有的属性字段
++ (NSArray *)getAllPropertyKeys;
+
+/// 获取对应下标属性的名称
+- (NSString *)propertyKeyAtIndex:(NSInteger)index;
+/// 获取对应下标的属性值
+- (id)propertyValueAtIndex:(NSInteger)index;
+/// 从另一个数据类中拷贝属性值
+- (void)copyValueFromModel:(UUBaseModel *)original;
+// 判断内容是否相等
+- (BOOL)isEqualToModel:(UUBaseModel *)original;
+
 @end
 
 NS_ASSUME_NONNULL_END

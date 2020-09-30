@@ -10,7 +10,12 @@
 
 @implementation UUToolsUI
 
-// 查找当前界面控制器
+// 获取当前Controller
++ (UIViewController *)currentViewController {
+    return [self topViewControllerFrom:[UIApplication sharedApplication].keyWindow.rootViewController];
+}
+
+// 查找最上层Controller
 + (UIViewController *)topViewControllerFrom:(UIViewController *)controller {
     if (controller.presentedViewController) {
         controller = controller.presentedViewController;
@@ -22,18 +27,6 @@
     } else {
         return controller;
     }
-}
-
-// 简单获取当前Controller
-+ (UIViewController *)currentViewController {
-    UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController; // TabBarController
-    if ([vc isKindOfClass:[UITabBarController class]]) {
-        vc = [(UITabBarController *)vc selectedViewController]; // NavigationController
-    }
-    if ([vc isKindOfClass:[UINavigationController class]]) {
-        vc = [(UINavigationController *)vc visibleViewController]; // current controller (不论是push还是present，都能找到)
-    }
-    return vc;
 }
 
 @end

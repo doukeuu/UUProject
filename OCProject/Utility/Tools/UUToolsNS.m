@@ -318,4 +318,17 @@
     executeMethod(object, sel, first, second);
 }
 
+// 执行某个对象的方法，无返回值
++ (void)invokeTarget:(id)target selector:(NSString *)selString {
+    if (!target || !selString) return;
+    SEL sel = NSSelectorFromString(selString);
+    if (![target respondsToSelector:sel]) return;
+    NSMethodSignature *signature = [target methodSignatureForSelector:sel];
+    if (!signature) return;
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    invocation.target = target;
+    invocation.selector = sel;
+    [invocation invoke];
+}
+
 @end

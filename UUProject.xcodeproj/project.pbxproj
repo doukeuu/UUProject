@@ -55,6 +55,10 @@
 		89220B5F24AC2A44002B0A5E /* UUAdvertiseDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B5E24AC2A44002B0A5E /* UUAdvertiseDetailController.m */; };
 		89220B6224AC2B33002B0A5E /* UUAdvertisementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B6124AC2B33002B0A5E /* UUAdvertisementModel.m */; };
 		89220B6524AC2FC1002B0A5E /* UULaunchGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89220B6424AC2FC1002B0A5E /* UULaunchGuideController.m */; };
+		893738892524577400A1EDFF /* UUMenuSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 893738882524577400A1EDFF /* UUMenuSegmentedView.m */; };
+		8937388C2524579B00A1EDFF /* UUMenuMultiOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8937388B2524579B00A1EDFF /* UUMenuMultiOptionView.m */; };
+		8937388F252457B500A1EDFF /* UUMenuOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8937388E252457B500A1EDFF /* UUMenuOptionCell.m */; };
+		8937389225245A0000A1EDFF /* UUOptionMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8937389125245A0000A1EDFF /* UUOptionMenuController.m */; };
 		8953B28F2499A4750034306A /* UUNormalTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B28E2499A4750034306A /* UUNormalTableCell.m */; };
 		8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B2972499AAE30034306A /* UULoginTableCell.m */; };
 		8953B29B2499B3930034306A /* UUTextFieldTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8953B29A2499B3930034306A /* UUTextFieldTableCell.m */; };
@@ -141,9 +145,15 @@
 		89CF62A124D117B000E8B694 /* UUNetworkSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF62A024D117B000E8B694 /* UUNetworkSwitch.m */; };
 		89CF62A624D159FE00E8B694 /* UUNetworkDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF62A524D159FE00E8B694 /* UUNetworkDefine.m */; };
 		89CF62A924D1784C00E8B694 /* UIBarButtonItem+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CF62A824D1784C00E8B694 /* UIBarButtonItem+UU.m */; };
+		89D2012D251484D500EE83FF /* NSTimer+UU.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D2012C251484D500EE83FF /* NSTimer+UU.m */; };
+		89EAB4E9250B0F2100FB5001 /* YMPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89EAB4E8250B0F2100FB5001 /* YMPushManager.m */; };
 		89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B124AACE7300612514 /* UUImageBrowseController.m */; };
 		89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B424AACF0700612514 /* UUImageClippingController.m */; };
 		89F690B824AACF9900612514 /* UULoginBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F690B724AACF9900612514 /* UULoginBaseController.m */; };
+		89FFBC352515A2E3003011B8 /* UUTitleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FFBC342515A2E3003011B8 /* UUTitleTableCell.m */; };
+		89FFBC392515D5A5003011B8 /* UUSatisfactionDegreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FFBC382515D5A5003011B8 /* UUSatisfactionDegreeView.m */; };
+		89FFBC3D2515D716003011B8 /* UUAppUpdateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FFBC3C2515D716003011B8 /* UUAppUpdateController.m */; };
+		89FFBC402515E126003011B8 /* UUBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FFBC3F2515E126003011B8 /* UUBaseButton.m */; };
 		B75DC2E596D62449224C7F34 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AEC096E5D3D0E5180C470A /* Pods_SwiftProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -265,6 +275,14 @@
 		89220B6124AC2B33002B0A5E /* UUAdvertisementModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAdvertisementModel.m; sourceTree = "<group>"; };
 		89220B6324AC2FC1002B0A5E /* UULaunchGuideController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULaunchGuideController.h; sourceTree = "<group>"; };
 		89220B6424AC2FC1002B0A5E /* UULaunchGuideController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULaunchGuideController.m; sourceTree = "<group>"; };
+		893738872524577400A1EDFF /* UUMenuSegmentedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUMenuSegmentedView.h; sourceTree = "<group>"; };
+		893738882524577400A1EDFF /* UUMenuSegmentedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUMenuSegmentedView.m; sourceTree = "<group>"; };
+		8937388A2524579B00A1EDFF /* UUMenuMultiOptionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUMenuMultiOptionView.h; sourceTree = "<group>"; };
+		8937388B2524579B00A1EDFF /* UUMenuMultiOptionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUMenuMultiOptionView.m; sourceTree = "<group>"; };
+		8937388D252457B500A1EDFF /* UUMenuOptionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUMenuOptionCell.h; sourceTree = "<group>"; };
+		8937388E252457B500A1EDFF /* UUMenuOptionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUMenuOptionCell.m; sourceTree = "<group>"; };
+		8937389025245A0000A1EDFF /* UUOptionMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUOptionMenuController.h; sourceTree = "<group>"; };
+		8937389125245A0000A1EDFF /* UUOptionMenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUOptionMenuController.m; sourceTree = "<group>"; };
 		8953B28D2499A4750034306A /* UUNormalTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNormalTableCell.h; sourceTree = "<group>"; };
 		8953B28E2499A4750034306A /* UUNormalTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNormalTableCell.m; sourceTree = "<group>"; };
 		8953B2962499AAE30034306A /* UULoginTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginTableCell.h; sourceTree = "<group>"; };
@@ -476,12 +494,24 @@
 		89CF62A524D159FE00E8B694 /* UUNetworkDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNetworkDefine.m; sourceTree = "<group>"; };
 		89CF62A724D1784C00E8B694 /* UIBarButtonItem+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+UU.h"; sourceTree = "<group>"; };
 		89CF62A824D1784C00E8B694 /* UIBarButtonItem+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+UU.m"; sourceTree = "<group>"; };
+		89D2012B251484D500EE83FF /* NSTimer+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+UU.h"; sourceTree = "<group>"; };
+		89D2012C251484D500EE83FF /* NSTimer+UU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+UU.m"; sourceTree = "<group>"; };
+		89EAB4E7250B0F2000FB5001 /* YMPushManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPushManager.h; sourceTree = "<group>"; };
+		89EAB4E8250B0F2100FB5001 /* YMPushManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPushManager.m; sourceTree = "<group>"; };
 		89F690B024AACE7300612514 /* UUImageBrowseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageBrowseController.h; sourceTree = "<group>"; };
 		89F690B124AACE7300612514 /* UUImageBrowseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImageBrowseController.m; sourceTree = "<group>"; };
 		89F690B324AACF0700612514 /* UUImageClippingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUImageClippingController.h; sourceTree = "<group>"; };
 		89F690B424AACF0700612514 /* UUImageClippingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUImageClippingController.m; sourceTree = "<group>"; };
 		89F690B624AACF9900612514 /* UULoginBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UULoginBaseController.h; sourceTree = "<group>"; };
 		89F690B724AACF9900612514 /* UULoginBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UULoginBaseController.m; sourceTree = "<group>"; };
+		89FFBC332515A2E3003011B8 /* UUTitleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUTitleTableCell.h; sourceTree = "<group>"; };
+		89FFBC342515A2E3003011B8 /* UUTitleTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUTitleTableCell.m; sourceTree = "<group>"; };
+		89FFBC372515D5A5003011B8 /* UUSatisfactionDegreeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUSatisfactionDegreeView.h; sourceTree = "<group>"; };
+		89FFBC382515D5A5003011B8 /* UUSatisfactionDegreeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUSatisfactionDegreeView.m; sourceTree = "<group>"; };
+		89FFBC3B2515D716003011B8 /* UUAppUpdateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAppUpdateController.h; sourceTree = "<group>"; };
+		89FFBC3C2515D716003011B8 /* UUAppUpdateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAppUpdateController.m; sourceTree = "<group>"; };
+		89FFBC3E2515E126003011B8 /* UUBaseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUBaseButton.h; sourceTree = "<group>"; };
+		89FFBC3F2515E126003011B8 /* UUBaseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUBaseButton.m; sourceTree = "<group>"; };
 		C5EB5B42B9402B3FD6218983 /* Pods-OCProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProject.debug.xcconfig"; path = "Target Support Files/Pods-OCProject/Pods-OCProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D015B9223E71F81F14277C68 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD854F0C48D9A9EBEFC85C4 /* Pods_OCProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -644,6 +674,7 @@
 		890C0457246A3AF500E1242F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89FFBC362515D58A003011B8 /* Satisfaction */,
 				8914291B24DE8F97009E01EF /* BubbleView */,
 				8983FF48249C5A2A00A9D20A /* AnimationView */,
 				8998425524A0458000881A29 /* Button */,
@@ -665,6 +696,8 @@
 		890C0458246A3AFB00E1242F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				893738852524572300A1EDFF /* OptionMenu */,
+				89FFBC3A2515D6DF003011B8 /* Update */,
 				890D9ECD24D4108A005ED317 /* AlertTips */,
 				89084A7A24D7FAD5008A1A87 /* Charts */,
 				89084A7224D7994F008A1A87 /* ImageHandler */,
@@ -833,13 +866,36 @@
 			path = Handler;
 			sourceTree = "<group>";
 		};
+		893738852524572300A1EDFF /* OptionMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8937389025245A0000A1EDFF /* UUOptionMenuController.h */,
+				8937389125245A0000A1EDFF /* UUOptionMenuController.m */,
+				893738862524572600A1EDFF /* View */,
+			);
+			path = OptionMenu;
+			sourceTree = "<group>";
+		};
+		893738862524572600A1EDFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				893738872524577400A1EDFF /* UUMenuSegmentedView.h */,
+				893738882524577400A1EDFF /* UUMenuSegmentedView.m */,
+				8937388A2524579B00A1EDFF /* UUMenuMultiOptionView.h */,
+				8937388B2524579B00A1EDFF /* UUMenuMultiOptionView.m */,
+				8937388D252457B500A1EDFF /* UUMenuOptionCell.h */,
+				8937388E252457B500A1EDFF /* UUMenuOptionCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8953B28C2499A3440034306A /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
+				89FFBC332515A2E3003011B8 /* UUTitleTableCell.h */,
+				89FFBC342515A2E3003011B8 /* UUTitleTableCell.m */,
 				8953B28D2499A4750034306A /* UUNormalTableCell.h */,
 				8953B28E2499A4750034306A /* UUNormalTableCell.m */,
-				8953B2962499AAE30034306A /* UULoginTableCell.h */,
-				8953B2972499AAE30034306A /* UULoginTableCell.m */,
 				8953B2992499B3930034306A /* UUTextFieldTableCell.h */,
 				8953B29A2499B3930034306A /* UUTextFieldTableCell.m */,
 				8953B29C2499B3A30034306A /* UUTextViewTableCell.h */,
@@ -933,10 +989,12 @@
 		895A9E0524930A17003C15D5 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				895A9E0724930C33003C15D5 /* HandlePushMessage.h */,
-				895A9E0624930C33003C15D5 /* HandlePushMessage.m */,
+				89EAB4E7250B0F2000FB5001 /* YMPushManager.h */,
+				89EAB4E8250B0F2100FB5001 /* YMPushManager.m */,
 				895A9E0824930C34003C15D5 /* RemoteNotificationManager.h */,
 				895A9E0924930C34003C15D5 /* RemoteNotificationManager.m */,
+				895A9E0724930C33003C15D5 /* HandlePushMessage.h */,
+				895A9E0624930C33003C15D5 /* HandlePushMessage.m */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1008,13 +1066,13 @@
 		896CF0CF2468FB4000D02CD2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				890C047F246A479000E1242F /* Definition */,
-				89C40D1A249077D000AE29BC /* Tools */,
-				896CF0D42468FBE400D02CD2 /* Network */,
-				890C0456246A3A9E00E1242F /* Model */,
 				896CF0D32468FB8B00D02CD2 /* Category */,
 				896CF0D62468FBFD00D02CD2 /* DataStore */,
+				890C047F246A479000E1242F /* Definition */,
+				890C0456246A3A9E00E1242F /* Model */,
+				896CF0D42468FBE400D02CD2 /* Network */,
 				896CF0D52468FBF300D02CD2 /* Security */,
+				89C40D1A249077D000AE29BC /* Tools */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1032,12 +1090,12 @@
 		896CF0D12468FB5000D02CD2 /* Facade */ = {
 			isa = PBXGroup;
 			children = (
+				896CF0D22468FB7E00D02CD2 /* Category */,
+				890C0458246A3AFB00E1242F /* Controller */,
 				890C047E246A478B00E1242F /* Definition */,
 				89C40D1B249077DE00AE29BC /* Tools */,
-				890C0458246A3AFB00E1242F /* Controller */,
-				890C0457246A3AF500E1242F /* View */,
-				896CF0D22468FB7E00D02CD2 /* Category */,
 				895A9E15249322BB003C15D5 /* Transition */,
+				890C0457246A3AF500E1242F /* View */,
 			);
 			path = Facade;
 			sourceTree = "<group>";
@@ -1076,6 +1134,8 @@
 				8975A693246B982A002A8D93 /* NSDictionary+UU.m */,
 				890C0459246A3CA800E1242F /* NSString+UU.h */,
 				890C045A246A3CA800E1242F /* NSString+UU.m */,
+				89D2012B251484D500EE83FF /* NSTimer+UU.h */,
+				89D2012C251484D500EE83FF /* NSTimer+UU.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1196,6 +1256,8 @@
 				8998426924A0510200881A29 /* UUSwitchButton.m */,
 				8998426B24A0574700881A29 /* UUFloatingButton.h */,
 				8998426C24A0574700881A29 /* UUFloatingButton.m */,
+				89FFBC3E2515E126003011B8 /* UUBaseButton.h */,
+				89FFBC3F2515E126003011B8 /* UUBaseButton.m */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1425,6 +1487,8 @@
 		89F690AE24AACE1E00612514 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8953B2962499AAE30034306A /* UULoginTableCell.h */,
+				8953B2972499AAE30034306A /* UULoginTableCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1438,6 +1502,24 @@
 				89220B5424AC1561002B0A5E /* UULoginAreaCodeController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		89FFBC362515D58A003011B8 /* Satisfaction */ = {
+			isa = PBXGroup;
+			children = (
+				89FFBC372515D5A5003011B8 /* UUSatisfactionDegreeView.h */,
+				89FFBC382515D5A5003011B8 /* UUSatisfactionDegreeView.m */,
+			);
+			path = Satisfaction;
+			sourceTree = "<group>";
+		};
+		89FFBC3A2515D6DF003011B8 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				89FFBC3B2515D716003011B8 /* UUAppUpdateController.h */,
+				89FFBC3C2515D716003011B8 /* UUAppUpdateController.m */,
+			);
+			path = Update;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1727,6 +1809,7 @@
 				8983FF41249C541700A9D20A /* UUDistalAreaPicker.m in Sources */,
 				898526922491DBEB008099FB /* GTMBase64.m in Sources */,
 				89A90A2624C972F800D48EA1 /* UUSearchPatternKeyCell.m in Sources */,
+				8937388F252457B500A1EDFF /* UUMenuOptionCell.m in Sources */,
 				8983FF4E249C5E5A00A9D20A /* UUNormalPickerView.m in Sources */,
 				89C40D292490838200AE29BC /* TFHppleElement.m in Sources */,
 				89C40D312490887F00AE29BC /* UUDeviceCheck.m in Sources */,
@@ -1735,6 +1818,8 @@
 				890D9EC324D3F98C005ED317 /* SSTabBarController.m in Sources */,
 				89CF62A124D117B000E8B694 /* UUNetworkSwitch.m in Sources */,
 				8998425E24A04C8B00881A29 /* UUImageCirculatingView.m in Sources */,
+				8937389225245A0000A1EDFF /* UUOptionMenuController.m in Sources */,
+				8937388C2524579B00A1EDFF /* UUMenuMultiOptionView.m in Sources */,
 				89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */,
 				89C40D282490835800AE29BC /* TFHpple.m in Sources */,
 				8914292124DE8FDA009E01EF /* UUUponBubbleView.m in Sources */,
@@ -1775,6 +1860,7 @@
 				8994F2D524D9595C002B3EC4 /* UULineChartOneCell.m in Sources */,
 				897AED1124A2DC70007F8D50 /* UUSearchFielddView.m in Sources */,
 				89120493246E1E8F00E76B0F /* UITextView+UU.m in Sources */,
+				89D2012D251484D500EE83FF /* NSTimer+UU.m in Sources */,
 				890C046F246A3F9D00E1242F /* UUBaseWebController.m in Sources */,
 				89220B6524AC2FC1002B0A5E /* UULaunchGuideController.m in Sources */,
 				8953B2982499AAE30034306A /* UULoginTableCell.m in Sources */,
@@ -1795,6 +1881,8 @@
 				89084A8D24D80F68008A1A87 /* UUPieChartOneCell.m in Sources */,
 				895A9E1C24932392003C15D5 /* UUInteractiveTransition.m in Sources */,
 				899408102497029C0004364A /* UUWebViewController.m in Sources */,
+				893738892524577400A1EDFF /* UUMenuSegmentedView.m in Sources */,
+				89FFBC352515A2E3003011B8 /* UUTitleTableCell.m in Sources */,
 				89C40D3A24908A8700AE29BC /* UUVersionCheck.m in Sources */,
 				89120499246E309300E76B0F /* UURefresher.m in Sources */,
 				890D9ED324D410AE005ED317 /* UUAlertTipsController.m in Sources */,
@@ -1813,11 +1901,14 @@
 				89084A8A24D80E7D008A1A87 /* UUPieChartOneRenderer.swift in Sources */,
 				890C046C246A3F2500E1242F /* UUTabBarController.m in Sources */,
 				8994FD4C24A196FB007FFC07 /* UUSelectionPopupView.m in Sources */,
+				89FFBC402515E126003011B8 /* UUBaseButton.m in Sources */,
 				8998426D24A0574700881A29 /* UUFloatingButton.m in Sources */,
 				896CF0D92468FD9C00D02CD2 /* UIView+UU.m in Sources */,
+				89FFBC392515D5A5003011B8 /* UUSatisfactionDegreeView.m in Sources */,
 				899CA22C24D2994D002633AF /* UUPlaceholderView.m in Sources */,
 				890D9ED024D410A0005ED317 /* UUAlertTipsView.m in Sources */,
 				89F690B524AACF0700612514 /* UUImageClippingController.m in Sources */,
+				89EAB4E9250B0F2100FB5001 /* YMPushManager.m in Sources */,
 				8998426A24A0510200881A29 /* UUSwitchButton.m in Sources */,
 				897AED1C24A2E1EB007F8D50 /* UUCommentTextView.m in Sources */,
 				89A90A2924C9731000D48EA1 /* UUSearchPatternHeaderView.m in Sources */,
@@ -1826,6 +1917,7 @@
 				890D9ECC24D40556005ED317 /* UUFoldingPopupView.m in Sources */,
 				89C40D1E2490783900AE29BC /* UUToolsUI.m in Sources */,
 				890C045E246A3D4500E1242F /* UUBaseModel.m in Sources */,
+				89FFBC3D2515D716003011B8 /* UUAppUpdateController.m in Sources */,
 				8914291324DE2EB5009E01EF /* UUImitateWeChatController.m in Sources */,
 				89220B6224AC2B33002B0A5E /* UUAdvertisementModel.m in Sources */,
 				89084A7624D799FD008A1A87 /* UUMapSelectionController.m in Sources */,

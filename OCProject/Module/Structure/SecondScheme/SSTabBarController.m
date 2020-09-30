@@ -25,6 +25,8 @@
     self.tabBar.shadowImage = [UIImage imageFromColor:UIColor.lightGrayColor];
     
     [self childContorllerAddition];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clickRemoteMessage) name:NoticeTransitionToMessage object:nil];
 }
 
 // 添加子控制器
@@ -59,6 +61,27 @@
     [item setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];
     item.titlePositionAdjustment = UIOffsetMake(0, -1);
     return item;
+}
+
+#pragma mark - Respond
+
+// 点击推送消息弹框
+- (void)clickRemoteMessage {
+    if (self.selectedViewController.presentedViewController) {
+        [self.selectedViewController dismissViewControllerAnimated:NO completion:nil];
+    }
+    if ([self.selectedViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navigation = (UINavigationController *)self.selectedViewController;
+        if (navigation.topViewController.presentedViewController) {
+            [navigation.topViewController dismissViewControllerAnimated:NO completion:nil];
+        }
+        if (self.selectedIndex == 1) {
+            [navigation popToRootViewControllerAnimated:YES];
+        } else {
+            [navigation popToRootViewControllerAnimated:NO];
+            self.selectedIndex = 1;
+        }
+    }
 }
 
 @end

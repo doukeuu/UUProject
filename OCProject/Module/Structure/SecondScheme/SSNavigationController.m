@@ -103,9 +103,18 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.childViewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
+        // 设置返回按钮,只有非根控制器
+//        UIBarButtonItem *item = [UIBarButtonItem backItemWithImage:[UIImage imageNamed:@"arrow_back_black"]
+//                                                            action:@selector(itemBack) target:self];
+//        viewController.navigationItem.leftBarButtonItem = item;
     }
     [super pushViewController:viewController animated:animated];
 }
+
+// 点击返回按钮
+//- (void)itemBack {
+//    [self popViewControllerAnimated:YES];
+//}
 
 #pragma mark - UIGestureRecognizerDelegate
 

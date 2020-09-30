@@ -9,6 +9,11 @@
 #import "UUBaseModel.h"
 #import <objc/runtime.h>
 
+@interface UUBaseModel ()
+
+@property (nonatomic, strong) NSArray *propertyKeyArray; // 属性字段数组
+@end
+
 @implementation UUBaseModel
 
 // 方法一：使用第三方库MJExtension
@@ -187,5 +192,61 @@
     return self;
 }
 
+#pragma mark - Property Key
+
+// 获取所有的属性字段
++ (NSArray *)getAllPropertyKeys {
+    unsigned int count;
+    objc_property_t *propertys = class_copyPropertyList(self, &count);
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i < count; i ++) {
+        const char *property = property_getName(propertys[i]);
+        NSString *propertyKey = [NSString stringWithUTF8String:property];
+        [mutableArray addObject:propertyKey];
+    }
+    free(propertys);
+    return [mutableArray copy];
+}
+
+- (NSArray *)propertyKeyArray {
+    if (_propertyKeyArray) return _propertyKeyArray;
+    _propertyKeyArray = [[self class] getAllPropertyKeys];
+    return _propertyKeyArray;
+}
+
+// 获取对应下标属性的名称
+- (NSString *)propertyKeyAtIndex:(NSInteger)index{
+    if (index < 0 || index >= self.propertyKeyArray.count) return nil;
+    return [self.propertyKeyArray objectAtIndex:index];
+}
+
+// 获取对应下标的属性值
+- (id)propertyValueAtIndex:(NSInteger)index {
+    if (index < 0 || index >= self.propertyKeyArray.count) return nil;
+    NSString *propertyKey = [self.propertyKeyArray objectAtIndex:index];
+    return [self valueForKey:propertyKey];
+}
+
+// 从另一个数据类中拷贝属性值
+- (void)copyValueFromModel:(UUBaseModel *)original {
+    if (!original) return;
+    for (NSString *key in self.propertyKeyArray) {
+        [self setValue:[original valueForKey:key] forKey:key];
+    }
+}
+
+// 判断内容是否相等
+- (BOOL)isEqualToModel:(UUBaseModel *)original {
+    for (NSString *key in self.propertyKeyArray) {
+        id nowValue = [NSString stringWithFormat:@"%@", [self valueForKey:key] ?: @""];
+        id originalValue = [NSString stringWithFormat:@"%@", [original valueForKey:key] ?: @""];
+        if (![nowValue isEqualToString:originalValue]){
+             return NO;
+        }else{
+             
+        }
+    }
+    return YES;
+}
 
 @end

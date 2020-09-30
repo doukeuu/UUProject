@@ -342,27 +342,28 @@
         return; // 网络请求被取消
     }
     NSInteger statusCode = [(NSHTTPURLResponse *)task.response statusCode];
-        NSError *underlyingError = error;
-        if (error.userInfo[NSUnderlyingErrorKey]) {
-            underlyingError = error.userInfo[NSUnderlyingErrorKey];
-        }
-        NSString *tips;
-        if (statusCode == 401) {
-            tips = @"";
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [[NSNotificationCenter defaultCenter] postNotificationName:UUNetworkResponseStatusCode401 object:nil];
-            });
-        } else if (statusCode == 404) {
-            tips = @"温馨提示：数据走丢了！";
-        } else {
-            NSData *errorData = underlyingError.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
-            NSString *errorString = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
-            tips = errorString ?: @"未找到错误信息";
-        }
-        NSMutableDictionary *userInfo = [underlyingError.userInfo mutableCopy];
-        [userInfo setObject:tips forKey:UUNetworkErrorTips];
-        [userInfo setObject:@(statusCode) forKey:UUNetworkErrorCode];
-        if (block) block([userInfo copy]);
+    NSError *underlyingError = error;
+    if (error.userInfo[NSUnderlyingErrorKey]) {
+        underlyingError = error.userInfo[NSUnderlyingErrorKey];
+    }
+    NSData *errorData = underlyingError.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+    NSString *tips = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
+    
+    if (statusCode == 401) {
+        NSString *string = tips ?: @"即将退出登陆";
+        tips = @"";
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:UUNetworkResponseStatusCode401 object:nil userInfo:@{UUNetworkErrorTips: string}];
+        });
+    } else if (statusCode == 404) {
+        tips = @"温馨提示：数据走丢了！";
+    } else {
+        tips = tips ?: @"未找到错误信息";
+    }
+    NSMutableDictionary *userInfo = [underlyingError.userInfo mutableCopy];
+    [userInfo setObject:tips forKey:UUNetworkErrorTips];
+    [userInfo setObject:@(statusCode) forKey:UUNetworkErrorCode];
+    if (block) block([userInfo copy]);
 }
 
 #pragma mark - Utility

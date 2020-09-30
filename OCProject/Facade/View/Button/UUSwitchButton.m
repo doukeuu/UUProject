@@ -104,4 +104,17 @@
     }];
 }
 
+// 扩大响应区域
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    CGFloat width = self.frame.size.width;
+    CGFloat height = self.frame.size.height;
+    CGFloat margin = 10;
+    // point是相对位置，0..<width, 0..<height则在内部
+    if (point.x > 0 && point.x < width &&
+        point.y > -margin && point.y < height + margin) {
+        return [super pointInside:CGPointZero withEvent:event];
+    }
+    return [super pointInside:point withEvent:event];
+}
+
 @end

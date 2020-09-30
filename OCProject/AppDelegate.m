@@ -20,8 +20,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = UIColor.whiteColor;
-    self.window.rootViewController = [[ViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[ViewController alloc] init]];
     [self.window makeKeyAndVisible];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveLogoutResponse:) name:UUNetworkResponseStatusCode401 object:nil];
     
     return YES;
 }
@@ -53,5 +55,33 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Respond
+
+// 收到退出登陆通知
+- (void)receiveLogoutResponse:(NSNotification *)notice {
+    UIViewController *controller = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if (![controller isKindOfClass:[UITabBarController class]]) return;
+    if ([controller.presentedViewController isKindOfClass:[UIAlertController class]]) return;
+    
+    NSString *tips = notice.userInfo[UUNetworkErrorTips];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:tips preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确  定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [LOGIN clearInfo];
+        [self changeWindowRootViewController];
+    }]];
+    [controller presentViewController:alert animated:YES completion:nil];
+}
+
+// 改变window的rootViewController
+- (void)changeWindowRootViewController {
+    // 已登陆
+//    if ([LOGIN extractInfo]) {
+//        self.window.rootViewController = [[UUTabBarController alloc] init];
+//        return;
+//    }
+    // 未登陆
+//    UIViewController *controller = [[UULoginPageController alloc] init];
+//    self.window.rootViewController = [[YMNavigationController alloc] initWithRootViewController:controller];
+}
 
 @end

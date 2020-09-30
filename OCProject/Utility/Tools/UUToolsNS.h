@@ -48,6 +48,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)executeObject:(id)object selector:(NSString *)selString object:(id)first;
 /// 执行某个对象的方法，无返回值，可以消除原生perform方法的警告
 + (void)executeObject:(id)object selector:(NSString *)selString object:(id)first object:(id)second;
+/// 执行某个对象的方法，无返回值
++ (void)invokeTarget:(id)target selector:(NSString *)selString;
 @end
 
 
