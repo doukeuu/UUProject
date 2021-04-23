@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52F1AEAF2632B54500AF1677 /* THBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F1AEAE2632B54500AF1677 /* THBaseViewController.m */; };
+		52F1AEB72632B56900AF1677 /* THNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F1AEB62632B56900AF1677 /* THNavigationController.m */; };
 		842226C36023216A29628E68 /* Pods_OCProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD854F0C48D9A9EBEFC85C4 /* Pods_OCProject.framework */; };
 		8901D5F324984FEA000EF470 /* UUBulgeTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8901D5F224984FEA000EF470 /* UUBulgeTabBar.m */; };
 		8901D5F7249856F0000EF470 /* UUNormalCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8901D5F6249856F0000EF470 /* UUNormalCollectionCell.m */; };
@@ -188,6 +190,10 @@
 
 /* Begin PBXFileReference section */
 		3A23AD61129FA02CE47F8594 /* Pods-OCProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCProject.release.xcconfig"; path = "Target Support Files/Pods-OCProject/Pods-OCProject.release.xcconfig"; sourceTree = "<group>"; };
+		52F1AEAD2632B54500AF1677 /* THBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBaseViewController.h; sourceTree = "<group>"; };
+		52F1AEAE2632B54500AF1677 /* THBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBaseViewController.m; sourceTree = "<group>"; };
+		52F1AEB52632B56900AF1677 /* THNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THNavigationController.h; sourceTree = "<group>"; };
+		52F1AEB62632B56900AF1677 /* THNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THNavigationController.m; sourceTree = "<group>"; };
 		62D1479CB3162430F9850F42 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		70AEC096E5D3D0E5180C470A /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8901D5F124984FEA000EF470 /* UUBulgeTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUBulgeTabBar.h; sourceTree = "<group>"; };
@@ -589,6 +595,17 @@
 				62D1479CB3162430F9850F42 /* Pods-SwiftProject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		52F1AEAC2632B52A00AF1677 /* ThirdScheme */ = {
+			isa = PBXGroup;
+			children = (
+				52F1AEAD2632B54500AF1677 /* THBaseViewController.h */,
+				52F1AEAE2632B54500AF1677 /* THBaseViewController.m */,
+				52F1AEB52632B56900AF1677 /* THNavigationController.h */,
+				52F1AEB62632B56900AF1677 /* THNavigationController.m */,
+			);
+			path = ThirdScheme;
 			sourceTree = "<group>";
 		};
 		8901D5F424985610000EF470 /* CollectionCell */ = {
@@ -1061,6 +1078,7 @@
 		895A9E1424931F4C003C15D5 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
+				52F1AEAC2632B52A00AF1677 /* ThirdScheme */,
 				890D9EBA24D3F906005ED317 /* SecondScheme */,
 				890C0470246A3FD800E1242F /* UUBaseTableController.h */,
 				890C0471246A3FD800E1242F /* UUBaseTableController.m */,
@@ -1861,6 +1879,7 @@
 				8937388C2524579B00A1EDFF /* UUMenuMultiOptionView.m in Sources */,
 				89F690B224AACE7300612514 /* UUImageBrowseController.m in Sources */,
 				89C40D282490835800AE29BC /* TFHpple.m in Sources */,
+				52F1AEB72632B56900AF1677 /* THNavigationController.m in Sources */,
 				8914292124DE8FDA009E01EF /* UUUponBubbleView.m in Sources */,
 				898526872491BB6E008099FB /* UUDataCache.m in Sources */,
 				8998426424A04D1D00881A29 /* UURippleButtonView.m in Sources */,
@@ -1885,6 +1904,7 @@
 				89C40D212490784C00AE29BC /* UUToolsNS.m in Sources */,
 				89120490246E1E7E00E76B0F /* UITextField+UU.m in Sources */,
 				89084A9024D8103C008A1A87 /* UUBarChartOneCell.m in Sources */,
+				52F1AEAF2632B54500AF1677 /* THBaseViewController.m in Sources */,
 				899CA22924D298DF002633AF /* UIScrollView+Placeholder.m in Sources */,
 				8998426124A04CE200881A29 /* UUImageAutoScrollView.m in Sources */,
 				89220B5924AC16BE002B0A5E /* UULoginPageHandler.m in Sources */,
@@ -2187,6 +2207,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KC2EBGQ68S;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProject/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2227,6 +2248,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KC2EBGQ68S;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OCProject/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
